@@ -1,6 +1,6 @@
 {
   "setting1": "value1",
   "rows": 2,
-  "columns":6,
+  "columns":2,
   "threshold": 10
 }
