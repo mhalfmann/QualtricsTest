@@ -3,10 +3,53 @@
         "rows": 2,
         "columns": 2,
         "content": {
-            "1": "Table1",
-            "2": "Table2",
-            "3": "Table3",
-            "4": "Table4"
+            "1": "table1",
+            "2": "table2",
+            "3": "table3",
+            "4": "table4"
+        }
+    },
+    "tables":{
+        "table1":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "eins",
+                "2": "zwei",
+                "3": "drei",
+                "4": "vier"
+            }   
+        },
+        "table2":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "hund",
+                "2": "katze",
+                "3": "maus",
+                "4": "pferd"
+            }
+        },
+        "table3":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "auto",
+                "2": "bahn",
+                "3": "flugzeug",
+                "4": "schiff"
+            }
+        },
+        "table4":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
         }
     }
+
   }
