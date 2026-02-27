@@ -1,6 +1,12 @@
 {
-  "setting1": "value1",
-  "rows": 2,
-  "columns":2,
-  "threshold": 10
-}
+    "selectionTable":{
+        "rows": 2,
+        "columns": 2,
+        "content": {
+            "1": "Table1",
+            "2": "Table2",
+            "3": "Table3",
+            "4": "Table4"
+        }
+    }
+  }
