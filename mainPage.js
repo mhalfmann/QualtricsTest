@@ -23,7 +23,7 @@ Qualtrics.SurveyEngine.addOnload(function() {
     }
     var SELECTION_TABLE_STYLE = {
         table: 'border-collapse: separate; border-spacing: 0; width: 100%; background: #fff;',
-        thNiveau: 'padding: 10px 8px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #505050; color: #fff;',
+        thNiveau: 'padding: 10px 8px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background:rgb(227, 15, 15); color: #fff;',
         thHelp: 'padding: 8px 6px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8; color: #000;',
         td: 'padding: 10px 8px; text-align: center; border: 1px solid #d0d0d0; background: #fff; color: #000; min-width: 80px;'
     };
