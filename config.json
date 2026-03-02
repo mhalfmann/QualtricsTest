@@ -3,10 +3,34 @@
         "rows": 2,
         "columns": 6,
         "content": {
-            "1": "table1",
-            "2": "table2",
-            "3": "table3",
-            "4": "table4"
+            "level1":{
+                "lots of help":{
+                    "1": "table1",
+                    "2": "table2"
+                },
+                "some help":{
+                    "1": "table3",
+                    "2": "table4"
+                },
+                "no help":{
+                    "1": "table5",
+                    "2": "table6"  
+                }
+            },
+            "level2":{
+                "lots of help":{
+                    "1": "table7",
+                    "2": "table8"
+                },
+                "some help":{
+                    "1": "table9",
+                    "2": "table10"
+                },
+                "no help":{
+                    "1": "table11",
+                    "2": "table12"
+                }
+            }
         }
     },
     "tables":{
