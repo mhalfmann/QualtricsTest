@@ -3,7 +3,7 @@
         "rows": 2,
         "columns": 6,
         "content": {
-            "level1":{
+            "level 1":{
                 "lots of help":{
                     "1": "table1",
                     "2": "table2"
@@ -17,7 +17,7 @@
                     "2": "table6"  
                 }
             },
-            "level2":{
+            "level 2":{
                 "lots of help":{
                     "1": "table7",
                     "2": "table8"

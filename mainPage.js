@@ -23,15 +23,14 @@ Qualtrics.SurveyEngine.addOnload(function() {
     }
     var SELECTION_TABLE_STYLE = {
         table: 'border-collapse: separate; border-spacing: 0; width: 100%; background: #fff;',
-        thNiveau: 'padding: 10px 8px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; border-bottom: none; background: #fff;',
-        thHelp: 'padding: 8px 6px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8;',
-        td: 'padding: 10px 8px; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8; min-width: 80px;'
+        thNiveau: 'padding: 10px 8px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #505050; color: #fff;',
+        thHelp: 'padding: 8px 6px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8; color: #000;',
+        td: 'padding: 10px 8px; text-align: center; border: 1px solid #d0d0d0; background: #fff; color: #000; min-width: 80px;'
     };
 
     function buildTableBTN(content, containerID) {
         var levelKeys = Object.keys(content).sort();
-        var helpKeys = ['lots of help', 'some help', 'no help'];
-        var helpLabels = { 'lots of help': 'Veel hulp', 'some help': 'Enige hulp', 'no help': 'Alles zelf' };
+        var helpKeys = Object.keys(content[levelKeys[0]] || {}).slice();
         var rowCount = 0;
         if (levelKeys.length && content[levelKeys[0]] && content[levelKeys[0]][helpKeys[0]]) {
             rowCount = Object.keys(content[levelKeys[0]][helpKeys[0]]).length;
@@ -45,8 +44,8 @@ Qualtrics.SurveyEngine.addOnload(function() {
         var trNiveau = document.createElement('tr');
         levelKeys.forEach(function(levelKey) {
             var th = document.createElement('th');
-            th.setAttribute('colspan', '3');
-            th.textContent = 'Niveau ' + (levelKey.replace(/\D/g, '') || levelKey);
+            th.setAttribute('colspan', String(helpKeys.length));
+            th.textContent = levelKey;
             th.setAttribute('style', SELECTION_TABLE_STYLE.thNiveau);
             trNiveau.appendChild(th);
         });
@@ -56,7 +55,7 @@ Qualtrics.SurveyEngine.addOnload(function() {
         levelKeys.forEach(function() {
             helpKeys.forEach(function(helpKey) {
                 var th = document.createElement('th');
-                th.textContent = helpLabels[helpKey] || helpKey;
+                th.textContent = helpKey;
                 th.setAttribute('style', SELECTION_TABLE_STYLE.thHelp);
                 trHelp.appendChild(th);
             });
@@ -78,7 +77,7 @@ Qualtrics.SurveyEngine.addOnload(function() {
                     btn.type = 'button';
                     btn.textContent = label;
                     btn.id = containerID + '_btn_' + levelKey + '_' + helpKey + '_' + rowKey;
-                    btn.setAttribute('style', 'width:100%; padding:6px; border:none; background:transparent; font:inherit; border-radius:4px;' + (tableId ? ' cursor:pointer;' : ' cursor:default; opacity:0.6;'));
+                    btn.setAttribute('style', 'width:100%; padding:6px; border:none; background:transparent; font:inherit; color:inherit; border-radius:4px;' + (tableId ? ' cursor:pointer;' : ' cursor:default; opacity:0.6;'));
                     if (tableId) {
                         btn.addEventListener('click', (function(id) { return function() { onCellButtonClick(id); }; })(tableId));
                     }
