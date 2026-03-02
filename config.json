@@ -1,7 +1,7 @@
 {
     "selectionTable":{
         "rows": 2,
-        "columns": 2,
+        "columns": 6,
         "content": {
             "1": "table1",
             "2": "table2",
@@ -41,6 +41,86 @@
             }
         },
         "table4":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table5":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "auto",
+                "2": "bahn",
+                "3": "flugzeug",
+                "4": "schiff"
+            }
+        },
+        "table6":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table7":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table8":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table9":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table10":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table11":{
+            "rows": 2,
+            "columns": 2,
+            "content": {
+                "1": "banane",
+                "2": "apfel",
+                "3": "birne",
+                "4": "kirsche"
+            }
+        },
+        "table12":{
             "rows": 2,
             "columns": 2,
             "content": {
