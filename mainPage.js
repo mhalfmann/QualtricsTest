@@ -14,41 +14,85 @@ Qualtrics.SurveyEngine.addOnload(function() {
     });
 
    function runSurveyLogic() {
-		buildTableBTN(config.selectionTable.rows, config.selectionTable.columns, 'selectionTable');
+		buildTableBTN(config.selectionTable.content, 'selectionTable');
         Qualtrics.SurveyEngine.setEmbeddedData('data1', config.rows+" X "+ config.columns);
         // document.getElementById('createTableBtn').addEventListener('click', function() {
         //     //buildTable(config.rows, config.columns, 'myTable');
         //     //buildTable(config.rows, config.columns, 'myTable2');
         // });
     }
-    function buildTableBTN(rows, cols, tableID) {
-        var n = 0;
-        var table = document.createElement('table');
-        table.style.borderCollapse = 'collapse';
-        for (var i = 0; i < rows; i++) {
-            var tr = document.createElement('tr');
-            for (var j = 0; j < cols; j++) {
-                n++;
-                var buttonText = config.selectionTable.content[n.toString()];
-                var td = document.createElement('td');
-                td.style.border = '1px solid black';
-                td.style.padding = '8px';
+    var SELECTION_TABLE_STYLE = {
+        table: 'border-collapse: separate; border-spacing: 0; width: 100%; background: #fff;',
+        thNiveau: 'padding: 10px 8px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; border-bottom: none; background: #fff;',
+        thHelp: 'padding: 8px 6px; font-weight: bold; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8;',
+        td: 'padding: 10px 8px; text-align: center; border: 1px solid #d0d0d0; background: #e8e8e8; min-width: 80px;'
+    };
 
-                var button = document.createElement('button');
-                button.id = tableID + '_btn_' + n;
-                button.textContent = buttonText;
-                button.addEventListener('click', (function(label) {
-                    return function() {
-                        onCellButtonClick(label);
-                    };
-                })(buttonText));
-
-                td.appendChild(button);
-                tr.appendChild(td);
-            }
-            table.appendChild(tr);
+    function buildTableBTN(content, containerID) {
+        var levelKeys = Object.keys(content).sort();
+        var helpKeys = ['lots of help', 'some help', 'no help'];
+        var helpLabels = { 'lots of help': 'Veel hulp', 'some help': 'Enige hulp', 'no help': 'Alles zelf' };
+        var rowCount = 0;
+        if (levelKeys.length && content[levelKeys[0]] && content[levelKeys[0]][helpKeys[0]]) {
+            rowCount = Object.keys(content[levelKeys[0]][helpKeys[0]]).length;
         }
-        document.getElementById(tableID).appendChild(table);
+
+        var table = document.createElement('table');
+        table.setAttribute('style', SELECTION_TABLE_STYLE.table);
+        table.className = 'selection-grid-table';
+
+        var thead = document.createElement('thead');
+        var trNiveau = document.createElement('tr');
+        levelKeys.forEach(function(levelKey) {
+            var th = document.createElement('th');
+            th.setAttribute('colspan', '3');
+            th.textContent = 'Niveau ' + (levelKey.replace(/\D/g, '') || levelKey);
+            th.setAttribute('style', SELECTION_TABLE_STYLE.thNiveau);
+            trNiveau.appendChild(th);
+        });
+        thead.appendChild(trNiveau);
+
+        var trHelp = document.createElement('tr');
+        levelKeys.forEach(function() {
+            helpKeys.forEach(function(helpKey) {
+                var th = document.createElement('th');
+                th.textContent = helpLabels[helpKey] || helpKey;
+                th.setAttribute('style', SELECTION_TABLE_STYLE.thHelp);
+                trHelp.appendChild(th);
+            });
+        });
+        thead.appendChild(trHelp);
+        table.appendChild(thead);
+
+        var tbody = document.createElement('tbody');
+        for (var r = 0; r < rowCount; r++) {
+            var rowKey = (r + 1).toString();
+            var tr = document.createElement('tr');
+            levelKeys.forEach(function(levelKey) {
+                helpKeys.forEach(function(helpKey) {
+                    var td = document.createElement('td');
+                    td.setAttribute('style', SELECTION_TABLE_STYLE.td + ' border-radius: 4px;');
+                    var tableId = content[levelKey] && content[levelKey][helpKey] && content[levelKey][helpKey][rowKey];
+                    var label = tableId || '—';
+                    var btn = document.createElement('button');
+                    btn.type = 'button';
+                    btn.textContent = label;
+                    btn.id = containerID + '_btn_' + levelKey + '_' + helpKey + '_' + rowKey;
+                    btn.setAttribute('style', 'width:100%; padding:6px; border:none; background:transparent; font:inherit; border-radius:4px;' + (tableId ? ' cursor:pointer;' : ' cursor:default; opacity:0.6;'));
+                    if (tableId) {
+                        btn.addEventListener('click', (function(id) { return function() { onCellButtonClick(id); }; })(tableId));
+                    }
+                    td.appendChild(btn);
+                    tr.appendChild(td);
+                });
+            });
+            tbody.appendChild(tr);
+        }
+        table.appendChild(tbody);
+
+        var container = document.getElementById(containerID);
+        container.innerHTML = '';
+        container.appendChild(table);
     }
 	function onCellButtonClick(tableID) {
 		console.log('Clicked table ' + tableID);
