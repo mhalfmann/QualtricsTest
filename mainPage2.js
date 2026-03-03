@@ -65,10 +65,10 @@ function showScreen(screenId) {
 function showLevelSelector() {
     document.getElementById('loop-counter-display').innerText = currentLoop;
     var container = document.getElementById('selection-grid-container');
-    var helpLevels = { veel_hulp: "Veel hulp", enige_hulp: "Enige hulp", alles_zelf: "Alles zelf" };
+    var helpLevels = { lots_of_help: "Lots of help", some_help: "Some help", all_self: "All by myself" };
     var html = '';
     
-    for (var i = 1; i <= 5; i++) { html += '<div class="grid-header level-' + i + '-header">Niveau ' + i + '</div>'; }
+    for (var i = 1; i <= 5; i++) { html += '<div class="grid-header level-' + i + '-header">Level ' + i + '</div>'; }
     for (var i = 1; i <= 5; i++) {
         var shade = 1;
         for (var helpKey in helpLevels) {
@@ -119,8 +119,8 @@ function showLevelSelector() {
             currentTaskConfig.level = level; currentTaskConfig.help = help; currentTaskConfig.task = task;
             
             // Link to the correct answer key
-            if (allAnswerKeys['level' + level] && allAnswerKeys['level' + level][task]) {
-                currentAnswerKey = allAnswerKeys['level' + level][task];
+            if (allAnswerKeys['level' + level] && allAnswerKeys['level' + level][help] && allAnswerKeys['level' + level][help][task]) {
+                currentAnswerKey = allAnswerKeys['level' + level][help][task];
             } else {
                 console.warn("No answer key found for this task!");
                 currentAnswerKey = null;
@@ -143,17 +143,17 @@ function initializeTask() {
         document.getElementById('debug-info').style.display = 'none';
     }
     
-    var baseDesc = 'De ' + currentTaskConfig.gene.trait + ' wordt bepaald door een gen... (' + currentTaskConfig.gene.dominant.allele + ' = ' + currentTaskConfig.gene.dominant.phenotype + ', ' + currentTaskConfig.gene.recessive.allele + ' = ' + currentTaskConfig.gene.recessive.phenotype + ').<br><br>';
-    document.getElementById('task-description').innerHTML = baseDesc + '<strong>Opdracht:</strong> ' + currentTaskConfig.narrative;
+    var baseDesc = 'The ' + currentTaskConfig.gene.trait + ' is determined by a gene... (' + currentTaskConfig.gene.dominant.allele + ' = ' + currentTaskConfig.gene.dominant.phenotype + ', ' + currentTaskConfig.gene.recessive.allele + ' = ' + currentTaskConfig.gene.recessive.phenotype + ').<br><br>';
+    document.getElementById('task-description').innerHTML = baseDesc + '<strong>Task:</strong> ' + currentTaskConfig.narrative;
     
     renderStep1(); renderStep2(); renderStep3(); renderStep5();
     
     var help = currentTaskConfig.help;
-    var isVeelHulp = (help === 'veel_hulp');
+    var isLotsOfHelp = (help === 'lots_of_help');
     
-    document.getElementById('step4-container').style.display = isVeelHulp ? 'block' : 'none';
-    document.getElementById('step5-container').style.display = isVeelHulp ? 'block' : 'none';
-    document.getElementById('complete-task-btn').style.display = isVeelHulp ? 'block' : 'none';
+    document.getElementById('step4-container').style.display = isLotsOfHelp ? 'block' : 'none';
+    document.getElementById('step5-container').style.display = isLotsOfHelp ? 'block' : 'none';
+    document.getElementById('complete-task-btn').style.display = isLotsOfHelp ? 'block' : 'none';
 
     showScreen('task-screen');
     document.getElementById('complete-task-btn').onclick = completeTask;
@@ -176,7 +176,7 @@ function renderStep1() {
 }
 
 function renderStep2() {
-    var isDisabled = (currentTaskConfig.help === 'enige_hulp' || currentTaskConfig.help === 'veel_hulp');
+    var isDisabled = (currentTaskConfig.help === 'some_help' || currentTaskConfig.help === 'lots_of_help');
     var createNode = function(personId) {
         var person = currentTaskConfig.family[personId];
         var isUnknown = currentTaskConfig.unknowns.indexOf(personId) > -1;
@@ -201,22 +201,22 @@ function renderStep2() {
 }
 
 function renderStep3() {
-    var isVeelHulp = (currentTaskConfig.help === 'veel_hulp');
+    var isLotsOfHelp = (currentTaskConfig.help === 'lots_of_help');
     var container = document.getElementById('step3-inputs');
-    var buttonHtml = '<button type="button" id="generate-tables-btn" style="margin-left: 10px;" ' + (isVeelHulp ? 'disabled style="display:none;"' : '') + '>Genereer Tabellen</button>';
+    var buttonHtml = '<button type="button" id="generate-tables-btn" style="margin-left: 10px;" ' + (isLotsOfHelp ? 'disabled style="display:none;"' : '') + '>Generate Tables</button>';
     
-    // Pre-fill values for Veel Hulp
-    var valCount = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step3.punnett_squares : "";
+    // Pre-fill values for Lots of Help
+    var valCount = (isLotsOfHelp && currentAnswerKey) ? currentAnswerKey.step3.punnett_squares : "";
     var correctReasoning = (currentAnswerKey) ? currentAnswerKey.step3.reasoning : [];
     
-    container.innerHTML = '<p>Bepaal de redeneerrichting(en) en hoeveel kruistabellen je nodig hebt.</p>' +
-                          '<div style="margin-bottom: 10px;"><strong>Richting:</strong>' +
-                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="deductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Deductief</span></label>' +
-                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="inductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Inductief</span></label></div>' +
-                          '<div><strong>Aantal kruistabellen:</strong> <input type="number" id="punnett-squares-needed" value="'+valCount+'" min="0" max="10" style="width:50px;" ' + (isVeelHulp ? 'disabled' : '') + '> ' + buttonHtml + '</div>';
+    container.innerHTML = '<p>Determine the reasoning direction(s) and how many Punnett squares you need.</p>' +
+                          '<div style="margin-bottom: 10px;"><strong>Direction:</strong>' +
+                          '<label class="choice-label ' + (isLotsOfHelp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="deductive" ' + (isLotsOfHelp ? 'disabled' : '') + '><span>Deductive</span></label>' +
+                          '<label class="choice-label ' + (isLotsOfHelp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="inductive" ' + (isLotsOfHelp ? 'disabled' : '') + '><span>Inductive</span></label></div>' +
+                          '<div><strong>Number of Punnett squares:</strong> <input type="number" id="punnett-squares-needed" value="'+valCount+'" min="0" max="10" style="width:50px;" ' + (isLotsOfHelp ? 'disabled' : '') + '> ' + buttonHtml + '</div>';
     
-    // Check boxes if Veel Hulp
-    if (isVeelHulp && currentAnswerKey) {
+    // Check boxes if Lots of Help
+    if (isLotsOfHelp && currentAnswerKey) {
         var checkboxes = container.querySelectorAll('input[name="reasoning"]');
         for (var i = 0; i < checkboxes.length; i++) {
             if (correctReasoning.indexOf(checkboxes[i].value) > -1) {
@@ -234,20 +234,20 @@ function renderStep3() {
     var generateTables = function() {
         var numTables = currentTaskConfig.punnett_squares_needed;
         var pContainer = document.getElementById('step4-punnett-squares');
-        pContainer.innerHTML = numTables > 0 ? '<p>Vul de allelen en de mogelijke genotypen in.</p>' : '';
+        pContainer.innerHTML = numTables > 0 ? '<p>Fill in the alleles and possible genotypes.</p>' : '';
         
-        var answerTables = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step4 : [];
+        var answerTables = (isLotsOfHelp && currentAnswerKey) ? currentAnswerKey.step4 : [];
 
         for (var k = 0; k < numTables; k++) {
             var tVal = (answerTables[k]) ? answerTables[k] : {}; // Get pre-fill values for this table
             
-            var getVal = function(key) { return (isVeelHulp && tVal[key]) ? tVal[key] : ""; };
+            var getVal = function(key) { return (isLotsOfHelp && tVal[key]) ? tVal[key] : ""; };
             
-            pContainer.innerHTML += '<div class="punnett-square-wrapper"><h5>Kruistabel ' + (k + 1) + '</h5><table class="punnett-square-table"><tr><td class="corner"></td><td><input type="text" maxlength="1" data-pos="p2a1" value="'+getVal('p2a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="1" data-pos="p2a2" value="'+getVal('p2a2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a1" value="'+getVal('p1a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o1" value="'+getVal('o1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o2" value="'+getVal('o2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a2" value="'+getVal('p1a2')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o3" value="'+getVal('o3')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o4" value="'+getVal('o4')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr></table></div>';
+            pContainer.innerHTML += '<div class="punnett-square-wrapper"><h5>Punnett square ' + (k + 1) + '</h5><table class="punnett-square-table"><tr><td class="corner"></td><td><input type="text" maxlength="1" data-pos="p2a1" value="'+getVal('p2a1')+'" '+(isLotsOfHelp?'disabled':'')+'/></td><td><input type="text" maxlength="1" data-pos="p2a2" value="'+getVal('p2a2')+'" '+(isLotsOfHelp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a1" value="'+getVal('p1a1')+'" '+(isLotsOfHelp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o1" value="'+getVal('o1')+'" '+(isLotsOfHelp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o2" value="'+getVal('o2')+'" '+(isLotsOfHelp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a2" value="'+getVal('p1a2')+'" '+(isLotsOfHelp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o3" value="'+getVal('o3')+'" '+(isLotsOfHelp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o4" value="'+getVal('o4')+'" '+(isLotsOfHelp?'disabled':'')+'/></td></tr></table></div>';
         }
     };
 
-    if (isVeelHulp) {
+    if (isLotsOfHelp) {
         generateTables();
     } else {
         document.getElementById('generate-tables-btn').onclick = function() {
@@ -378,10 +378,10 @@ function completeTask() {
 
 function showEffortQuestion(taskData) {
     var content = document.getElementById('effort-question-content');
-    var html = '<h4 style="margin-bottom: 20px;">Hoeveel moeite kostte het je om deze biologie opgave te maken?</h4>';
+    var html = '<h4 style="margin-bottom: 20px;">How much effort did it take you to complete this biology task?</h4>';
     
     html += '<div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 30px; border-top: 1px solid #eee; padding-top: 15px;">';
-    var scaleLabels = { 1: "Heel erg<br>weinig", 3: "Weinig", 5: "Neutraal", 7: "Veel", 9: "Heel erg<br>veel" };
+    var scaleLabels = { 1: "Very<br>little", 3: "Little", 5: "Neutral", 7: "Much", 9: "Very<br>much" };
 
     for (var i = 1; i <= 9; i++) {
         var labelText = scaleLabels[i] ? scaleLabels[i] : "";
@@ -395,10 +395,10 @@ function showEffortQuestion(taskData) {
     }
     html += '</div>';
 
-    html += '<h4 style="margin-top:30px;">Hoeveel van de 5 stappen denk je dat je correct had?</h4>';
+    html += '<h4 style="margin-top:30px;">How many of the 5 steps do you think you had correct?</h4>';
     html += '<div>';
     for(var k=0; k<=5; k++) {
-        html += '<label class="choice-label"><input type="radio" name="correct" value="'+k+'"><span>'+k+(k===1?' stap':' stappen')+'</span></label>';
+        html += '<label class="choice-label"><input type="radio" name="correct" value="'+k+'"><span>'+k+(k===1?' step':' steps')+'</span></label>';
     }
     html += '</div>';
     

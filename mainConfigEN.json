@@ -1,6 +1,6 @@
 {
   "level1": {
-    "veel_hulp": {
+    "lots_of_help": {
       "Eye Color": {
         "narrative": "Two parents have a child. Each parent has a homozygous genotype and has blue eyes.",
         "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
@@ -26,7 +26,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
       }
     },
-    "enige_hulp": {
+    "some_help": {
       "Depression": {
         "narrative": "Two homozygous parents have a child. One parent has a higher risk of depression (recessive), the other a lower risk (dominant).",
         "gene": { "trait": "Depression", "dominant": { "allele": "D", "phenotype": "lower risk" }, "recessive": { "allele": "d", "phenotype": "higher risk" } },
@@ -52,7 +52,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
       }
     },
-    "alles_zelf": {
+    "all_self": {
       "Wolman Syndrome": {
         "narrative": "One parent does not have Wolman (dominant R) and is homozygous. The other parent does have Wolman (recessive r).",
         "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "healthy" }, "recessive": { "allele": "r", "phenotype": "affected" } },
@@ -74,7 +74,7 @@
     }
   },
   "level2": {
-    "veel_hulp": {
+    "lots_of_help": {
       "Eye Color": {
         "narrative": "Two parents have a child. One parent has brown eyes and is heterozygous. The other parent has blue eyes.",
         "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
@@ -100,7 +100,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
       }
     },
-    "enige_hulp": {
+    "some_help": {
       "P.R.A. (disease)": {
         "narrative": "Both dogs do not suffer from PRA (dominant P) and are heterozygous.",
         "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "healthy" }, "recessive": { "allele": "p", "phenotype": "affected" } },
@@ -126,7 +126,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
       }
     },
-    "alles_zelf": {
+    "all_self": {
       "Huntington": {
         "narrative": "One parent has Huntington (dominant H) and is heterozygous. The other parent does not have Huntington.",
         "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "affected" }, "recessive": { "allele": "h", "phenotype": "healthy" } },
@@ -148,7 +148,7 @@
     }
   },
   "level3": {
-    "veel_hulp": {
+    "lots_of_help": {
       "Eye Color": {
         "narrative": "L3: One parent has brown eyes and is homozygous. Nothing is known about the other parent. The child has brown eyes and is heterozygous.",
         "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
@@ -174,7 +174,7 @@
         "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
       }
     },
-    "enige_hulp": {
+    "some_help": {
       "Wolman Syndrome": {
         "narrative": "One parent has Wolman (recessive r). The other is unknown. The child also has Wolman.",
         "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "healthy" }, "recessive": { "allele": "r", "phenotype": "affected" } },
@@ -200,7 +200,7 @@
         "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
       }
     },
-    "alles_zelf": {
+    "all_self": {
       "Tongue Rolling": {
         "narrative": "One parent can roll their tongue and is heterozygous. The other is unknown. The child can also roll their tongue and is also heterozygous.",
         "gene": { "trait": "Tongue", "dominant": { "allele": "T", "phenotype": "rolling" }, "recessive": { "allele": "t", "phenotype": "non-rolling" } },
@@ -222,7 +222,7 @@
     }
   },
   "level4": {
-    "veel_hulp": {
+    "lots_of_help": {
       "Eye Color": {
         "narrative": "Parent 1 (P) is homozygous recessive. Parent 2 (P) is heterozygous. Child (F1) unknown. Partner (F1) is homozygous recessive. Grandchild (F2) is heterozygous.",
         "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
@@ -248,7 +248,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
       }
     },
-    "enige_hulp": {
+    "some_help": {
       "Depression": {
         "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous recessive. Child (F1) unknown. Partner (F1) heterozygous. Grandchild (F2) homozygous dominant.",
         "gene": { "trait": "Depression", "dominant": { "allele": "D", "phenotype": "lower risk" }, "recessive": { "allele": "d", "phenotype": "higher risk" } },
@@ -274,7 +274,7 @@
         "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
       }
     },
-    "alles_zelf": {
+    "all_self": {
       "Cleft Lip": {
         "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous recessive. Child (F1) unknown. Partner (F1) recessive. Grandchild (F2) recessive.",
         "gene": { "trait": "Cleft Lip", "dominant": { "allele": "L", "phenotype": "healthy" }, "recessive": { "allele": "l", "phenotype": "cleft lip" } },
@@ -296,7 +296,7 @@
     }
   },
   "level5": {
-    "veel_hulp": {
+    "lots_of_help": {
       "Eye Color": {
         "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) unknown. Grandchild (F2) homozygous recessive.",
         "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
@@ -322,7 +322,7 @@
         "unknowns": ["p_mother", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Partner (F1)?" }
       }
     },
-    "enige_hulp": {
+    "some_help": {
       "Tail Length": {
         "narrative": "P: Parent 1 heterozygous, Parent 2 unknown. Child (F1) homozygous recessive. Partner (F1) homozygous dominant. Grandchild (F2) unknown.",
         "gene": { "trait": "Tail Length", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
@@ -348,7 +348,7 @@
         "unknowns": ["p_mother", "f1_child"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Child (F1)?" }
       }
     },
-    "alles_zelf": {
+    "all_self": {
       "Fruit Flies": {
         "narrative": "P: Parent 1 unknown, Parent 2 homozygous dominant. Child (F1) homozygous dominant. Partner (F1) heterozygous. Grandchild (F2) unknown.",
         "gene": { "trait": "Wings", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
