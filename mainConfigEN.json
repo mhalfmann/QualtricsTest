@@ -1,0 +1,378 @@
+{
+  "level1": {
+    "veel_hulp": {
+      "Eye Color": {
+        "narrative": "Two parents have a child. Each parent has a homozygous genotype and has blue eyes.",
+        "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Hair Type": {
+        "narrative": "Two parents have a child. Both parents are homozygous. One has curly hair, the other straight hair.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Cat Coat": {
+        "narrative": "Two cats have an offspring. Both cats are homozygous and have a ringed coat (dominant over striped).",
+        "gene": { "trait": "Cat Coat", "dominant": { "allele": "K", "phenotype": "ringed" }, "recessive": { "allele": "k", "phenotype": "striped" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Apple Tree Flowering Time": {
+        "narrative": "Two trees produce an offspring. Both parents are homozygous and have a longer flowering time (recessive compared to shorter).",
+        "gene": { "trait": "Flowering Time", "dominant": { "allele": "B", "phenotype": "shorter" }, "recessive": { "allele": "b", "phenotype": "longer" } },
+        "family": { "p_father": { "id": "p_father", "name": "Tree 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Tree 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      }
+    },
+    "enige_hulp": {
+      "Depression": {
+        "narrative": "Two homozygous parents have a child. One parent has a higher risk of depression (recessive), the other a lower risk (dominant).",
+        "gene": { "trait": "Depression", "dominant": { "allele": "D", "phenotype": "lower risk" }, "recessive": { "allele": "d", "phenotype": "higher risk" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Huntington": {
+        "narrative": "Both parents do not have Huntington (dominant is disease H, recessive is healthy h) and are homozygous for this trait.",
+        "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "affected" }, "recessive": { "allele": "h", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Chicken Beak": {
+        "narrative": "A rooster and a hen have a chick. Both parents are homozygous, but one has a strongly curved beak (recessive) and the other a weakly curved beak (dominant).",
+        "gene": { "trait": "Beak", "dominant": { "allele": "K", "phenotype": "weakly curved" }, "recessive": { "allele": "k", "phenotype": "strongly curved" } },
+        "family": { "p_father": { "id": "p_father", "name": "Rooster (P)" }, "p_mother": { "id": "p_mother", "name": "Hen (P)" }, "f1_child": { "id": "f1_child", "name": "Chick (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Cleft Lip": {
+        "narrative": "Two parents have a child. Both parents do not have a cleft lip (dominant L) and are homozygous for this trait.",
+        "gene": { "trait": "Cleft Lip", "dominant": { "allele": "L", "phenotype": "no cleft lip" }, "recessive": { "allele": "l", "phenotype": "cleft lip" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      }
+    },
+    "alles_zelf": {
+      "Wolman Syndrome": {
+        "narrative": "One parent does not have Wolman (dominant R) and is homozygous. The other parent does have Wolman (recessive r).",
+        "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "healthy" }, "recessive": { "allele": "r", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Tail Length": {
+        "narrative": "Two chimpanzees have an offspring. Both chimpanzees have a long tail (dominant L) and are homozygous.",
+        "gene": { "trait": "Tail Length", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      },
+      "Milk Allergy": {
+        "narrative": "Two parents have a child. Neither has a milk allergy (recessive mm? Text states dominant M is allergy). Parents have no allergy and are homozygous.",
+        "gene": { "trait": "Milk Allergy", "dominant": { "allele": "M", "phenotype": "allergy" }, "recessive": { "allele": "m", "phenotype": "no allergy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What is the possible genotype of the unknown offspring?" }
+      }
+    }
+  },
+  "level2": {
+    "veel_hulp": {
+      "Eye Color": {
+        "narrative": "Two parents have a child. One parent has brown eyes and is heterozygous. The other parent has blue eyes.",
+        "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Hair Type": {
+        "narrative": "Two parents have a child. Both parents have curly hair (dominant). One is homozygous, the other heterozygous.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Apert Syndrome": {
+        "narrative": "One parent has Apert syndrome (dominant) and is heterozygous. The other parent does not have Apert syndrome.",
+        "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "affected" }, "recessive": { "allele": "a", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Fruit Flies": {
+        "narrative": "One fly has long wings (dominant) and is heterozygous. The other has short wings.",
+        "gene": { "trait": "Wings", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Fly 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Fly 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      }
+    },
+    "enige_hulp": {
+      "P.R.A. (disease)": {
+        "narrative": "Both dogs do not suffer from PRA (dominant P) and are heterozygous.",
+        "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "healthy" }, "recessive": { "allele": "p", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Dog 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Dog 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Puppy (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Flower Color": {
+        "narrative": "Both flowers have the red color (dominant R) and are heterozygous.",
+        "gene": { "trait": "Flower Color", "dominant": { "allele": "R", "phenotype": "red" }, "recessive": { "allele": "r", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Flower 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Flower 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Flowering Time": {
+        "narrative": "One apple tree has a shorter flowering time (homozygous), the other also has a shorter flowering time but is heterozygous.",
+        "gene": { "trait": "Flowering Time", "dominant": { "allele": "B", "phenotype": "short" }, "recessive": { "allele": "b", "phenotype": "long" } },
+        "family": { "p_father": { "id": "p_father", "name": "Tree 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Tree 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Tongue Rolling": {
+        "narrative": "Both parents can roll their tongue (dominant T) and are heterozygous.",
+        "gene": { "trait": "Tongue", "dominant": { "allele": "T", "phenotype": "rolling" }, "recessive": { "allele": "t", "phenotype": "non-rolling" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      }
+    },
+    "alles_zelf": {
+      "Huntington": {
+        "narrative": "One parent has Huntington (dominant H) and is heterozygous. The other parent does not have Huntington.",
+        "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "affected" }, "recessive": { "allele": "h", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Albinism": {
+        "narrative": "Each parent is not an albino (dominant A) and is heterozygous.",
+        "gene": { "trait": "Albinism", "dominant": { "allele": "A", "phenotype": "non-albino" }, "recessive": { "allele": "a", "phenotype": "albino" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      },
+      "Breast Cancer": {
+        "narrative": "One parent has hereditary breast cancer (dominant M) and is heterozygous, the other does not (homozygous).",
+        "gene": { "trait": "Breast Cancer", "dominant": { "allele": "M", "phenotype": "with cancer" }, "recessive": { "allele": "m", "phenotype": "no cancer" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "What are the possible genotypes of the unknown offspring?" }
+      }
+    }
+  },
+  "level3": {
+    "veel_hulp": {
+      "Eye Color": {
+        "narrative": "L3: One parent has brown eyes and is homozygous. Nothing is known about the other parent. The child has brown eyes and is heterozygous.",
+        "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Hair Type": {
+        "narrative": "One parent has curly hair and is heterozygous. The other is unknown. The child has curly hair and is homozygous.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Fruit Flies": {
+        "narrative": "One fruit fly has short wings (homozygous). The other is unknown. The offspring has long wings and is heterozygous.",
+        "gene": { "trait": "Wings", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Fly 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Fly 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Chicken Beak": {
+        "narrative": "One parent has a weakly curved beak and is heterozygous. The other is unknown. The chick has a strongly curved beak.",
+        "gene": { "trait": "Beak", "dominant": { "allele": "K", "phenotype": "weakly curved" }, "recessive": { "allele": "k", "phenotype": "strongly curved" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Chick (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      }
+    },
+    "enige_hulp": {
+      "Wolman Syndrome": {
+        "narrative": "One parent has Wolman (recessive r). The other is unknown. The child also has Wolman.",
+        "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "healthy" }, "recessive": { "allele": "r", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Tail Length": {
+        "narrative": "One parent is heterozygous and has a long tail. The other is unknown. The offspring has a long tail and is homozygous.",
+        "gene": { "trait": "Tail Length", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Offspring (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "P.R.A. (disease)": {
+        "narrative": "One parent does not have PRA (dominant P) and is heterozygous. The other is unknown. The puppy does have PRA.",
+        "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "healthy" }, "recessive": { "allele": "p", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Dog 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Dog 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Puppy (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Milk Allergy": {
+        "narrative": "One parent has no allergy (recessive m). The other is unknown. The child is allergic (dominant M) and heterozygous.",
+        "gene": { "trait": "Milk Allergy", "dominant": { "allele": "M", "phenotype": "allergy" }, "recessive": { "allele": "m", "phenotype": "no allergy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      }
+    },
+    "alles_zelf": {
+      "Tongue Rolling": {
+        "narrative": "One parent can roll their tongue and is heterozygous. The other is unknown. The child can also roll their tongue and is also heterozygous.",
+        "gene": { "trait": "Tongue", "dominant": { "allele": "T", "phenotype": "rolling" }, "recessive": { "allele": "t", "phenotype": "non-rolling" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Depression": {
+        "narrative": "One parent has a reduced risk (dominant D) and is homozygous. The other is unknown. The child also has a reduced risk and is heterozygous.",
+        "gene": { "trait": "Depression", "dominant": { "allele": "D", "phenotype": "lower risk" }, "recessive": { "allele": "d", "phenotype": "higher risk" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      },
+      "Apert Syndrome": {
+        "narrative": "One parent has Apert (dominant A) and is heterozygous. The other is unknown. The child also has Apert and is homozygous.",
+        "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "affected" }, "recessive": { "allele": "a", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Parent 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Parent 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" } },
+        "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "What are the possible genotypes of the unknown parent?" }
+      }
+    }
+  },
+  "level4": {
+    "veel_hulp": {
+      "Eye Color": {
+        "narrative": "Parent 1 (P) is homozygous recessive. Parent 2 (P) is heterozygous. Child (F1) unknown. Partner (F1) is homozygous recessive. Grandchild (F2) is heterozygous.",
+        "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Hair Type": {
+        "narrative": "Both parents (P) are heterozygous. Child (F1) unknown. Partner (F1) is homozygous dominant. Grandchild (F2) is heterozygous.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Albinism": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) homozygous recessive (albino). Grandchild (F2) is also albino.",
+        "gene": { "trait": "Albinism", "dominant": { "allele": "A", "phenotype": "non-albino" }, "recessive": { "allele": "a", "phenotype": "albino" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Cat Coat": {
+        "narrative": "P: Cat 1 homozygous dominant (ringed), Cat 2 homozygous recessive (striped). Child (F1) unknown. Partner (F1) recessive. Grandchild (F2) heterozygous.",
+        "gene": { "trait": "Cat Coat", "dominant": { "allele": "R", "phenotype": "ringed" }, "recessive": { "allele": "r", "phenotype": "striped" } },
+        "family": { "p_father": { "id": "p_father", "name": "Cat 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Cat 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      }
+    },
+    "enige_hulp": {
+      "Depression": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous recessive. Child (F1) unknown. Partner (F1) heterozygous. Grandchild (F2) homozygous dominant.",
+        "gene": { "trait": "Depression", "dominant": { "allele": "D", "phenotype": "lower risk" }, "recessive": { "allele": "d", "phenotype": "higher risk" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Fruit Flies": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) homozygous recessive. Grandchild (F2) heterozygous.",
+        "gene": { "trait": "Wings", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Fly 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Fly 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Flower Color": {
+        "narrative": "P: Both flowers homozygous (1 red RR, 1 blue rr). Child (F1) unknown. Partner (F1) heterozygous. Grandchild (F2) blue (rr).",
+        "gene": { "trait": "Flower Color", "dominant": { "allele": "R", "phenotype": "red" }, "recessive": { "allele": "r", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Flower 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Flower 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Tongue Rolling": {
+        "narrative": "P: Both parents homozygous recessive. Child (F1) unknown. Partner (F1) homozygous dominant. Grandchild (F2) heterozygous.",
+        "gene": { "trait": "Tongue", "dominant": { "allele": "T", "phenotype": "rolling" }, "recessive": { "allele": "t", "phenotype": "non-rolling" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      }
+    },
+    "alles_zelf": {
+      "Cleft Lip": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous recessive. Child (F1) unknown. Partner (F1) recessive. Grandchild (F2) recessive.",
+        "gene": { "trait": "Cleft Lip", "dominant": { "allele": "L", "phenotype": "healthy" }, "recessive": { "allele": "l", "phenotype": "cleft lip" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "P.R.A. (disease)": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous recessive. Child (F1) unknown. Partner (F1) homozygous dominant. Grandchild (F2) homozygous dominant.",
+        "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "healthy" }, "recessive": { "allele": "p", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Dog 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Dog 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      },
+      "Breast Cancer": {
+        "narrative": "P: Parent 1 homozygous recessive, Parent 2 homozygous dominant. Child (F1) unknown. Partner (F1) heterozygous. Grandchild (F2) homozygous recessive.",
+        "gene": { "trait": "Breast Cancer", "dominant": { "allele": "M", "phenotype": "with cancer" }, "recessive": { "allele": "m", "phenotype": "no cancer" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "What are the possible genotypes of the unknown child (F1)?" }
+      }
+    }
+  },
+  "level5": {
+    "veel_hulp": {
+      "Eye Color": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) unknown. Grandchild (F2) homozygous recessive.",
+        "gene": { "trait": "Eye Color", "dominant": { "allele": "B", "phenotype": "brown" }, "recessive": { "allele": "b", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of the unknown F1 generation?" }
+      },
+      "Hair Type 1": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 unknown. Child (F1) unknown. Partner (F1) homozygous dominant. Grandchild (F2) heterozygous.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f1_child"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Child (F1)?" }
+      },
+      "Hair Type 2": {
+        "narrative": "P: Parent 1 homozygous recessive, Parent 2 unknown. Child (F1) heterozygous. Partner (F1) unknown. Grandchild (F2) homozygous dominant.",
+        "gene": { "trait": "Hair Type", "dominant": { "allele": "H", "phenotype": "curly" }, "recessive": { "allele": "h", "phenotype": "straight" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Partner (F1)?" }
+      },
+      "Milk Allergy": {
+        "narrative": "P: Parent 1 homozygous recessive, Parent 2 unknown. Child (F1) heterozygous. Partner (F1) unknown. Grandchild (F2) homozygous dominant.",
+        "gene": { "trait": "Milk Allergy", "dominant": { "allele": "M", "phenotype": "allergy" }, "recessive": { "allele": "m", "phenotype": "no allergy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Partner (F1)?" }
+      }
+    },
+    "enige_hulp": {
+      "Tail Length": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 unknown. Child (F1) homozygous recessive. Partner (F1) homozygous dominant. Grandchild (F2) unknown.",
+        "gene": { "trait": "Tail Length", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Grandchild (F2)?" }
+      },
+      "Apple Tree Flowering Time": {
+        "narrative": "P: Parent 1 heterozygous, Parent 2 homozygous dominant. Child (F1) unknown. Partner (F1) unknown. Grandchild (F2) homozygous dominant.",
+        "gene": { "trait": "Flowering Time", "dominant": { "allele": "B", "phenotype": "short" }, "recessive": { "allele": "b", "phenotype": "long" } },
+        "family": { "p_father": { "id": "p_father", "name": "Tree 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Tree 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Child (F1) and Partner (F1)?" }
+      },
+      "Apert Syndrome": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) homozygous recessive. Grandchild (F2) unknown.",
+        "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "affected" }, "recessive": { "allele": "a", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Child (F1) and Grandchild (F2)?" }
+      },
+      "Wolman Syndrome": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 unknown. Child (F1) unknown. Partner (F1) homozygous recessive. Grandchild (F2) heterozygous.",
+        "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "healthy" }, "recessive": { "allele": "r", "phenotype": "affected" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f1_child"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Child (F1)?" }
+      }
+    },
+    "alles_zelf": {
+      "Fruit Flies": {
+        "narrative": "P: Parent 1 unknown, Parent 2 homozygous dominant. Child (F1) homozygous dominant. Partner (F1) heterozygous. Grandchild (F2) unknown.",
+        "gene": { "trait": "Wings", "dominant": { "allele": "L", "phenotype": "long" }, "recessive": { "allele": "l", "phenotype": "short" } },
+        "family": { "p_father": { "id": "p_father", "name": "Fly 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Fly 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_father", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 1 (P) and Grandchild (F2)?" }
+      },
+      "Huntington": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 unknown. Child (F1) heterozygous. Partner (F1) heterozygous. Grandchild (F2) unknown.",
+        "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "affected" }, "recessive": { "allele": "h", "phenotype": "healthy" } },
+        "family": { "p_father": { "id": "p_father", "name": "Father (P)" }, "p_mother": { "id": "p_mother", "name": "Mother (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_mother", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 2 (P) and Grandchild (F2)?" }
+      },
+      "Flower Color": {
+        "narrative": "P: Parent 1 homozygous dominant, Parent 2 heterozygous. Child (F1) unknown. Partner (F1) unknown. Grandchild (F2) homozygous recessive.",
+        "gene": { "trait": "Flower Color", "dominant": { "allele": "R", "phenotype": "red" }, "recessive": { "allele": "r", "phenotype": "blue" } },
+        "family": { "p_father": { "id": "p_father", "name": "Flower 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Flower 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Child (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Child (F1) and Partner (F1)?" }
+      },
+      "Chicken Beak": {
+        "narrative": "P: Parent 1 unknown, Parent 2 heterozygous. Child (F1) heterozygous. Partner (F1) unknown. Grandchild (F2) homozygous recessive.",
+        "gene": { "trait": "Beak", "dominant": { "allele": "K", "phenotype": "weakly curved" }, "recessive": { "allele": "k", "phenotype": "strongly curved" } },
+        "family": { "p_father": { "id": "p_father", "name": "Rooster (P)" }, "p_mother": { "id": "p_mother", "name": "Hen (P)" }, "f1_child": { "id": "f1_child", "name": "Chick (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Grandchild (F2)" } },
+        "unknowns": ["p_father", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "What are the possible genotypes of Parent 1 (P) and Partner (F1)?" }
+      }
+    }
+  }
+}

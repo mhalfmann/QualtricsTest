@@ -3,8 +3,8 @@ var totalLoops = 1;
 var debugMode = true;
 
 // --- GLOBAL CONFIGURATION & STATE ---
-var mainConfigUrl = 'https://survey.uu.nl/ControlPanel/File.php?F=F_xxtzoUDh2ePnzcY'; // Tasks
-var answerKeyUrl = 'https://survey.uu.nl/ControlPanel/File.php?F=F_dEBttljAx2i2tdb';  // Answers
+var mainConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/mainConfigEN.json'; // Tasks
+var answerKeyUrl = 'https://mhalfmann.github.io/QualtricsTest/answerKeyEN.json';  // Answers
 var allConfigs = {};
 var allAnswerKeys = {};
 var currentTaskConfig = {};
