@@ -163,7 +163,7 @@ function initializeTask() {
 
 function renderStep1() {
     var isDisabled = (currentTaskConfig.help === 'enige_hulp' || currentTaskConfig.help === 'veel_hulp');
-    var html = '<p>Bepaal op basis van de omschrijving het genotype voor elk bekend individu.</p>';
+    var html = '<p>Based on the description, determine the genotype for each known individual..</p>';
     for (var key in currentTaskConfig.family) {
         if (currentTaskConfig.family.hasOwnProperty(key) && currentTaskConfig.unknowns.indexOf(key) === -1) {
             var person = currentTaskConfig.family[key];
