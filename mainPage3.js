@@ -8,7 +8,7 @@ var currentTaskIndex = 1;
 var debugMode = false; // Set to false to hide red debug text
 
 // --- CONSTANTS ---
-var mainConfigUrl = 'https://survey.uu.nl/ControlPanel/File.php?F=F_xxtzoUDh2ePnzcY';
+var mainConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/mainConfigDE.json'; // Tasks
 var answerKeyUrl = 'https://survey.uu.nl/ControlPanel/File.php?F=F_dEBttljAx2i2tdb';
 
 // --- STATE ---
