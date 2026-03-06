@@ -9,7 +9,7 @@ var debugMode = false; // Set to false to hide red debug text
 
 // --- CONSTANTS ---
 var mainConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/mainConfigDE.json'; // Tasks
-var answerKeyUrl = 'https://survey.uu.nl/ControlPanel/File.php?F=F_dEBttljAx2i2tdb';
+var answerKeyUrl = 'https://mhalfmann.github.io/QualtricsTest/answerKeyDE.json';
 
 // --- STATE ---
 var allConfigs = {};
@@ -455,7 +455,7 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         
         Qualtrics.SurveyEngine.setEmbeddedData('TaskType_' + currentTaskIndex, finalTaskData.task);
         Qualtrics.SurveyEngine.setEmbeddedData('TaskScore_' + currentTaskIndex, finalTaskData.score);
-
+        console.log("final score: "+finalTaskData.score);
         // 2. Update CompletedTasks history
         if (currentTaskConfig.uniqueId) {
             completedTasksList.push(currentTaskConfig.uniqueId);
