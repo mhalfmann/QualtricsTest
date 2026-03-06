@@ -451,6 +451,9 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         // CONVERT KEY TO READABLE TEXT
         // "veel_hulp" -> "veel hulp", "enige_hulp" -> "enige hulp", "alles_zelf" -> "alles zelf"
         var formattedHelp = finalTaskData.help.replace(/_/g, ' ');
+        if(formattedHelp=="veel hulp")formattedHelp = "viel Hilfe";
+        if(formattedHelp=="enige hulp")formattedHelp = "etwas Hilfe";
+        if(formattedHelp=="alles zelf")formattedHelp = "alles selbst";
         Qualtrics.SurveyEngine.setEmbeddedData('TaskHelp_' + currentTaskIndex, formattedHelp);
         
         Qualtrics.SurveyEngine.setEmbeddedData('TaskType_' + currentTaskIndex, finalTaskData.task);
