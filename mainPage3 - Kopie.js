@@ -74,7 +74,7 @@ function showScreen(screenId) {
 
 function showLevelSelector() {
     var container = document.getElementById('selection-grid-container');
-    var helpLevels = { veel_hulp: "Viel Hilfe", enige_hulp: "Etwas Hilfe", alles_zelf: "Alles selbst" };
+    var helpLevels = { veel_hulp: "Veel hulp", enige_hulp: "Enige hulp", alles_zelf: "Alles zelf" };
     var html = '';
     
     // Headers
@@ -173,8 +173,8 @@ function initializeTask() {
         debugDiv.style.backgroundColor = '#ffe6e6';
     }
     
-    var baseDesc = 'Das Merkmal <em>' + currentTaskConfig.gene.trait + '</em> wird durch ein Gen bestimmt (' + currentTaskConfig.gene.dominant.allele + ' = ' + currentTaskConfig.gene.dominant.phenotype + ', ' + currentTaskConfig.gene.recessive.allele + ' = ' + currentTaskConfig.gene.recessive.phenotype + ').<br><br>';
-    document.getElementById('task-description').innerHTML = baseDesc + '<strong>Aufgabe:</strong> ' + currentTaskConfig.narrative;
+    var baseDesc = 'De ' + currentTaskConfig.gene.trait + ' wordt bepaald door een gen... (' + currentTaskConfig.gene.dominant.allele + ' = ' + currentTaskConfig.gene.dominant.phenotype + ', ' + currentTaskConfig.gene.recessive.allele + ' = ' + currentTaskConfig.gene.recessive.phenotype + ').<br><br>';
+    document.getElementById('task-description').innerHTML = baseDesc + '<strong>Opdracht:</strong> ' + currentTaskConfig.narrative;
     
     renderStep1(); renderStep2(); renderStep3(); renderStep5();
     
@@ -192,7 +192,7 @@ function initializeTask() {
 
 function renderStep1() {
     var isDisabled = (currentTaskConfig.help === 'enige_hulp' || currentTaskConfig.help === 'veel_hulp');
-    var html = '<p>Bestimme anhand der Beschreibung den Genotyp für jedes bekannte Individuum.</p>';
+    var html = '<p>Bepaal op basis van de omschrijving het genotype voor elk bekend individu.</p>';
     for (var key in currentTaskConfig.family) {
         if (currentTaskConfig.family.hasOwnProperty(key) && currentTaskConfig.unknowns.indexOf(key) === -1) {
             var person = currentTaskConfig.family[key];
@@ -228,15 +228,15 @@ function renderStep2() {
 function renderStep3() {
     var isVeelHulp = (currentTaskConfig.help === 'veel_hulp');
     var container = document.getElementById('step3-inputs');
-    var buttonHtml = '<button type="button" id="generate-tables-btn" style="margin-left: 10px;" ' + (isVeelHulp ? 'disabled style="display:none;"' : '') + '>Tabellen generieren</button>';
+    var buttonHtml = '<button type="button" id="generate-tables-btn" style="margin-left: 10px;" ' + (isVeelHulp ? 'disabled style="display:none;"' : '') + '>Genereer Tabellen</button>';
     var valCount = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step3.punnett_squares : "";
     var correctReasoning = (currentAnswerKey) ? currentAnswerKey.step3.reasoning : [];
     
-    container.innerHTML = '<p>Bestimme die Schlussfolgerungsrichtung(en) und die Anzahl der benötigten Kreuztabellen.</p>' +
-                          '<div style="margin-bottom: 10px;"><strong>Richtung:</strong>' +
-                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="deductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Deduktiv</span></label>' +
-                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="inductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Induktiv</span></label></div>' +
-                          '<div><strong>Anzahl der Kreuztabellen:</strong> <input type="number" id="punnett-squares-needed" value="'+(valCount||"")+'" min="0" max="10" style="width:50px;" ' + (isVeelHulp ? 'disabled' : '') + '> ' + buttonHtml + '</div>';
+    container.innerHTML = '<p>Bepaal de redeneerrichting(en) en hoeveel kruistabellen je nodig hebt.</p>' +
+                          '<div style="margin-bottom: 10px;"><strong>Richting:</strong>' +
+                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="deductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Deductief</span></label>' +
+                          '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="inductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Inductief</span></label></div>' +
+                          '<div><strong>Aantal kruistabellen:</strong> <input type="number" id="punnett-squares-needed" value="'+(valCount||"")+'" min="0" max="10" style="width:50px;" ' + (isVeelHulp ? 'disabled' : '') + '> ' + buttonHtml + '</div>';
     
     if (isVeelHulp && currentAnswerKey) {
         var checkboxes = container.querySelectorAll('input[name="reasoning"]');
@@ -253,12 +253,12 @@ function renderStep3() {
     var generateTables = function() {
         var numTables = currentTaskConfig.punnett_squares_needed;
         var pContainer = document.getElementById('step4-punnett-squares');
-        pContainer.innerHTML = numTables > 0 ? '<p>Fülle die Allele und die möglichen Genotypen ein.</p>' : '';
+        pContainer.innerHTML = numTables > 0 ? '<p>Vul de allelen en de mogelijke genotypen in.</p>' : '';
         var answerTables = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step4 : [];
         for (var k = 0; k < numTables; k++) {
             var tVal = (answerTables[k]) ? answerTables[k] : {};
             var getVal = function(key) { return (isVeelHulp && tVal[key]) ? tVal[key] : ""; };
-            pContainer.innerHTML += '<div class="punnett-square-wrapper"><h5>Kreuztabelle '+(k+1)+'</h5><table class="punnett-square-table"><tr><td class="corner"></td><td><input type="text" maxlength="1" data-pos="p2a1" value="'+getVal('p2a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="1" data-pos="p2a2" value="'+getVal('p2a2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a1" value="'+getVal('p1a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o1" value="'+getVal('o1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o2" value="'+getVal('o2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a2" value="'+getVal('p1a2')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o3" value="'+getVal('o3')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o4" value="'+getVal('o4')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr></table></div>';
+            pContainer.innerHTML += '<div class="punnett-square-wrapper"><h5>Kruistabel '+(k+1)+'</h5><table class="punnett-square-table"><tr><td class="corner"></td><td><input type="text" maxlength="1" data-pos="p2a1" value="'+getVal('p2a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="1" data-pos="p2a2" value="'+getVal('p2a2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a1" value="'+getVal('p1a1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o1" value="'+getVal('o1')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o2" value="'+getVal('o2')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr><tr><td><input type="text" maxlength="1" data-pos="p1a2" value="'+getVal('p1a2')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o3" value="'+getVal('o3')+'" '+(isVeelHulp?'disabled':'')+'/></td><td><input type="text" maxlength="2" data-pos="o4" value="'+getVal('o4')+'" '+(isVeelHulp?'disabled':'')+'/></td></tr></table></div>';
         }
     };
 
@@ -438,7 +438,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         allAnswerKeys = values[1];
         showLevelSelector();
     }).catch(function(e) { 
-        document.getElementById('task-wrapper').innerHTML = 'Fehler beim Laden der Konfiguration: ' + e.message; 
+        document.getElementById('task-wrapper').innerHTML = 'Error loading configuration: ' + e.message; 
     });
 });
 
