@@ -4,7 +4,7 @@
 
 // --- USER CONFIGURATION ---
 // IMPORTANT: Change this number for each Question in Qualtrics (1, 2, ... 12)
-var currentTaskIndex = 1; 
+var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex')); 
 var debugMode = false; // Set to false to hide red debug text
 
 // --- CONSTANTS ---
@@ -419,7 +419,12 @@ function completeTask() {
 Qualtrics.SurveyEngine.addOnReady(function() {
     var that = this;
     that.hideNextButton(); // Standard Qualtrics API to hide
-    
+    console.log("Adaptivity: "+Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity'));
+    console.log("Current Task Index: "+currentTaskIndex);
+    if(currentTaskIndex>1){
+        console.log("Correct Steps: "+Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1)));
+        console.log("Effort: "+Qualtrics.SurveyEngine.getEmbeddedData('Effort'+(currentTaskIndex-1)));
+    }
     // Initialize History from Embedded Data
     var historyStr = Qualtrics.SurveyEngine.getEmbeddedData('CompletedTasks');
     if (historyStr && historyStr.trim() !== "") {
@@ -466,4 +471,6 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
             Qualtrics.SurveyEngine.setEmbeddedData('CompletedTasks', newHistory);
         }
     }
+    currentTaskIndex++;
+    Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
 });
