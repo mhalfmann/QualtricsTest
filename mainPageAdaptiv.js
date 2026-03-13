@@ -469,7 +469,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
                 adaptivity = 2;
             }
             if(effort >= 4 && effort <= 6){
-                adaptivity = +1;
+                adaptivity = 1;
             }
             if(effort >= 7 && effort <= 9){
                 adaptivity = 0;
@@ -497,10 +497,17 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         allConfigs = values[0];
         allAnswerKeys = values[1];
         if(Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity')=="none"){            
-            showLevelSelector(selectedColumn);
+            showLevelSelector(0);
         }
         if(Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity')=="some"){
-            showLevelSelector(selectedColumn);
+            if(currentTaskIndex>1){                
+                if(adaptivity==-2)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine deutlich leichtere Aufgabe auszuwählen.";
+                if(adaptivity==-1)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine etwas leichtere Aufgabe auszuwählen.";
+                if(adaptivity==0)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine ähnliche Aufgabe auszuwählen.";
+                if(adaptivity==1)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine etwas schwierigere Aufgabe auszuwählen.";
+                if(adaptivity==2)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine deutlich schwierigere Aufgabe auszuwählen.";
+            }
+            showLevelSelector(0);
         }
         if(Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity')=="all"){
             showLevelSelector(selectedColumn);
