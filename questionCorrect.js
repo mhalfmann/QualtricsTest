@@ -17,8 +17,17 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 
 });
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+	var currentTaskIndex = 1; 
     var value = this.getSelectedChoices(); // returns array, e.g. ["3"]
-    var selectedValue = parseInt(value[0]) + 3; // the selected choice ID
-	console.log(selectedValue); 
-	Qualtrics.SurveyEngine.setEmbeddedData('NumQuestions', selectedValue);
+	var answerCount = this.getChoices().length;
+	var offset = 0;
+	console.log('Answer Count: '+answerCount);
+	if(answerCount == 6) offset = -1;
+	if(answerCount == 4) offset = 1;
+	if(answerCount == 2) offset = 3;
+	
+    var selectedValue = parseInt(value[0]) + offset; // the selected choice ID
+	var embeddedDataName = 'CorrectSteps'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+	console.log('Setting '+embeddedDataName+' to '+selectedValue); 
+	Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
 });

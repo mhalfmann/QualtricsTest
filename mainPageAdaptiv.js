@@ -541,6 +541,6 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
             Qualtrics.SurveyEngine.setEmbeddedData('CompletedTasks', newHistory);
         }
     }
-    currentTaskIndex++;
-    Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
+    // currentTaskIndex++;
+    // Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
 });
