@@ -200,7 +200,7 @@ function initializeTask() {
 
 function renderStep1() {
     var isDisabled = (currentTaskConfig.help === 'enige_hulp' || currentTaskConfig.help === 'veel_hulp');
-    var html = '<p>Bestimme anhand der Beschreibung den Genotyp für jedes bekannte Individuum.</p>';
+    var html = '<p>Bestimmen Sie anhand der Beschreibung den Genotyp für jedes bekannte Individuum.</p>';
     for (var key in currentTaskConfig.family) {
         if (currentTaskConfig.family.hasOwnProperty(key) && currentTaskConfig.unknowns.indexOf(key) === -1) {
             var person = currentTaskConfig.family[key];
@@ -240,7 +240,7 @@ function renderStep3() {
     var valCount = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step3.punnett_squares : "";
     var correctReasoning = (currentAnswerKey) ? currentAnswerKey.step3.reasoning : [];
     
-    container.innerHTML = '<p>Bestimme die Schlussfolgerungsrichtung(en) und die Anzahl der benötigten Kreuztabellen.</p>' +
+    container.innerHTML = '<p>Bestimmen Sie die Schlussfolgerungsrichtung(en) und die Anzahl der benötigten Kreuztabellen.</p>' +
                           '<div style="margin-bottom: 10px;"><strong>Richtung:</strong>' +
                           '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="deductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Deduktiv</span></label>' +
                           '<label class="choice-label ' + (isVeelHulp ? 'disabled' : '') + '"><input type="checkbox" name="reasoning" value="inductief" ' + (isVeelHulp ? 'disabled' : '') + '><span>Induktiv</span></label></div>' +
@@ -261,7 +261,7 @@ function renderStep3() {
     var generateTables = function() {
         var numTables = currentTaskConfig.punnett_squares_needed;
         var pContainer = document.getElementById('step4-punnett-squares');
-        pContainer.innerHTML = numTables > 0 ? '<p>Fülle die Allele und die möglichen Genotypen ein.</p>' : '';
+        pContainer.innerHTML = numTables > 0 ? '<p>Füllen Sie die Allele und die möglichen Genotypen ein.</p>' : '';
         var answerTables = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step4 : [];
         for (var k = 0; k < numTables; k++) {
             var tVal = (answerTables[k]) ? answerTables[k] : {};
@@ -501,11 +501,11 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         }
         if(Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity')=="some"){
             if(currentTaskIndex>1){                
-                if(adaptivity==-2)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine deutlich leichtere Aufgabe auszuwählen.";
-                if(adaptivity==-1)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine etwas leichtere Aufgabe auszuwählen.";
-                if(adaptivity==0)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine ähnliche Aufgabe auszuwählen.";
-                if(adaptivity==1)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine etwas schwierigere Aufgabe auszuwählen.";
-                if(adaptivity==2)document.getElementById('suggestion').innerText = "Wir empfehlen Dir, eine deutlich schwierigere Aufgabe auszuwählen.";
+                if(adaptivity==-2)document.getElementById('suggestion').innerText = "Wir empfehlen Ihnen, eine deutlich leichtere Aufgabe auszuwählen.";
+                if(adaptivity==-1)document.getElementById('suggestion').innerText = "Wir empfehlen Ihnen, eine etwas leichtere Aufgabe auszuwählen.";
+                if(adaptivity==0)document.getElementById('suggestion').innerText = "Wir empfehlen Ihnen, eine ähnliche Aufgabe auszuwählen.";
+                if(adaptivity==1)document.getElementById('suggestion').innerText = "Wir empfehlen Ihnen, eine etwas schwierigere Aufgabe auszuwählen.";
+                if(adaptivity==2)document.getElementById('suggestion').innerText = "Wir empfehlen Ihnen, eine deutlich schwierigere Aufgabe auszuwählen.";
             }
             showLevelSelector(0);
         }
