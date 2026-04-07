@@ -321,16 +321,21 @@ function calculateScore(data, key) {
     
     // Step 1: Check known genotypes
     var s1Correct = true;
+    Qualtrics.SurveyEngine.setEmbeddedData('Step1correct', 'false');
     if (!key.step1) s1Correct = false;
     else {
         for(var k in key.step1) { 
             if((data.step1[k] || "").trim() !== key.step1[k]) s1Correct = false; 
         }
     }
-    if(s1Correct) score++;
+    if(s1Correct) {
+        score++;
+        Qualtrics.SurveyEngine.setEmbeddedData('Step1correct', 'true');
+    }
 
     // Step 2: Check tree genotypes (knowns only)
     var s2Correct = true;
+    Qualtrics.SurveyEngine.setEmbeddedData('Step2correct', 'false');
     if (!key.step2) s2Correct = false;
     else {
         // Only check fields that are NOT unknown in the task config, 
@@ -348,15 +353,24 @@ function calculateScore(data, key) {
              }
         }
     }
-    if(s2Correct) score++;
+    if(s2Correct) {
+        score++;
+        Qualtrics.SurveyEngine.setEmbeddedData('Step2correct', 'true');
+    }
 
     // Step 3
+    
+    Qualtrics.SurveyEngine.setEmbeddedData('Step3correct', 'false');
     var rUser = data.step3_reasoning.slice().sort().join(",");
     var rKey = key.step3.reasoning.slice().sort().join(",");
-    if (rUser === rKey && parseInt(data.step3_punnett_squares_requested) === key.step3.punnett_squares) score++;
+    if (rUser === rKey && parseInt(data.step3_punnett_squares_requested) === key.step3.punnett_squares) {
+        score++;
+        Qualtrics.SurveyEngine.setEmbeddedData('Step3correct', 'true');
+    }
 
     // Step 4
     var s4Correct = true;
+    Qualtrics.SurveyEngine.setEmbeddedData('Step4correct', 'false');
     var userTableKeys = Object.keys(data.step4_tables);
     // Basic check: did they fill at least one table if required?
     if (key.step4.length > 0 && userTableKeys.length === 0) {
@@ -374,10 +388,14 @@ function calculateScore(data, key) {
             }
         }
     }
-    if(s4Correct) score++;
+    if(s4Correct) {
+        score++;
+        Qualtrics.SurveyEngine.setEmbeddedData('Step4correct', 'true');
+    }
 
     // Step 5
     var s5Correct = true;
+    Qualtrics.SurveyEngine.setEmbeddedData('Step5correct', 'false');
     var keyAnswers = key.step5.slice().sort();
     var userAnswers = [];
     for(var p in data.step5_final_answers) { userAnswers = userAnswers.concat(data.step5_final_answers[p]); }
@@ -391,8 +409,11 @@ function calculateScore(data, key) {
         }
     }
     
-    if(s5Correct) score++;
-    
+    if(s5Correct) {
+        score++;
+        Qualtrics.SurveyEngine.setEmbeddedData('Step5correct', 'true');
+    }
+    Qualtrics.SurveyEngine.setEmbeddedData('CurrentScore', score);
     return score;
 }
 
@@ -434,6 +455,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1)));
     that.hideNextButton(); // Standard Qualtrics API to hide
     console.log("Adaptivity: "+Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity'));
+    console.log("Feedback: "+Qualtrics.SurveyEngine.getEmbeddedData('Feedback'));
     console.log("Current Task Index: "+currentTaskIndex);
     if(currentTaskIndex>1){
         console.log("Current Column: "+currentColumn);
