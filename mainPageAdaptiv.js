@@ -348,9 +348,16 @@ function calculateScore(data, key) {
              // UNLESS it's level 1/2 where unknowns are filled in step 5.
              // Actually, step 2 inputs are disabled for unknowns.
              // So we just check if user input matches key for knowns.
-             if (currentTaskConfig.unknowns.indexOf(k) === -1) {
-                 if((data.step2_stamboom[k] || "").trim() !== key.step2[k]) s2Correct = false;
-             }
+             //if data.step2_stamboom[k] is undefined, consolelog ("data.step2_stamboom["+k+"] is undefined");
+             if (data.step2_stamboom[k] !== undefined) {
+                // console.log("data.step2_stamboom["+k+"] is not undefined");
+             
+                if (currentTaskConfig.unknowns.indexOf(k) === -1) {
+                    if((data.step2_stamboom[k] || "").trim() !== key.step2[k]) s2Correct = false;
+                }
+                // console.log("checking Step 2: "+k+" "+data.step2_stamboom[k] + " " + key.step2[k]);
+                // console.log("s2Correct: "+s2Correct);
+            }
         }
     }
     if(s2Correct) {
@@ -425,7 +432,7 @@ function collectTaskData() {
         step1:{}, step2_stamboom:{}, step4_tables:{}, step5_final_answers:{} 
     };
     var s1=document.getElementById('step1-inputs').getElementsByTagName('input');for(var i=0;i<s1.length;i++){userData.step1[s1[i].dataset.personId]=s1[i].value;}
-    var s2=document.getElementById('step2-tree').getElementsByTagName('input');for(var j=0;j<s2.length;j++){userData.step2_stamboom[s2[j].dataset.personId]=s2[j].value;}
+    var s2=document.getElementById('step2-tree').getElementsByTagName('input');for(var j=0;j<s2.length;j++){/*console.log("s2["+j+"].value: "+s2[j].value + " s2["+j+"].dataset.personId: " + s2[j].dataset.personId);*/userData.step2_stamboom[s2[j].dataset.personId]=s2[j].value;}
     var r=[];var re=document.getElementsByName('reasoning');for(var k=0;k<re.length;k++){if(re[k].checked){r.push(re[k].value);}}userData.step3_reasoning=r;
     var pi=document.getElementById('punnett-squares-needed');if(pi){userData.step3_punnett_squares_requested=pi.value;}
     var ts=document.querySelectorAll('.punnett-square-table');for(var l=0;l<ts.length;l++){var td={};var ti=ts[l].getElementsByTagName('input');for(var m=0;m<ti.length;m++){td[ti[m].dataset.pos]=ti[m].value;}userData.step4_tables['table_'+(l+1)]=td;}
