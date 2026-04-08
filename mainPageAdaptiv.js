@@ -326,6 +326,8 @@ function calculateScore(data, key) {
     else {
         for(var k in key.step1) { 
             if((data.step1[k] || "").trim() !== key.step1[k]) s1Correct = false; 
+            console.log("checking Step 1: "+k+" "+data.step1[k] + " " + key.step1[k]);
+            console.log("s1Correct: "+s1Correct);
         }
     }
     if(s1Correct) {
@@ -431,7 +433,8 @@ function collectTaskData() {
         task: currentTaskConfig.task,
         step1:{}, step2_stamboom:{}, step4_tables:{}, step5_final_answers:{} 
     };
-    var s1=document.getElementById('step1-inputs').getElementsByTagName('input');for(var i=0;i<s1.length;i++){userData.step1[s1[i].dataset.personId]=s1[i].value;}
+    console.log("dataset: "+this.dataset);
+    var s1=document.getElementById('step1-inputs').getElementsByTagName('input');for(var i=0;i<s1.length;i++){console.log("s1["+i+"].value: "+s1[i].value + " s1["+i+"].dataset.personId: " + s1[i].dataset.personId);userData.step1[s1[i].dataset.personId]=s1[i].value;}
     var s2=document.getElementById('step2-tree').getElementsByTagName('input');for(var j=0;j<s2.length;j++){/*console.log("s2["+j+"].value: "+s2[j].value + " s2["+j+"].dataset.personId: " + s2[j].dataset.personId);*/userData.step2_stamboom[s2[j].dataset.personId]=s2[j].value;}
     var r=[];var re=document.getElementsByName('reasoning');for(var k=0;k<re.length;k++){if(re[k].checked){r.push(re[k].value);}}userData.step3_reasoning=r;
     var pi=document.getElementById('punnett-squares-needed');if(pi){userData.step3_punnett_squares_requested=pi.value;}
