@@ -1,0 +1,23 @@
+<div id="hilfsniveau">Hilfsniveau<!--Sie haben soeben eine Aufgabe auf Niveau&nbsp;${e://Field/TaskDifficulty_1} mit Hilfsniveau ${e://Field/TaskHelp_1} abgeschlossen.-->
+</div>
+<br>
+<div id="richtigeSchritte">Richtige Schritte<!--Sie haben angegeben, dass Sie&nbsp;<span style="display: none;" id="cke_bm_1877S">&nbsp;</span> ${e://Field/CorrectSteps1}<span style="display: none;" id="cke_bm_1877E">&nbsp;</span>&nbsp;von 5 Schritten richtig hatten.--><br>
+</div>
+<br>
+<div id="aufwand">Aufwand<!--Ihren Aufwand haben Sie mit&nbsp; ${e://Field/Effort1}&nbsp;auf einer Skala von 1 bis 9 bewertet.--><br>
+</div>
+
+<script>
+Qualtrics.SurveyEngine.addOnReady(function () {
+    var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex')); 
+    var difficulty = Qualtrics.SurveyEngine.getEmbeddedData('TaskDifficulty_'+(currentTaskIndex-1));
+    var help = Qualtrics.SurveyEngine.getEmbeddedData('TaskHelp_'+(currentTaskIndex-1));
+    var correctSteps = Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1));
+    var effort = Qualtrics.SurveyEngine.getEmbeddedData('Effort'+(currentTaskIndex-1));
+
+    console.log("### Current Task Index: "+currentTaskIndex);
+	document.getElementById('hilfsniveau').innerText = "Sie haben soeben eine Aufgabe auf Niveau " + difficulty + " mit Hilfsniveau " + help + " abgeschlossen.";
+    document.getElementById('richtigeSchritte').innerText = "Sie haben angegeben, dass Sie " + correctSteps + " von 5 Schritten richtig hatten.";
+    document.getElementById('aufwand').innerText = "Ihren Aufwand haben Sie mit " + effort + " auf einer Skala von 1 bis 9 bewertet.";
+});
+</script>
