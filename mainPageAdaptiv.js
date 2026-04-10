@@ -315,6 +315,19 @@ function renderStep5() {
 
 // --- DATA GATHERING & SUBMISSION ---
 
+/** Level 1–4: step5 is string[]. Level 5: step5 is { f1_child: string[], f1_partner: string[], ... }. */
+function normalizeStep5KeyAnswers(step5) {
+    if (!step5) return [];
+    if (Array.isArray(step5)) return step5.slice().sort();
+    var out = [];
+    for (var p in step5) {
+        if (Object.prototype.hasOwnProperty.call(step5, p) && Array.isArray(step5[p])) {
+            out = out.concat(step5[p]);
+        }
+    }
+    return out.sort();
+}
+
 function calculateScore(data, key) {
     if (!key) return 0;
     var score = 0;
@@ -405,7 +418,7 @@ function calculateScore(data, key) {
     // Step 5
     var s5Correct = true;
     Qualtrics.SurveyEngine.setEmbeddedData('Step5correct', 'false');
-    var keyAnswers = key.step5.slice().sort();
+    var keyAnswers = normalizeStep5KeyAnswers(key.step5);
     var userAnswers = [];
     for(var p in data.step5_final_answers) { userAnswers = userAnswers.concat(data.step5_final_answers[p]); }
     userAnswers.sort();
