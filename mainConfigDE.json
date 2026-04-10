@@ -1,0 +1,2922 @@
+{
+  "level1": {
+    "veel_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Jedes Elternteil hat einen homozygoten Genotyp und blaue Augen.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide Elternteile sind homozygot. Eines hat lockiges Haar, das andere glattes Haar.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Katzenfell": {
+        "narrative": "Zwei Katzen haben einen Nachkommen. Beide Katzen sind homozygot und haben Ringe im Fell.",
+        "gene": {
+          "trait": "Katzenfell",
+          "dominant": {
+            "allele": "K",
+            "phenotype": "Ringe"
+          },
+          "recessive": {
+            "allele": "k",
+            "phenotype": "Streifen"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Apfelbaum": {
+        "narrative": "Zwei Bäume erzeugen einen Nachkommen. Beide sind homozygot und haben eine längere Blütezeit.",
+        "gene": {
+          "trait": "Blütezeit",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "kürzer"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "länger"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Baum 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Baum 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Depression": {
+        "narrative": "Zwei homozygote Eltern bekommen ein Kind. Ein Elternteil hat ein höheres Risiko für Depression, das andere ein geringeres.",
+        "gene": {
+          "trait": "Depression",
+          "dominant": {
+            "allele": "D",
+            "phenotype": "geringeres Risiko"
+          },
+          "recessive": {
+            "allele": "d",
+            "phenotype": "höheres Risiko"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      }
+    },
+    "enige_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Ein Elternteil hat braune Augen, der andere blaue. Beide sind homozygot.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide Elternteile sind homozygot und haben lockiges Haar.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Huntington": {
+        "narrative": "Zwei Eltern haben beide keine Huntington-Krankheit und sind homozygot für dieses Merkmal.",
+        "gene": {
+          "trait": "Huntington",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "erkrankt"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "gesund"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Huhnschnabel": {
+        "narrative": "Ein Hahn und eine Henne bekommen ein Küken. Beide Eltern sind homozygot, aber einer hat einen stark gekrümmten Schnabel, der andere einen schwach gekrümmten.",
+        "gene": {
+          "trait": "Schnabel",
+          "dominant": {
+            "allele": "K",
+            "phenotype": "schwach gekrümmt"
+          },
+          "recessive": {
+            "allele": "k",
+            "phenotype": "stark gekrümmt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Hahn (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Henne (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Küken (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Schisis": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide haben keine Hasenscharte und sind homozygot für dieses Merkmal.",
+        "gene": {
+          "trait": "LKG-Spalte",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "keine Hasenscharte"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "Hasenscharte"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      }
+    },
+    "alles_zelf": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide haben braune Augen und sind homozygot für dieses Merkmal.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind, haben glattes Haar und sind homozygot für dieses Merkmal.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Wolman-Syndrom": {
+        "narrative": "Ein Elternteil hat kein Wolman-Syndrom und ist homozygot. Der andere Elternteil ist an Wolman erkrankt.",
+        "gene": {
+          "trait": "Wolman",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "erkrankt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Schwanzlänge": {
+        "narrative": "Zwei Schimpansen bekommen einen Nachkommen. Beide haben einen langen Schwanz und sind homozygot.",
+        "gene": {
+          "trait": "Schwanzlänge",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "lang"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kurz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Schimpanse 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Schimpanse 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Milchallergie": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Keiner hat eine Milchallergie. Beide sind homozygot und nicht allergisch.",
+        "gene": {
+          "trait": "Milchallergie",
+          "dominant": {
+            "allele": "M",
+            "phenotype": "Allergie"
+          },
+          "recessive": {
+            "allele": "m",
+            "phenotype": "keine Allergie"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+        }
+      }
+    }
+  },
+  "level2": {
+    "veel_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Ein Elternteil hat braune Augen und ist heterozygot, der andere blaue Augen.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide haben lockiges Haar. Eines ist homozygot, das andere heterozygot.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Apert-Syndrom": {
+        "narrative": "Ein Elternteil hat das Apert-Syndrom und ist heterozygot. Der andere hat kein Apert-Syndrom.",
+        "gene": {
+          "trait": "Apert",
+          "dominant": {
+            "allele": "A",
+            "phenotype": "erkrankt"
+          },
+          "recessive": {
+            "allele": "a",
+            "phenotype": "gesund"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Fruchtfliegen": {
+        "narrative": "Eine Fliege hat lange Flügel und ist heterozygot. Die andere hat kurze Flügel.",
+        "gene": {
+          "trait": "Flügel",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "lang"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kurz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Fliege 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Fliege 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "PRA-Krankheit": {
+        "narrative": "Beide Hunde leiden nicht unter PRA und sind heterozygot.",
+        "gene": {
+          "trait": "PRA",
+          "dominant": {
+            "allele": "P",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "p",
+            "phenotype": "erkrankt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Hund 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Hund 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Welpe (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      }
+    },
+    "enige_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat braune Augen und ist homozygot, die Mutter blaue Augen.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat lockiges Haar und ist heterozygot. Die Mutter hat glattes Haar.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Blütenfarbe": {
+        "narrative": "Beide Blumen sind rot und heterozygot.",
+        "gene": {
+          "trait": "Blütenfarbe",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "rot"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Blume 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Blume 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Apfelbaum": {
+        "narrative": "Ein Apfelbaum hat eine kürzere Blütezeit, der andere ebenfalls eine kürzere Blütezeit, ist aber heterozygot.",
+        "gene": {
+          "trait": "Blütezeit",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "kurz"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "lang"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Baum 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Baum 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Zungenrollen": {
+        "narrative": "Beide Eltern können die Zunge einrollen und sind heterozygot.",
+        "gene": {
+          "trait": "Zunge",
+          "dominant": {
+            "allele": "T",
+            "phenotype": "kann einrollen"
+          },
+          "recessive": {
+            "allele": "t",
+            "phenotype": "kann nicht einrollen"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      }
+    },
+    "alles_zelf": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat braune Augen und ist homozygot, die Mutter hat ebenfalls braune Augen, ist aber heterozygot.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat lockiges Haar und ist homozygot, die Mutter glattes Haar.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Huntington": {
+        "narrative": "Ein Elternteil hat Huntington und ist heterozygot. Der andere nicht.",
+        "gene": {
+          "trait": "Huntington",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "erkrankt"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "gesund"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Albinismus": {
+        "narrative": "Kein Elternteil ist Albino; beide sind heterozygot.",
+        "gene": {
+          "trait": "Albinismus",
+          "dominant": {
+            "allele": "A",
+            "phenotype": "kein Albino"
+          },
+          "recessive": {
+            "allele": "a",
+            "phenotype": "Albino"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      },
+      "Mammakarzinom": {
+        "narrative": "Ein Elternteil hat erblichen Brustkrebs und ist heterozygot, der andere nicht.",
+        "gene": {
+          "trait": "Mammakarzinom",
+          "dominant": {
+            "allele": "M",
+            "phenotype": "mit erblicher Belastung"
+          },
+          "recessive": {
+            "allele": "m",
+            "phenotype": "ohne erbliche Belastung"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 1,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+        }
+      }
+    }
+  },
+  "level3": {
+    "veel_hulp": {
+      "Augenfarbe": {
+        "narrative": "Ein Elternteil hat braune Augen und ist homozygot. Über das andere Elternteil ist nichts bekannt. Das Kind hat braune Augen und ist heterozygot.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Ein Elternteil hat lockiges Haar und ist heterozygot. Das andere ist unbekannt. Das Kind hat lockiges Haar und ist homozygot.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Fruchtfliegen": {
+        "narrative": "Eine Fruchtfliege hat kurze Flügel. Die andere ist unbekannt. Der Nachkomme hat lange Flügel und ist heterozygot.",
+        "gene": {
+          "trait": "Flügel",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "lang"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kurz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Fliege 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Fliege 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Huhnschnabel": {
+        "narrative": "Ein Elternteil hat einen schwach gekrümmten Schnabel und ist heterozygot. Das andere ist unbekannt. Das Küken hat einen stark gekrümmten Schnabel.",
+        "gene": {
+          "trait": "Schnabel",
+          "dominant": {
+            "allele": "K",
+            "phenotype": "schwach gekrümmt"
+          },
+          "recessive": {
+            "allele": "k",
+            "phenotype": "stark gekrümmt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Küken (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Wolman-Syndrom": {
+        "narrative": "Ein Elternteil hat Wolman. Das andere ist unbekannt. Das Kind hat ebenfalls Wolman.",
+        "gene": {
+          "trait": "Wolman",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "erkrankt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      }
+    },
+    "enige_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat blaue Augen. Über die Mutter ist nichts bekannt. Zusammen haben sie ein Kind mit blauen Augen.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Der Vater hat lockiges Haar und ist homozygot. Über die Mutter ist nichts bekannt. Ihr gemeinsames Kind hat ebenfalls lockiges Haar und ist heterozygot.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Schwanzlänge": {
+        "narrative": "Ein Elternteil ist heterozygot und hat einen langen Schwanz. Das andere ist unbekannt. Der Nachkomme hat einen langen Schwanz und ist homozygot.",
+        "gene": {
+          "trait": "Schwanzlänge",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "lang"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kurz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Schimpanse 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Schimpanse 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Nachkomme (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "PRA-Krankheit": {
+        "narrative": "Ein Elternteil hat keine PRA und ist heterozygot. Das andere ist unbekannt. Der Welpe hat PRA.",
+        "gene": {
+          "trait": "PRA",
+          "dominant": {
+            "allele": "P",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "p",
+            "phenotype": "erkrankt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Hund 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Hund 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Welpe (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Milchallergie": {
+        "narrative": "Ein Elternteil hat keine Allergie. Das andere ist unbekannt. Das Kind ist allergisch und heterozygot.",
+        "gene": {
+          "trait": "Milchallergie",
+          "dominant": {
+            "allele": "M",
+            "phenotype": "Allergie"
+          },
+          "recessive": {
+            "allele": "m",
+            "phenotype": "keine Allergie"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      }
+    },
+    "alles_zelf": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat blaue Augen und ist homozygot. Über die Mutter ist nichts bekannt. Sie haben ein Kind mit blauen Augen.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Der Vater hat lockiges Haar und ist homozygot. Über die Mutter ist nichts bekannt. Ihr gemeinsames Kind hat ebenfalls lockiges Haar und ist heterozygot.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Zungenrollen": {
+        "narrative": "Ein Elternteil kann die Zunge einrollen und ist heterozygot. Das andere ist unbekannt. Das Kind kann es auch und ist heterozygot.",
+        "gene": {
+          "trait": "Zunge",
+          "dominant": {
+            "allele": "T",
+            "phenotype": "kann einrollen"
+          },
+          "recessive": {
+            "allele": "t",
+            "phenotype": "kann nicht einrollen"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Depression": {
+        "narrative": "Ein Elternteil hat ein geringeres Risiko und ist homozygot. Das andere ist unbekannt. Das Kind hat ebenfalls geringeres Risiko und ist heterozygot.",
+        "gene": {
+          "trait": "Depression",
+          "dominant": {
+            "allele": "D",
+            "phenotype": "geringeres Risiko"
+          },
+          "recessive": {
+            "allele": "d",
+            "phenotype": "höheres Risiko"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      },
+      "Apert-Syndrom": {
+        "narrative": "Ein Elternteil hat Apert und ist heterozygot. Das andere ist unbekannt. Das Kind hat ebenfalls Apert und ist homozygot.",
+        "gene": {
+          "trait": "Apert",
+          "dominant": {
+            "allele": "A",
+            "phenotype": "erkrankt"
+          },
+          "recessive": {
+            "allele": "a",
+            "phenotype": "gesund"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Elternteil 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Elternteil 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          }
+        },
+        "unknowns": [
+          "p_mother"
+        ],
+        "punnett_squares_needed": 3,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+        }
+      }
+    }
+  },
+  "level4": {
+    "veel_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat blaue Augen und ist homozygot. Die Mutter hat braune Augen und ist heterozygot. Über ihr Kind ist nichts bekannt. Mit einem Partner mit blauen Augen bekommt dieses Kind wieder ein Kind (Enkelkind), das heterozygot für braune Augen ist.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide sind heterozygot für lockiges Haar. Über das Kind ist nichts bekannt. Mit einem Partner, der homozygot lockiges Haar hat, bekommt es ein Enkelkind, das ebenfalls lockiges Haar hat und heterozygot ist.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Albinismus": {
+        "narrative": "Zwei Eltern ohne Albinismus, der Vater homozygot, die Mutter heterozygot, bekommen ein Kind, über das sonst nichts bekannt ist. Mit einem Partner mit Albinismus bekommt dieses Kind ein Enkelkind mit Albinismus.",
+        "gene": {
+          "trait": "Albinismus",
+          "dominant": {
+            "allele": "A",
+            "phenotype": "kein Albino"
+          },
+          "recessive": {
+            "allele": "a",
+            "phenotype": "Albino"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Katzenfell": {
+        "narrative": "Zwei Katzen haben einen Nachkommen. Der Vater hat Ringe im Fell, die Mutter Streifen, beide sind dafür homozygot. Über den Nachkommen ist nichts bekannt. Mit einem Partner mit Streifen bekommt der unbekannte Nachkomme ein Enkelkind, das heterozygot für Ringe ist.",
+        "gene": {
+          "trait": "Katzenfell",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "Ringe"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "Streifen"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Katze 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Katze 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Depression": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat ein geringeres Depressionsrisiko und ist heterozygot. Die Mutter ein höheres Risiko und ist homozygot. Über das Kind ist nichts bekannt. Mit einem Partner, der heterozygot ist und geringeres Risiko hat, bekommt es ein Enkelkind, das homozygot für geringeres Risiko ist.",
+        "gene": {
+          "trait": "Depression",
+          "dominant": {
+            "allele": "D",
+            "phenotype": "geringeres Risiko"
+          },
+          "recessive": {
+            "allele": "d",
+            "phenotype": "höheres Risiko"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      }
+    },
+    "enige_hulp": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Beide haben braune Augen; der Vater ist homozygot, die Mutter heterozygot. Über das Kind ist nichts bekannt. Mit einem Partner mit blauen Augen bekommt es ein Enkelkind, das heterozygot ist und braune Augen hat.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei heterozygot Eltern mit lockigem Haar bekommen ein Kind. Über dieses Kind ist nichts bekannt. Mit einem ebenfalls heterozygoten Partner mit lockigem Haar bekommt es ein Enkelkind mit glattem Haar, homozygot dafür.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Fruchtfliegen": {
+        "narrative": "Zwei Fliegen mit langen Flügeln bekommen einen Nachkommen. Der Vater ist homozygot, die Mutter heterozygot. Über den Nachkommen ist nichts bekannt. Dieser Nachkomme hat mit einem Partner mit kurzen Flügeln ein Kind, das heterozygot für das Merkmal ist.",
+        "gene": {
+          "trait": "Flügel",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "lang"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kurz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Fliege 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Fliege 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Blütenfarbe": {
+        "narrative": "Zwei homozygote Blumen bekommen einen Nachkommen. Die Vaterblume ist rot, die Mutterblume blau. Vom Nachkommen ist nichts bekannt. Mit einem heterozygoten Partner bekommt der unbekannte Nachkomme ein Enkelkind mit blauer Blütenfarbe.",
+        "gene": {
+          "trait": "Blütenfarbe",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "rot"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Blume 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Blume 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Zungenrollen": {
+        "narrative": "Zwei Eltern können die Zunge nicht einrollen und sind homozygot. Über das Kind ist nichts bekannt. Mit einem Partner, der einrollen kann und homozygot ist, bekommt es ein Enkelkind, das einrollen kann und heterozygot ist.",
+        "gene": {
+          "trait": "Zunge",
+          "dominant": {
+            "allele": "T",
+            "phenotype": "kann einrollen"
+          },
+          "recessive": {
+            "allele": "t",
+            "phenotype": "kann nicht einrollen"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      }
+    },
+    "alles_zelf": {
+      "Augenfarbe": {
+        "narrative": "Zwei Eltern mit braunen Augen bekommen ein Kind. Der Vater ist homozygot für braune Augen, die Mutter heterozygot. Über das Kind ist nichts bekannt. Mit einem Partner mit blauen Augen bekommt es ein Enkelkind, das heterozygot für braune Augen ist.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Zwei heterozygot Eltern mit lockigem Haar bekommen ein Kind. Über dieses Kind ist nichts bekannt. Mit einem ebenfalls heterozygoten Partner mit lockigem Haar bekommt es ein Enkelkind mit glattem Haar, homozygot dafür.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Schisis": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater ist heterozygot und hat keine Lippen-Kiefer-Gaumen-Spalte, die Mutter hat eine Spalte und ist homozygot dafür. Sie bekommen ein Kind, über das nichts bekannt ist. Mit einem Partner mit Spalte bekommt es ein Enkelkind mit Spalte.",
+        "gene": {
+          "trait": "LKG-Spalte",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "Lippen-Kiefer-Gaumen-Spalte"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "PRA-Krankheit": {
+        "narrative": "Zwei Hunde bekommen einen Welpen. Der Vater hat keine PRA und ist heterozygot, die Mutter hat PRA und ist homozygot. Über den Welpen ist nichts bekannt. Mit einer Partnerhündin ohne PRA, homozygot, bekommt der Welpe später ein Enkelkind, ebenfalls ohne PRA und homozygot.",
+        "gene": {
+          "trait": "PRA",
+          "dominant": {
+            "allele": "P",
+            "phenotype": "gesund"
+          },
+          "recessive": {
+            "allele": "p",
+            "phenotype": "erkrankt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Hund 1 (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Hund 2 (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      },
+      "Mammakarzinom": {
+        "narrative": "Zwei Eltern bekommen ein Kind. Der Vater ist homozygot ohne erbliche Brustkrebsbelastung, die Mutter homozygot mit erblicher Belastung. Über das Kind ist nichts bekannt. Dieses Kind hat mit einem Partner mit Belastung, heterozygot, ein Kind; das Enkelkind hat keine Belastung und ist homozygot dafür.",
+        "gene": {
+          "trait": "Mammakarzinom",
+          "dominant": {
+            "allele": "M",
+            "phenotype": "mit erblicher Belastung"
+          },
+          "recessive": {
+            "allele": "m",
+            "phenotype": "ohne erbliche Belastung"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child"
+        ],
+        "punnett_squares_needed": 4,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+        }
+      }
+    }
+  },
+  "level5": {
+    "veel_hulp": {
+      "Augenfarbe": {
+        "narrative": "Die Augenfarbe beim Menschen wird mitbestimmt durch ein Gen, das für braun (B) dominant und für blau (b) rezessiv ist. Zwei Eltern (Generation P) haben jeweils braune Augen, der Vater ist dafür homozygot, die Mutter heterozygot. Über das Kind (F1), das sie bekommen, oder den Partner dieses Kindes ist nichts bekannt, aber diese beiden bekommen wieder ein Kind (F2) mit blauen Augen, homozygot für dieses Merkmal.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen haben die Individuen der Generation F1?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Die Haarform beim Menschen wird teilweise durch ein Gen bestimmt. Die dominante Allelform ist lockiges Haar (H), die rezessive glattes Haar (h). Zwei Eltern (P): Der Vater hat lockiges Haar und ist heterozygot, die Mutter glattes Haar und ist homozygot; sie bekommen ein Kind (F1). Über dieses Kind (F1) oder seinen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2) mit lockigem Haar, homozygot dafür.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Milchallergie": {
+        "narrative": "Bestimmte Allergien, etwa gegen Milch, werden teils genetisch mitbestimmt. In seiner dominanten Form (M) bewirkt ein Gen eine Milchallergie. Zwei Eltern (P) haben beide eine Milchallergie, der Vater mit homozygotem, die Mutter mit heterozygotem Genotyp; sie bekommen ein Kind (F1). Über dieses Kind oder seinen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2), das ebenfalls Milchallergie hat und homozygot dafür ist.",
+        "gene": {
+          "trait": "Milchallergie",
+          "dominant": {
+            "allele": "M",
+            "phenotype": "Milchallergie"
+          },
+          "recessive": {
+            "allele": "m",
+            "phenotype": "keine Milchallergie"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Apert-Syndrom": {
+        "narrative": "Das Apert-Syndrom ist eine erbliche, angeborene Erkrankung von Schädel, Gesicht sowie Händen und Füßen. Es liegt eine Veränderung des Erbmaterials vor. Das Syndrom zeigt sich als dominant vererbtes Gen (A); die rezessive Form (a) führt nicht zum Apert-Syndrom. Zwei Eltern (P) haben beide das Apert-Syndrom, der Vater homozygot, die Mutter heterozygot. Über ihr gemeinsames Kind (F1) ist nichts bekannt. Mit einem ebenfalls unbekannten Partner bekommen sie ein Kind (F2) mit Apert-Syndrom, homozygot dafür.",
+        "gene": {
+          "trait": "Apert-Syndrom",
+          "dominant": {
+            "allele": "A",
+            "phenotype": "Apert-Syndrom"
+          },
+          "recessive": {
+            "allele": "a",
+            "phenotype": "kein Apert-Syndrom"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Huntington": {
+        "narrative": "Die Huntington-Krankheit ist eine erbliche Erkrankung des Gehirns, die meist im Erwachsenenalter beginnt und über Jahre fortschreitet. Sie entsteht durch das Absterben von Nervenzellen in bestimmten Hirnregionen, die für Bewegung und kognitive Fähigkeiten wichtig sind. Huntington ist erblich; das Merkmal wirkt dominant (H), die rezessive Form (h) führt nicht zur Krankheit. Der Vater hat keine Huntington-Krankheit und ist homozygot, die Mutter ist heterozygot. Über das gemeinsame Kind (F1) und dessen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2) ohne Huntington, homozygot dafür.",
+        "gene": {
+          "trait": "Huntington",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "Huntington-Krankheit"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "keine Huntington-Krankheit"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      }
+    },
+    "enige_hulp": {
+      "Augenfarbe": {
+        "narrative": "Die Augenfarbe wird teils durch ein Gen erklärt: die dominante Allelform ist braun (B), die rezessive blau (b). Zwei Eltern (P): Der Vater ist heterozygot mit braunen Augen, die Mutter homozygot mit blauen Augen; sie bekommen ein Kind. Über Kind (F1) oder Partner von F1 ist nichts bekannt, aber diese beiden bekommen ein Kind (F2) mit braunen Augen, homozygot dafür.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Die Haarform beim Menschen wird teilweise durch ein Gen bestimmt: dominant lockiges Haar (H), rezessiv glattes Haar (h). Zwei Eltern (P): Der Vater ist heterozygot für lockiges Haar, die Mutter homozygot für lockiges Haar; sie bekommen ein Kind (F1). Über F1 oder dessen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2) mit lockigem Haar, homozygot dafür.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Schwanzlänge": {
+        "narrative": "Die Schwanzlänge beim Schimpansen wird mitbestimmt durch ein Gen: das dominante Allel (L) führt zu längeren Schwänzen, das rezessive (l) zu kürzeren. Zwei Schimpansen (P): Der Vater ist heterozygot für einen langen Schwanz, die Mutter homozygot für einen langen Schwanz; sie bekommen einen Nachkommen (F1). Über F1 oder dessen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2) mit kurzem Schwanz, homozygot dafür.",
+        "gene": {
+          "trait": "Schwanzlänge",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "längerer Schwanz"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kürzerer Schwanz"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Wolman-Syndrom": {
+        "narrative": "Die Wolman-Krankheit ist eine seltene erbliche Stoffwechselerkrankung aus der Gruppe der lysosomalen Speicherkrankheiten. Fehlende oder unvollständig funktionierende Enzyme führen dazu, dass sich Stoffe im Lysosom anreichern und schließlich Gewebe und Organe schädigen. Das Wolman-Syndrom ist schwerwiegend, teilweise erblich und rezessiv (n); bei der dominanten Form (N) besteht keine Erkrankung. Zwei Eltern (P): Der Vater ist ohne Wolman und homozygot dafür, die Mutter heterozygot; sie bekommen ein Kind (F1), über das nichts bekannt ist. Dieses Kind (F1) bekommt mit einem unbekannten Partner ein Kind (F2), das nicht an Wolman erkrankt und homozygot gesund ist.",
+        "gene": {
+          "trait": "Wolman-Syndrom",
+          "dominant": {
+            "allele": "N",
+            "phenotype": "kein Wolman-Syndrom"
+          },
+          "recessive": {
+            "allele": "n",
+            "phenotype": "Wolman-Syndrom"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Blütenfarbe": {
+        "narrative": "Bei einer bestimmten Blumenart bewirkt ein Gen in dominanter Form stärkere Rötfung (R), in rezessiver stärkere Blaufärbung (r). Zwei rote Blumen (P), wobei der „Vater“ heterozygot und die „Mutter“ homozygot ist, erzeugen einen Nachkommen (F1), über den nichts bekannt ist. Ein unbekannter Partner zeugt mit diesem Nachkommen wieder einen Nachkommen (F2), der homozygot und rot ist.",
+        "gene": {
+          "trait": "Blütenfarbe",
+          "dominant": {
+            "allele": "R",
+            "phenotype": "rot"
+          },
+          "recessive": {
+            "allele": "r",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      }
+    },
+    "alles_zelf": {
+      "Augenfarbe": {
+        "narrative": "Die Augenfarbe wird mitbestimmt durch ein Gen, bei dem braune Augen (B) dominant über blaue (b) sind. Der Vater hat braune Augen und ist heterozygot, die Mutter blaue Augen und ist homozygot. Sie bekommen ein Kind (F1), über das nichts bekannt ist. Über den Partner von F1 ebenfalls nicht, aber diese beiden bekommen ein Kind (F2) mit blauen Augen, homozygot dafür.",
+        "gene": {
+          "trait": "Augenfarbe",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "braun"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "blau"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Haarform": {
+        "narrative": "Die Haarform wird mitbestimmt durch ein Gen, bei dem lockiges Haar (H) dominant über glattes (h) ist. Zwei Eltern (P) bekommen ein Kind (F1). Der Vater hat lockiges Haar und ist homozygot, die Mutter lockiges Haar und ist heterozygot. Über das gemeinsame Kind ist nichts bekannt. Mit einem ebenfalls unbekannten Partner bekommt dieses Kind (F1) wieder ein Kind (F2) mit glattem Haar, homozygot dafür.",
+        "gene": {
+          "trait": "Haarform",
+          "dominant": {
+            "allele": "H",
+            "phenotype": "lockig"
+          },
+          "recessive": {
+            "allele": "h",
+            "phenotype": "glatt"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Apfelbaum": {
+        "narrative": "Die Blütezeit des japanischen Apfelbaums wird mitbestimmt durch ein Gen, bei dem kürzere Blüte (B) dominant über längere (b) ist. Zwei Apfelbäume (P) erzeugen einen Nachkommen (F1). Der „Vater“-Baum hat längere Blüte und ist homozygot dafür, der „Mutter“-Baum kürzere Blüte und ist heterozygot. Über den Nachkommen (F1) ist nichts bekannt, ebenso wenig über den Partner-Baum, der durch Kreuzung einen Baum (F2) mit längerer Blüte erzeugt, homozygot dafür.",
+        "gene": {
+          "trait": "Apfelbaum-Blütezeit",
+          "dominant": {
+            "allele": "B",
+            "phenotype": "kürzere Blütezeit"
+          },
+          "recessive": {
+            "allele": "b",
+            "phenotype": "längere Blütezeit"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Fruchtfliegen": {
+        "narrative": "Bei Fruchtfliegen wird die Flügellänge unter anderem durch ein Gen bestimmt, bei dem längere Flügel (L) dominant über kürzere (l) sind. Zwei Fruchtfliegen (P), der Vater homozygot und die Mutter heterozygot für lange Flügel, erzeugen einen Nachkommen (F1), über den nichts bekannt ist. Mit einem unbekannten Partner entsteht ein Nachkomme (F2) mit längeren Flügeln, homozygot dafür.",
+        "gene": {
+          "trait": "Fruchtfliegen",
+          "dominant": {
+            "allele": "L",
+            "phenotype": "längere Flügel"
+          },
+          "recessive": {
+            "allele": "l",
+            "phenotype": "kürzere Flügel"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      },
+      "Huhnschnabel": {
+        "narrative": "Bei Gallus gallus (dem Haushuhn) wird die Schnabelkrümmung mitbestimmt durch ein Gen: schwache Krümmung ist dominant (K) über starke (k). Hahn und Henne (P): Der Hahn ist heterozygot für schwache Krümmung, die Henne homozygot für schwache Krümmung. Sie erhalten ein Huhn (F1), über das nichts bekannt ist. Mit einem unbekannten Partner bekommt dieses Huhn (F1) ein Huhn (F2), homozygot für stark gekrümmten Schnabel.",
+        "gene": {
+          "trait": "Huhnschnabel",
+          "dominant": {
+            "allele": "K",
+            "phenotype": "schwache Krümmung"
+          },
+          "recessive": {
+            "allele": "k",
+            "phenotype": "starke Krümmung"
+          }
+        },
+        "family": {
+          "p_father": {
+            "id": "p_father",
+            "name": "Vater (P)"
+          },
+          "p_mother": {
+            "id": "p_mother",
+            "name": "Mutter (P)"
+          },
+          "f1_child": {
+            "id": "f1_child",
+            "name": "Kind (F1)"
+          },
+          "f1_partner": {
+            "id": "f1_partner",
+            "name": "Partner (F1)"
+          },
+          "f2_grandchild": {
+            "id": "f2_grandchild",
+            "name": "Enkelkind (F2)"
+          }
+        },
+        "unknowns": [
+          "f1_child",
+          "f1_partner"
+        ],
+        "punnett_squares_needed": 7,
+        "steps": {
+          "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+        }
+      }
+    }
+  }
+}
