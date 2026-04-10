@@ -194,8 +194,6 @@ function initializeTask() {
 
     showScreen('task-screen');
     document.getElementById('complete-task-btn').onclick = completeTask;
-    ensureCompleteTaskValidationListeners();
-    updateCompleteTaskButtonState();
 }
 
 // --- RENDER STEPS ---
@@ -285,7 +283,6 @@ function renderStep3() {
             document.getElementById('step4-container').style.display = 'block';
             document.getElementById('step5-container').style.display = 'block';
             document.getElementById('complete-task-btn').style.display = 'block';
-            updateCompleteTaskButtonState();
         };
     }
 }
@@ -312,56 +309,7 @@ function renderStep5() {
             var input = this.querySelector('input');
             input.checked = !input.checked;
             this.classList.toggle('selected');
-            updateCompleteTaskButtonState();
         }
-    }
-    updateCompleteTaskButtonState();
-}
-
-function isStep4PunnettComplete() {
-    var inputs = document.querySelectorAll('.punnett-square-table input');
-    if (inputs.length === 0) return true;
-    for (var i = 0; i < inputs.length; i++) {
-        var el = inputs[i];
-        var v = (el.value || '').trim();
-        if (el.disabled) {
-            if (!v) return false;
-        } else {
-            if (!v) return false;
-        }
-    }
-    return true;
-}
-
-function isStep5FinalAnswersComplete() {
-    if (!currentTaskConfig || !currentTaskConfig.unknowns || currentTaskConfig.unknowns.length === 0) return true;
-    for (var i = 0; i < currentTaskConfig.unknowns.length; i++) {
-        var pid = currentTaskConfig.unknowns[i];
-        var person = currentTaskConfig.family[pid];
-        if (!person) return false;
-        if (!document.querySelector('input[name="final-answer-' + person.id + '"]:checked')) return false;
-    }
-    return true;
-}
-
-function updateCompleteTaskButtonState() {
-    var btn = document.getElementById('complete-task-btn');
-    if (!btn) return;
-    if (btn.style.display === 'none') return;
-    btn.disabled = !(isStep4PunnettComplete() && isStep5FinalAnswersComplete());
-}
-
-function ensureCompleteTaskValidationListeners() {
-    var p4 = document.getElementById('step4-punnett-squares');
-    var p5 = document.getElementById('step5-answer');
-    if (p4 && !p4.dataset.validationBound) {
-        p4.dataset.validationBound = '1';
-        p4.addEventListener('input', updateCompleteTaskButtonState);
-        p4.addEventListener('change', updateCompleteTaskButtonState);
-    }
-    if (p5 && !p5.dataset.validationBound) {
-        p5.dataset.validationBound = '1';
-        p5.addEventListener('change', updateCompleteTaskButtonState);
     }
 }
 
@@ -511,10 +459,8 @@ function collectTaskData() {
 }
 
 function completeTask() {
-    var btn = document.getElementById('complete-task-btn');
-    if (btn && btn.disabled) return;
-    if (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete()) return;
     finalTaskData = collectTaskData();
+    // Directly submit
     document.getElementById('NextButton').click();
 }
 
