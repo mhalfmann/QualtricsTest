@@ -1,378 +1,222 @@
 {
-    "level1": {
-      "veel_hulp": {
-        "Oogkleur": {
-          "narrative": "Twee ouders krijgen een kind. Elke ouder heeft een homozygoot genotype en heeft blauwe ogen.",
-          "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Haarvorm": {
-          "narrative": "Twee ouders krijgen een kind. Beide ouders zijn homozygoot. De een heeft krullend haar, de ander steil haar.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Kattenvacht": {
-          "narrative": "Twee katten krijgen een nakomeling. Beide katten zijn homozygoot en hebben ringen in de vacht (dominant over strepen).",
-          "gene": { "trait": "Kattenvacht", "dominant": { "allele": "K", "phenotype": "ringen" }, "recessive": { "allele": "k", "phenotype": "strepen" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Bloeitijd Appelboom": {
-          "narrative": "Twee bomen zorgen voor een nakomeling. Beide ouders zijn homozygoot en hebben een langere bloeitijd (recessief t.o.v. korter).",
-          "gene": { "trait": "Bloeitijd", "dominant": { "allele": "B", "phenotype": "korter" }, "recessive": { "allele": "b", "phenotype": "langer" } },
-          "family": { "p_father": { "id": "p_father", "name": "Boom 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Boom 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        }
+  "level1": {
+    "veel_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. Elke ouder heeft een homozygoot genotype en heeft blauwe ogen.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. Beide ouders zijn homozygoot. De een heeft krullend haar, de ander steil haar.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Kattenvacht": { "narrative": "Twee katten krijgen een nakomeling. Beide katten zijn homozygoot en hebben ringen in de vacht.", "gene": { "trait": "Kattenvacht", "dominant": { "allele": "K", "phenotype": "ringen" }, "recessive": { "allele": "k", "phenotype": "strepen" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Appelboom": { "narrative": "Twee bomen zorgen voor een nakomeling. Beide ouders zijn homozygoot en hebben een langere bloeitijd.", "gene": { "trait": "Bloeitijd", "dominant": { "allele": "B", "phenotype": "korter" }, "recessive": { "allele": "b", "phenotype": "langer" } }, "family": { "p_father": { "id": "p_father", "name": "Boom 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Boom 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Depressie": { "narrative": "Twee homozygote ouders krijgen een kind. Een ouder heeft een grotere kans op depressie, de ander minder.", "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } }
+    },
+    "enige_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De ene ouder heeft bruine ogen en de ander blauwe ogen. Beide zijn homozygoot.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. Beide ouders zijn homozygoot en hebben krullend haar.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Huntington": { "narrative": "Twee ouders hebben allebei geen Huntington en zijn homozygoot voor deze eigenschap.", "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "ziek" }, "recessive": { "allele": "h", "phenotype": "gezond" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Kippensnavel": { "narrative": "Een haan en een kip krijgen een kuiken. Beide ouders zijn homozygoot, maar een heeft een sterk gekromde snavel en de ander een zwak gekromde snavel.", "gene": { "trait": "Snavel", "dominant": { "allele": "K", "phenotype": "zwak gekromd" }, "recessive": { "allele": "k", "phenotype": "sterk gekromd" } }, "family": { "p_father": { "id": "p_father", "name": "Haan (P)" }, "p_mother": { "id": "p_mother", "name": "Kip (P)" }, "f1_child": { "id": "f1_child", "name": "Kuiken (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Schisis": { "narrative": "Twee ouders krijgen een kind. Beide ouders hebben geen hazenlip en zijn homozygoot voor deze eigenschap.", "gene": { "trait": "Hazenlip", "dominant": { "allele": "L", "phenotype": "geen hazenlip" }, "recessive": { "allele": "l", "phenotype": "hazenlip" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } }
+    },
+    "alles_zelf": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. Beide ouders hebben bruine ogen en zijn ook allebei homozygoot voor de eigenschap.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind, hebben steil haar en zijn homozygoot voor deze eigenschap.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Wolman syndroom": { "narrative": "Een van de ouders heeft geen Wolman en is homozygoot. De andere ouder heeft wel Wolman.", "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "gezond" }, "recessive": { "allele": "r", "phenotype": "ziek" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Staartlengte": { "narrative": "Twee chimpansees krijgen een nakomeling. Beide chimpansees hebben een lange staart en zijn homozygoot.", "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } }, "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } },
+      "Melk allergie": { "narrative": "Twee ouders krijgen een kind. Geen van beiden hebben een allergie voor melk. De ouders hebben geen allergie en zijn homozygoot.", "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "allergie" }, "recessive": { "allele": "m", "phenotype": "geen allergie" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" } }
+    }
+  },
+  "level2": {
+    "veel_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De ene ouder heeft bruine ogen en is heterozygoot. De andere ouder heeft blauwe ogen.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. Beide ouders hebben krullend haar. De ene is homozygoot, de ander heterozygoot.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Apert syndroom": { "narrative": "De ene ouder heeft het Apert syndroom en is heterozygoot. De andere ouder heeft geen Apert syndroom.", "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "ziek" }, "recessive": { "allele": "a", "phenotype": "gezond" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Fruitvliegjes": { "narrative": "Een vlieg heeft lange vleugels en is heterozygoot. De andere heeft korte vleugels.", "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } }, "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "P.R.A. ziekte": { "narrative": "Beide honden hebben geen last van PRA en zijn heterozygoot.", "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } }, "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Pup (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } }
+    },
+    "enige_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De vader heeft bruine ogen en is homozygoot voor deze eigenschap, de moeder heeft blauwe ogen.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. De vader heeft krullend haar en is heterozygoot. De moeder heeft steil haar.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Bloemkleur": { "narrative": "Beide bloemen hebben de rode kleur en zijn heterozygoot.", "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Bloem 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Bloem 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Appelboom": { "narrative": "De ene appelboom heeft een kortere bloeitijd, de andere ook een kortere bloeitijd maar is heterozygoot.", "gene": { "trait": "Bloeitijd", "dominant": { "allele": "B", "phenotype": "kort" }, "recessive": { "allele": "b", "phenotype": "lang" } }, "family": { "p_father": { "id": "p_father", "name": "Boom 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Boom 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Tong krullen": { "narrative": "Beide ouders kunnen hun tong krullen en zijn heterozygoot.", "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } }
+    },
+    "alles_zelf": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De vader heeft bruine ogen en is homozygoot voor deze eigenschap, de moeder heeft ook bruine ogen, maar is heterozygoot.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. De vader heeft krullend haar en is homozygoot, de moeder heeft steil haar.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Huntington": { "narrative": "De ene ouder heeft Huntington en is heterozygoot. De andere ouder heeft geen Huntington.", "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "ziek" }, "recessive": { "allele": "h", "phenotype": "gezond" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Albinisme": { "narrative": "Elke ouder is geen albino en is heterozygoot.", "gene": { "trait": "Albinisme", "dominant": { "allele": "A", "phenotype": "geen albino" }, "recessive": { "allele": "a", "phenotype": "albino" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } },
+      "Mamma carcinoom": { "narrative": "De ene ouder heeft erfelijke borstkanker en is heterozygoot, de andere ouder heeft het niet.", "gene": { "trait": "Mamma-carcinoom", "dominant": { "allele": "M", "phenotype": "wel kanker" }, "recessive": { "allele": "m", "phenotype": "geen kanker" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" } }
+    }
+  },
+  "level3": {
+    "veel_hulp": {
+      "Oogkleur": { "narrative": "Een van de ouders heeft bruine ogen en is homozygoot. Over de andere ouder is niets bekend. Het kind heeft bruine ogen en is heterozygoot.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Haarvorm": { "narrative": "Een van de ouders heeft krullend haar en is heterozygoot. De ander is onbekend. Het kind heeft krullend haar en is homozygoot.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Fruitvliegjes": { "narrative": "De ene fruitvlieg heeft korte vleugels. De ander is onbekend. De nakomeling heeft lange vleugels en is heterozygoot.", "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } }, "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Kippensnavel": { "narrative": "Een ouder heeft een zwak gekromde snavel en is heterozygoot. De ander is onbekend. Het kuiken heeft een sterk gekromde snavel.", "gene": { "trait": "Snavel", "dominant": { "allele": "K", "phenotype": "zwak gekromd" }, "recessive": { "allele": "k", "phenotype": "sterk gekromd" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kuiken (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Wolman syndroom": { "narrative": "Een ouder heeft Wolman. De ander is onbekend. Het kind heeft ook Wolman.", "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "gezond" }, "recessive": { "allele": "r", "phenotype": "ziek" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } }
+    },
+    "enige_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De vader heeft blauwe ogen. Over de moeder is niets bekend. Samen krijgen de ouders een kind dat ook blauwe ogen heeft.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Haarvorm": { "narrative": "De vader heeft krullend haar en is homozygoot. Over de moeder is niets bekend. Het kind dat ze samen krijgen heeft ook krullend haar, en is heterozygoot.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Staartlengte": { "narrative": "Een ouder is heterozygoot en heeft een lange staart. De ander is onbekend. De nakomeling heeft een lange staart en is homozygoot.", "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } }, "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "P.R.A. ziekte": { "narrative": "Een ouder heeft geen PRA en is heterozygoot. De ander is onbekend. De pup heeft wel PRA.", "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } }, "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Pup (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Melk allergie": { "narrative": "Een ouder heeft geen allergie. De ander is onbekend. Het kind is wel allergisch en heterozygoot.", "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "allergie" }, "recessive": { "allele": "m", "phenotype": "geen allergie" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } }
+    },
+    "alles_zelf": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De vader heeft blauwe ogen en is homozygoot voor deze eigenschap. Over de moeder is niets bekend. Samen krijgen de ouders een kind dat ook blauwe ogen heeft.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Haarvorm": { "narrative": "De vader heeft krullend haar en is homozygoot. Over de moeder is niets bekend. Het kind dat ze samen krijgen heeft ook krullend haar, en is heterozygoot.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Tong krullen": { "narrative": "Een ouder kan tong krullen en is heterozygoot. De ander is onbekend. Het kind kan ook tong krullen en is ook heterozygoot.", "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns":["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Depressie": { "narrative": "Een ouder heeft verkleinde kans en is homozygoot. De ander is onbekend. Het kind heeft ook verkleinde kans en is heterozygoot.", "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } },
+      "Apert syndroom": { "narrative": "Een ouder heeft Apert en is heterozygoot. De ander is onbekend. Het kind heeft ook Apert en is homozygoot.", "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "ziek" }, "recessive": { "allele": "a", "phenotype": "gezond" } }, "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } }, "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" } }
+    }
+  },
+  "level4": {
+    "veel_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. De vader heeft blauwe ogen en is homozygoot voor deze eigenschap. De moeder heeft bruine ogen en is heterozygoot voor de eigenschap. Over het kind dat ze krijgen is niets bekend. Samen met een partner met blauwe ogen, krijgt dit kind ook weer een kind (kleinkind) welk heterozygoot is voor bruine ogen.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Haarvorm": { "narrative": "Twee ouders krijgen een kind. Beide ouders hebben een heterozygoot genotype voor krullend haar. Over het kind dat ze krijgen is niets bekend. Samen met een partner die homozygoot is voor krullend haar, krijgt dit kind een kleinkind dat ook krullend haar heeft en heterozygoot is voor de eigenschap.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Albinisme": { "narrative": "Twee ouders zonder albinisme, de vader homozygoot, de moeder heterozygoot, krijgen een kind, waarover verder niets bekend is. Samen met een partner met albinisme, krijgt dit kind een kleinkind dat ook albinisme heeft.", "gene": { "trait": "Albinisme", "dominant": { "allele": "A", "phenotype": "geen albino" }, "recessive": { "allele": "a", "phenotype": "albino" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Kattenvacht": { "narrative": "Twee katten krijgen een nakomeling. De vader kat heeft ringen in de vacht, de moeder kat een gestreepte vacht, en beide zijn hier homozygoot voor. Over de nakomeling is echter niets bekend. Samen met een partner met strepen op de vacht krijgt de onbekende nakomeling een kleinkind, dat heterozygoot is voor ringen.", "gene": { "trait": "Kattenvacht", "dominant": { "allele": "R", "phenotype": "ringen" }, "recessive": { "allele": "r", "phenotype": "strepen" } }, "family": { "p_father": { "id": "p_father", "name": "Kat 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Kat 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Depressie": { "narrative": "Twee ouders krijgen een kind. De vader heeft een lagere kans op depressie en is heterozygoot voor deze eigenschap. De moeder is homozygoot en heeft een verhoogde kans op depressie. Over het kind dat ze krijgen is niets bekend. Samen met een partner die heterozygoot is en een verlaagde kans op depressie heeft, krijgt dit kind een kleinkind dat homozygoot is voor een verlaagde kans op depressie.", "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } }
+    },
+    "enige_hulp": {
+      "Oogkleur": { "narrative": "Twee ouders krijgen een kind. Beide ouders hebben bruine ogen, maar waar de vader homozygoot is, is de moeder heterozygoot voor deze eigenschap. Over het kind dat ze krijgen is niets bekend. Dit kind krijgt met een partner met blauwe ogen een kleinkind dat heterozygoot is en bruine ogen heeft.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Haarvorm": { "narrative": "Twee ouders, die heterozygoot zijn voor de haarvorm en beide krullend haar hebben, krijgen een kind. Over dit kind is verder niets bekend. Samen met een partner die ook heterozygoot is en krullend haar heeft, krijgt dit kind op diens beurt een kleinkind dat steil haar heeft en homozygoot is voor die eigenschap.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Fruitvliegjes": { "narrative": "Twee vliegen met elk lange vleugels krijgen een nakomeling. De vader vlieg is homozygoot voor de eigenschap, de moeder vlieg heterozygoot. Over de nakomeling is verder niets bekend. Deze nakomeling krijgt samen met een partner met korte vleugels een nakomeling dat heterozygoot is voor de eigenschap.", "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } }, "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Bloemkleur": { "narrative": "Twee homozygote bloemen krijgen een nakomeling. De vader bloem is rood van kleur, de moeder bloem blauw. Van de nakomeling is niets bekend. Samen met een partner die heterozygoot is voor de eigenschap, krijgt de onbekende nakomeling een kleinkind. Dit kleinkind heeft blauwe blaadjes.", "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Bloem 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Bloem 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Tong krullen": { "narrative": "Twee ouders krijgen een kind. Beide ouders kunnen de tong niet krullen en zijn homozygoot voor de eigenschap. Over het kind is niet bekend. Samen met een partner die wel de tong kan krullen en homozygoot is voor deze eigenschap, krijgt dit kind een kleinkind, dat de tong kan krullen en heterozygoot is voor de eigenschap.", "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } }
+    },
+    "alles_zelf": {
+      "Oogkleur": { "narrative": "Twee ouders met bruine ogen krijgen een kind. De vader is homozygoot voor bruine ogen, de moeder heterozygoot. Over het kind is niets bekend. Samen met een partner met blauwe ogen krijgt dit kind een kleinkind dat heterozygoot is voor bruine ogen.", "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Haarvorm": { "narrative": "Twee ouders, die heterozygoot zijn voor de haarvorm en beide krullend haar hebben, krijgen een kind. Over dit kind is verder niets bekend. Samen met een partner die ook heterozygoot is en krullend haar heeft, krijgt dit kind op diens beurt een kleinkind dat steil haar heeft en homozygoot is voor die eigenschap.", "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Schisis": { "narrative": "Twee ouders krijgen een kind. De vader is heterozygoot en heeft geen schisis, maar de moeder heeft wel schisis en is homozygoot voor deze eigenschap. Zij krijgen samen een kind waar verder niets over bekend is. Samen met een partner met schisis krijgt dit kind een kleinkind dat ook schisis heeft.", "gene": { "trait": "Hazenlip", "dominant": { "allele": "L", "phenotype": "gezond" }, "recessive": { "allele": "l", "phenotype": "hazenlip" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "P.R.A. ziekte": { "narrative": "Twee honden krijgen een pup. De vader hond heeft geen PRA en is heterozygoot voor deze eigenschap, de moeder hond heeft wel last van PRA en is homozygoot voor de eigenschap. Over de pup is niets bekend. Samen met een partner hond die geen PRA heeft en homozygoot is voor die eigenschap, krijgt de pup later ook weer een nakomeling, het kleinkind, en deze nakomeling heeft ook geen PRA en is homozygoot voor de eigenschap.", "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } }, "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } },
+      "Mamma carcinoom": { "narrative": "Twee ouders krijgen een kind. De vader is homozygoot en heeft geen erfelijke aanleg voor borstkanker, de moeder is ook homozygoot maar heeft wel een erfelijke aanleg voor borstkanker. Over het kind dat ze krijgen is verder niets bekend. Dit kind krijgt weer een kind met een partner die aanleg heeft voor borstkanker en heterozygoot voor deze eigenschap is. Het kleinkind heeft geen aanleg voor borstkanker en is hier homozygoot voor.", "gene": { "trait": "Mamma-carcinoom", "dominant": { "allele": "M", "phenotype": "wel kanker" }, "recessive": { "allele": "m", "phenotype": "geen kanker" } }, "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } }, "unknowns":["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" } }
+    }
+  },
+  "level5": {
+    "veel_hulp": {
+      "Oogkleur": {
+        "narrative": "De oogkleur in mensen wordt mede bepaald door een gen dat dominant is voor bruin (B) en recessief voor blauw (b). Twee ouders (generatie P) hebben elk bruine ogen, maar de vader is daar homozygoot voor en de moeder heterozygoot. Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) dat blauwe ogen heeft en homozygoot is voor de eigenschap.",
+        "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de individuen in generatie F1?" }
       },
-      "enige_hulp": {
-        "Depressie": {
-          "narrative": "Twee homozygote ouders krijgen een kind. Een ouder heeft een grotere kans op depressie (recessief), de ander minder (dominant).",
-          "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Huntington": {
-          "narrative": "Twee ouders hebben allebei geen Huntington (dominant is ziekte H, recessief is gezond h) en zijn homozygoot voor deze eigenschap.",
-          "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "ziek" }, "recessive": { "allele": "h", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Snavel Kip": {
-          "narrative": "Een haan en een kip krijgen een kuiken. Beide ouders zijn homozygoot, maar een heeft een sterk gekromde snavel (recessief) en de ander een zwak gekromde snavel (dominant).",
-          "gene": { "trait": "Snavel", "dominant": { "allele": "K", "phenotype": "zwak gekromd" }, "recessive": { "allele": "k", "phenotype": "sterk gekromd" } },
-          "family": { "p_father": { "id": "p_father", "name": "Haan (P)" }, "p_mother": { "id": "p_mother", "name": "Kip (P)" }, "f1_child": { "id": "f1_child", "name": "Kuiken (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Hazenlip": {
-          "narrative": "Twee ouders krijgen een kind. Beide ouders hebben geen hazenlip (dominant L) en zijn homozygoot voor deze eigenschap.",
-          "gene": { "trait": "Hazenlip", "dominant": { "allele": "L", "phenotype": "geen hazenlip" }, "recessive": { "allele": "l", "phenotype": "hazenlip" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        }
+      "Haarvorm": {
+        "narrative": "De haarvorm bij mensen wordt door een deel bepaald door een gen. Dit gen heeft als dominante allelvorm krullend haar (H) en heeft als recessieve allelvorm steil haar (h). Twee ouders (generatie P), waarvan de vader krullend haar heeft en daar heterozygoot voor is, en de moeder steil haar heeft en daar homozygoot voor is, krijgen een kind (F1). Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) dat krullend haar heeft en daar homozygoot voor is.",
+        "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "alles_zelf": {
-        "Wolman syndroom": {
-          "narrative": "Een van de ouders heeft geen Wolman (dominant R) en is homozygoot. De andere ouder heeft wel Wolman (recessief r).",
-          "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "gezond" }, "recessive": { "allele": "r", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Staartlengte": {
-          "narrative": "Twee chimpansees krijgen een nakomeling. Beide chimpansees hebben een lange staart (dominant L) en zijn homozygoot.",
-          "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        },
-        "Melk allergie": {
-          "narrative": "Twee ouders krijgen een kind. Geen van beide hebben een allergie voor melk (recessief mm? Tekst zegt dominant M is allergie). Ouders hebben geen allergie en zijn homozygoot.",
-          "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "allergie" }, "recessive": { "allele": "m", "phenotype": "geen allergie" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat is het mogelijke genotype van de onbekende nakomeling?" }
-        }
+      "Melk allergie": {
+        "narrative": "Bepaalde allergieën, zoals voor melk, worden deels bepaald door genetische aanleg. Een gen zorgt in zijn dominante vorm (M) voor een allergie voor melk. Twee ouders (generatie P) met beide een melkallergie, maar de vader met een homozygoot genotype, en de moeder met een heterozygoot genotype, krijgen een kind (F1). Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) met ook een melkallergie en is daar homozygoot voor.",
+        "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "melkallergie" }, "recessive": { "allele": "m", "phenotype": "geen melkallergie" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
+      },
+      "Apert syndroom": {
+        "narrative": "Het Apert syndroom is een erfelijke en aangeboren aandoening van de schedel, het aangezicht en de handen en voeten. Bij het Apert syndroom is sprake van een verandering in het erfelijk materiaal. Apert syndroom uit zich als een dominant gen (A), waarbij de recessieve vorm (a) dus niet tot Apert syndroom leidt. Twee ouders (generatie P) hebben beide het Apert syndroom, maar waar de vader homozygoot voor de eigenschap is, is de moeder heterozygoot. Over het kind dat ze samen krijgen (F1) is echter niets bekend. Samen met een partner waar ook niets over bekend is, krijgen ze een kind (F2) dat het Apert syndroom heeft en daar homozygoot voor is.",
+        "gene": { "trait": "Apert syndroom", "dominant": { "allele": "A", "phenotype": "Apert syndroom" }, "recessive": { "allele": "a", "phenotype": "geen Apert syndroom" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
+      },
+      "Huntington": {
+        "narrative": "De ziekte van Huntington is een erfelijke hersenaandoening die meestal op volwassen leeftijd begint en geleidelijk in de loop van de jaren toeneemt. De ziekte van Huntington wordt veroorzaakt door het geleidelijk afsterven van zenuwcellen in bepaalde delen van de hersenen. Deze hersendelen zijn belangrijk voor het aansturen van bewegingen en voor de verstandelijke vaardigheden. Huntington is een ziekte die erfelijk bepaald wordt. Huntington uit zich als een dominant gen (H), waarbij de recessieve vorm (h) dus niet tot Huntington leidt. De vader heeft geen Huntington en is homozygoot, de moeder is heterozygoot. Over het kind dat ze samen krijgen (F1) en de partner van dit kind is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) zonder Huntington en is daar homozygoot voor.",
+        "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "Huntington" }, "recessive": { "allele": "h", "phenotype": "geen Huntington" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       }
     },
-    "level2": {
-      "veel_hulp": {
-        "Oogkleur": {
-          "narrative": "Twee ouders krijgen een kind. De ene ouder heeft bruine ogen en is heterozygoot. De andere ouder heeft blauwe ogen.",
-          "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Haarvorm": {
-          "narrative": "Twee ouders krijgen een kind. Beide ouders hebben krullend haar (dominant). De ene is homozygoot, de ander heterozygoot.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Apert syndroom": {
-          "narrative": "De ene ouder heeft het Apert syndroom (dominant) en is heterozygoot. De andere ouder heeft geen Apert syndroom.",
-          "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "ziek" }, "recessive": { "allele": "a", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Fruitvliegjes": {
-          "narrative": "Een vlieg heeft lange vleugels (dominant) en is heterozygoot. De andere heeft korte vleugels.",
-          "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        }
+    "enige_hulp": {
+      "Oogkleur": {
+        "narrative": "Oogkleur kan voor een deel verklaard worden door een gen. De dominante allelvorm van dit gen is bruin (B), en de recessieve vorm blauw (b). Twee ouders (generatie P), de vader is heterozygoot met bruine ogen, en de moeder is homozygoot met blauwe ogen, krijgen een kind. Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt een kind (F2) dat bruine ogen heeft en homozygoot is voor de eigenschap.",
+        "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "enige_hulp": {
-        "P.R.A. (ziekte)": {
-          "narrative": "Beide honden hebben geen last van PRA (dominant P) en zijn heterozygoot.",
-          "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Pup (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Bloemkleur": {
-          "narrative": "Beide bloemen hebben de rode kleur (dominant R) en zijn heterozygoot.",
-          "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Bloem 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Bloem 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Bloeitijd": {
-          "narrative": "De ene appelboom heeft een kortere bloeitijd (homozygoot), de andere ook een kortere bloeitijd maar is heterozygoot.",
-          "gene": { "trait": "Bloeitijd", "dominant": { "allele": "B", "phenotype": "kort" }, "recessive": { "allele": "b", "phenotype": "lang" } },
-          "family": { "p_father": { "id": "p_father", "name": "Boom 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Boom 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Tong krullen": {
-          "narrative": "Beide ouders kunnen hun tong krullen (dominant T) en zijn heterozygoot.",
-          "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        }
+      "Haarvorm": {
+        "narrative": "De haarvorm bij mensen wordt door een deel bepaald door een gen. Dit gen heeft als dominante allelvorm krullend haar (H) en heeft als recessieve allelvorm steil haar (h). Twee ouders (generatie P), waarvan de vader heterozygoot is voor krullend haar en waarvan de moeder homozygoot is voor krullend haar, krijgen een kind (F1). Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) dat krullend haar heeft en homozygoot is voor de eigenschap.",
+        "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "alles_zelf": {
-        "Huntington": {
-          "narrative": "De ene ouder heeft Huntington (dominant H) en is heterozygoot. De andere ouder heeft geen Huntington.",
-          "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "ziek" }, "recessive": { "allele": "h", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Albinisme": {
-          "narrative": "Elke ouder is geen albino (dominant A) en is heterozygoot.",
-          "gene": { "trait": "Albinisme", "dominant": { "allele": "A", "phenotype": "geen albino" }, "recessive": { "allele": "a", "phenotype": "albino" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        },
-        "Mamma-carcinoom": {
-          "narrative": "De ene ouder heeft erfelijke borstkanker (dominant M) en is heterozygoot, de andere ouder heeft het niet (homozygoot).",
-          "gene": { "trait": "Mamma-carcinoom", "dominant": { "allele": "M", "phenotype": "wel kanker" }, "recessive": { "allele": "m", "phenotype": "geen kanker" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 1, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende nakomeling?" }
-        }
+      "Staartlengte": {
+        "narrative": "De staartlengte bij een chimpansee wordt mede bepaald door een gen. Het dominante allel (L) zorgt voor langere staarten, terwijl het recessieve allel (l) zorgt voor korte staarten. Twee chimpansees (generatie P), de vader heterozygoot voor een lange staart, en de moeder homozygoot voor een lange staart, krijgen een nakomeling (F1). Over het kind (F1) dat ze krijgen of de partner van dat kind (F1) is niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) met een korte staart die homozygoot is voor deze eigenschap.",
+        "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "langere staart" }, "recessive": { "allele": "l", "phenotype": "kortere staart" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor de onbekende nakomeling (F1) en de onbekende partner (F1)?" }
+      },
+      "Wolman syndroom": {
+        "narrative": "De ziekte van Wolman is een zeldzame erfelijke en aangeboren stofwisselingsziekte die valt onder de lysosomale stapelingsziekten. Het ontbreken of niet volledig functioneren van enzymen zorgt ervoor dat (afval)stoffen zich opstapelen in het lysosoom. Dit veroorzaazaakt ten slotte schade in weefsels en organen. Het Wolman Syndroom is een ernstige ziekte, dat gedeeltelijk erfelijk bepaald wordt, en zich recessief uit (n). Bij de dominante vorm (N) is dus niets aan de hand. Twee ouders (generatie P), de vader zonder Wolman en homozygoot voor die eigenschap, en de moeder met een heterozygoot genotype, krijgen een kind (F1) waar niets over bekend is. Dit kind (F1) krijgt samen met een partner waar ook niets over bekend is een kind (F2) dat niet vatbaar is voor Wolman en daar homozygoot voor is.",
+        "gene": { "trait": "Wolman syndroom", "dominant": { "allele": "N", "phenotype": "Geen Wolman syndroom" }, "recessive": { "allele": "n", "phenotype": "Wolman syndroom" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
+      },
+      "Bloemkleur": {
+        "narrative": "Bij een bepaalde bloemsoort bepaalt een gen in zijn dominante vorm dat de bloem meer rood kleurt (R) en in zijn recessieve vorm meer blauw kleurt (r). Twee bloemen (generatie P) die allebei rood zijn maar waarvan de ‘vader’ heterozygoot is en de ‘moeder’ homozygoot, krijgen een nakomeling (F1) waarover niets bekend is. Een onbekende partner krijgt samen met deze onbekende nakomeling weer een nakomeling (F2), die homozygoot is en rood van kleur.",
+        "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor de onbekende nakomeling (F1) en de onbekende partner (F1)?" }
       }
     },
-    "level3": {
-      "veel_hulp": {
-        "Oogkleur": {
-          "narrative": "L3: Een van de ouders heeft bruine ogen en is homozygoot. Over de andere ouder is niets bekend. Het kind heeft bruine ogen en is heterozygoot.",
-          "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Haarvorm": {
-          "narrative": "Een van de ouders heeft krullend haar en is heterozygoot. De ander is onbekend. Het kind heeft krullend haar en is homozygoot.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Fruitvliegjes": {
-          "narrative": "De ene fruitvlieg heeft korte vleugels (homozygoot). De ander is onbekend. De nakomeling heeft lange vleugels en is heterozygoot.",
-          "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Snavel kip": {
-          "narrative": "Een ouder heeft een zwak gekromde snavel en is heterozygoot. De ander is onbekend. Het kuiken heeft een sterk gekromde snavel.",
-          "gene": { "trait": "Snavel", "dominant": { "allele": "K", "phenotype": "zwak gekromd" }, "recessive": { "allele": "k", "phenotype": "sterk gekromd" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kuiken (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        }
+    "alles_zelf": {
+      "Oogkleur": {
+        "narrative": "De kleuren van ogen wordt mede bepaald door een gen, waarbij bruine ogen (B) dominant zijn over blauwe ogen (b). De vader heeft bruine ogen en is heterozygoot voor de eigenschap. De moeder heeft blauwe ogen en is hier homozygoot voor. Samen krijgen zij een kind (F1) waarover niets bekend. Over de partner van dat kind (F1) is ook niets bekend, maar deze twee krijgen op hun beurt weer een kind (F2) met blauwe ogen die homozygoot is voor deze eigenschap",
+        "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "enige_hulp": {
-        "Wolman syndroom": {
-          "narrative": "Een ouder heeft Wolman (recessief r). De ander is onbekend. Het kind heeft ook Wolman.",
-          "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "gezond" }, "recessive": { "allele": "r", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Staartlengte": {
-          "narrative": "Een ouder is heterozygoot en heeft een lange staart. De ander is onbekend. De nakomeling heeft een lange staart en is homozygoot.",
-          "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Nakomeling (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "P.R.A. (ziekte)": {
-          "narrative": "Een ouder heeft geen PRA (dominant P) en is heterozygoot. De ander is onbekend. De pup heeft wel PRA.",
-          "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Pup (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Melk allergie": {
-          "narrative": "Een ouder heeft geen allergie (recessief m). De ander is onbekend. Het kind is wel allergisch (dominant M) en heterozygoot.",
-          "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "allergie" }, "recessive": { "allele": "m", "phenotype": "geen allergie" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        }
+      "Haarvorm": {
+        "narrative": "De vorm van het haar wordt mede bepaald door een gen, waarbij krullend haar (H) dominant is over steil haar (h). Twee ouders (generatie P) krijgen een kind (F1). De vader heeft krullend haar en is homozygoot voor deze eigenschap, de moeder heeft krullend haar en is heterozygoot voor de eigenschap. Over het kind dat ze samen krijgen is niets bekend. Samen met een partner, waarover ook niets bekend is, krijgt dit kind (F1) ook weer een kind (F2). Het kind (F2) heeft steil haar en is homozygoot voor deze eigenschap.",
+        "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "alles_zelf": {
-        "Tong krullen": {
-          "narrative": "Een ouder kan tong krullen en is heterozygoot. De ander is onbekend. Het kind kan ook tong krullen en is ook heterozygoot.",
-          "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Depressie": {
-          "narrative": "Een ouder heeft verkleinde kans (dominant D) en is homozygoot. De ander is onbekend. Het kind heeft ook verkleinde kans en is heterozygoot.",
-          "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        },
-        "Apert syndroom": {
-          "narrative": "Een ouder heeft Apert (dominant A) en is heterozygoot. De ander is onbekend. Het kind heeft ook Apert en is homozygoot.",
-          "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "ziek" }, "recessive": { "allele": "a", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Ouder 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Ouder 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" } },
-          "unknowns": ["p_mother"], "punnett_squares_needed": 3, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende ouder?" }
-        }
-      }
-    },
-    "level4": {
-      "veel_hulp": {
-        "Oogkleur": {
-          "narrative": "Ouder 1 (P) is homozygoot recessief. Ouder 2 (P) is heterozygoot. Kind (F1) onbekend. Partner (F1) is homozygoot recessief. Kleinkind (F2) is heterozygoot.",
-          "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Haarvorm": {
-          "narrative": "Beide ouders (P) zijn heterozygoot. Kind (F1) onbekend. Partner (F1) is homozygoot dominant. Kleinkind (F2) is heterozygoot.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Albinisme": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 heterozygoot. Kind (F1) onbekend. Partner (F1) homozygoot recessief (albino). Kleinkind (F2) is ook albino.",
-          "gene": { "trait": "Albinisme", "dominant": { "allele": "A", "phenotype": "geen albino" }, "recessive": { "allele": "a", "phenotype": "albino" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Kattenvacht": {
-          "narrative": "P: Kat 1 homozygoot dominant (ringen), Kat 2 homozygoot recessief (strepen). Kind (F1) onbekend. Partner (F1) recessief. Kleinkind (F2) heterozygoot.",
-          "gene": { "trait": "Kattenvacht", "dominant": { "allele": "R", "phenotype": "ringen" }, "recessive": { "allele": "r", "phenotype": "strepen" } },
-          "family": { "p_father": { "id": "p_father", "name": "Kat 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Kat 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        }
+      "Appelboom": {
+        "narrative": "De bloeitijd van de Japanse appelboom wordt mede bepaald door een gen, waarbij kortere bloeitijd (B) dominant is over langere bloeitijd (b). Twee appelbomen (generatie P) krijgen een nakomeling (F1). De ‘vader’ appelboom heeft een langere bloeitijd en is homozygoot voor die eigenschap, de ‘moeder’ appelboom heeft kortere bloeitijd en is heterozygoot voor die eigenschap. Over de nakomeling (F1) is niets bekend. Evenmin over de 'partner-boom' die door een kruising een appelboom (F2) geeft met langere bloeitijd en daar homozygoot voor is.",
+        "gene": { "trait": "Bloeitijd appelboom", "dominant": { "allele": "B", "phenotype": "kortere bloeitijd" }, "recessive": { "allele": "b", "phenotype": "langere bloeitijd" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor de onbekende nakomeling (F1) en de onbekende partner (F1)?" }
       },
-      "enige_hulp": {
-        "Depressie": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 homozygoot recessief. Kind (F1) onbekend. Partner (F1) heterozygoot. Kleinkind (F2) homozygoot dominant.",
-          "gene": { "trait": "Depressie", "dominant": { "allele": "D", "phenotype": "minder kans" }, "recessive": { "allele": "d", "phenotype": "meer kans" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Fruitvliegjes": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 heterozygoot. Kind (F1) onbekend. Partner (F1) homozygoot recessief. Kleinkind (F2) heterozygoot.",
-          "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Bloemkleur": {
-          "narrative": "P: Beide bloemen homozygoot (1 rood RR, 1 blauw rr). Kind (F1) onbekend. Partner (F1) heterozygoot. Kleinkind (F2) blauw (rr).",
-          "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Bloem 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Bloem 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Tong krullen": {
-          "narrative": "P: Beide ouders homozygoot recessief. Kind (F1) onbekend. Partner (F1) homozygoot dominant. Kleinkind (F2) heterozygoot.",
-          "gene": { "trait": "Tong", "dominant": { "allele": "T", "phenotype": "krullen" }, "recessive": { "allele": "t", "phenotype": "niet krullen" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        }
+      "Fruitvliegjes": {
+        "narrative": "Bij fruitvliegjes wordt de lengte van de vleugels onder andere bepaald door een gen, waarbij langere vleugels dominant (L) zijn over korte vleugels (l). Twee fruitvliegjes (generatie P), waarvan de vader homozygoot is en de moeder heterozygoot is voor lange vleugels, krijgen een nakomeling (F1) waarover niets bekend is. Samen met een partner waarvan ook niets bekend is, komt er een nakomeling (F2) met langere vleugels, die homozygoot is voor deze eigenschap.",
+        "gene": { "trait": "Fruitvliegjes", "dominant": { "allele": "L", "phenotype": "langere vleugels" }, "recessive": { "allele": "l", "phenotype": "kortere vleugels" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       },
-      "alles_zelf": {
-        "Hazenlip": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 homozygoot recessief. Kind (F1) onbekend. Partner (F1) recessief. Kleinkind (F2) recessief.",
-          "gene": { "trait": "Hazenlip", "dominant": { "allele": "L", "phenotype": "gezond" }, "recessive": { "allele": "l", "phenotype": "hazenlip" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "P.R.A. (ziekte)": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 homozygoot recessief. Kind (F1) onbekend. Partner (F1) homozygoot dominant. Kleinkind (F2) homozygoot dominant.",
-          "gene": { "trait": "PRA", "dominant": { "allele": "P", "phenotype": "gezond" }, "recessive": { "allele": "p", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Hond 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Hond 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        },
-        "Mamma-carcinoom": {
-          "narrative": "P: Ouder 1 homozygoot recessief, Ouder 2 homozygoot dominant. Kind (F1) onbekend. Partner (F1) heterozygoot. Kleinkind (F2) homozygoot recessief.",
-          "gene": { "trait": "Mamma-carcinoom", "dominant": { "allele": "M", "phenotype": "wel kanker" }, "recessive": { "allele": "m", "phenotype": "geen kanker" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child"], "punnett_squares_needed": 4, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van het onbekende kind (F1)?" }
-        }
-      }
-    },
-    "level5": {
-      "veel_hulp": {
-        "Oogkleur": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 heterozygoot. Kind (F1) onbekend. Partner (F1) onbekend. Kleinkind (F2) homozygoot recessief.",
-          "gene": { "trait": "Oogkleur", "dominant": { "allele": "B", "phenotype": "bruin" }, "recessive": { "allele": "b", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van de onbekende F1 generatie?" }
-        },
-        "Haarvorm 1": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 onbekend. Kind (F1) onbekend. Partner (F1) homozygoot dominant. Kleinkind (F2) heterozygoot.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f1_child"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Kind (F1)?" }
-        },
-        "Haarvorm 2": {
-          "narrative": "P: Ouder 1 homozygoot recessief, Ouder 2 onbekend. Kind (F1) heterozygoot. Partner (F1) onbekend. Kleinkind (F2) homozygoot dominant.",
-          "gene": { "trait": "Haarvorm", "dominant": { "allele": "H", "phenotype": "krullend" }, "recessive": { "allele": "h", "phenotype": "steil" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Partner (F1)?" }
-        },
-        "Melk allergie": {
-          "narrative": "P: Ouder 1 homozygoot recessief, Ouder 2 onbekend. Kind (F1) heterozygoot. Partner (F1) onbekend. Kleinkind (F2) homozygoot dominant.",
-          "gene": { "trait": "Melkallergie", "dominant": { "allele": "M", "phenotype": "allergie" }, "recessive": { "allele": "m", "phenotype": "geen allergie" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Partner (F1)?" }
-        }
-      },
-      "enige_hulp": {
-        "Staartlengte": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 onbekend. Kind (F1) homozygoot recessief. Partner (F1) homozygoot dominant. Kleinkind (F2) onbekend.",
-          "gene": { "trait": "Staartlengte", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Chimp 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Chimp 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Kleinkind (F2)?" }
-        },
-        "Bloeitijd Appelboom": {
-          "narrative": "P: Ouder 1 heterozygoot, Ouder 2 homozygoot dominant. Kind (F1) onbekend. Partner (F1) onbekend. Kleinkind (F2) homozygoot dominant.",
-          "gene": { "trait": "Bloeitijd", "dominant": { "allele": "B", "phenotype": "kort" }, "recessive": { "allele": "b", "phenotype": "lang" } },
-          "family": { "p_father": { "id": "p_father", "name": "Boom 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Boom 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Kind (F1) en Partner (F1)?" }
-        },
-        "Apert Syndroom": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 heterozygoot. Kind (F1) onbekend. Partner (F1) homozygoot recessief. Kleinkind (F2) onbekend.",
-          "gene": { "trait": "Apert", "dominant": { "allele": "A", "phenotype": "ziek" }, "recessive": { "allele": "a", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Kind (F1) en Kleinkind (F2)?" }
-        },
-        "Wolman syndroom": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 onbekend. Kind (F1) onbekend. Partner (F1) homozygoot recessief. Kleinkind (F2) heterozygoot.",
-          "gene": { "trait": "Wolman", "dominant": { "allele": "R", "phenotype": "gezond" }, "recessive": { "allele": "r", "phenotype": "ziek" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f1_child"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Kind (F1)?" }
-        }
-      },
-      "alles_zelf": {
-        "Fruitvliegjes": {
-          "narrative": "P: Ouder 1 onbekend, Ouder 2 homozygoot dominant. Kind (F1) homozygoot dominant. Partner (F1) heterozygoot. Kleinkind (F2) onbekend.",
-          "gene": { "trait": "Vleugels", "dominant": { "allele": "L", "phenotype": "lang" }, "recessive": { "allele": "l", "phenotype": "kort" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vlieg 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Vlieg 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_father", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 1 (P) en Kleinkind (F2)?" }
-        },
-        "Huntington": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 onbekend. Kind (F1) heterozygoot. Partner (F1) heterozygoot. Kleinkind (F2) onbekend.",
-          "gene": { "trait": "Huntington", "dominant": { "allele": "H", "phenotype": "ziek" }, "recessive": { "allele": "h", "phenotype": "gezond" } },
-          "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_mother", "f2_grandchild"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 2 (P) en Kleinkind (F2)?" }
-        },
-        "Bloemkleur": {
-          "narrative": "P: Ouder 1 homozygoot dominant, Ouder 2 heterozygoot. Kind (F1) onbekend. Partner (F1) onbekend. Kleinkind (F2) homozygoot recessief.",
-          "gene": { "trait": "Bloemkleur", "dominant": { "allele": "R", "phenotype": "rood" }, "recessive": { "allele": "r", "phenotype": "blauw" } },
-          "family": { "p_father": { "id": "p_father", "name": "Bloem 1 (P)" }, "p_mother": { "id": "p_mother", "name": "Bloem 2 (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["f1_child", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Kind (F1) en Partner (F1)?" }
-        },
-        "Snavel kip": {
-          "narrative": "P: Ouder 1 onbekend, Ouder 2 heterozygoot. Kind (F1) heterozygoot. Partner (F1) onbekend. Kleinkind (F2) homozygoot recessief.",
-          "gene": { "trait": "Snavel", "dominant": { "allele": "K", "phenotype": "zwak gekromd" }, "recessive": { "allele": "k", "phenotype": "sterk gekromd" } },
-          "family": { "p_father": { "id": "p_father", "name": "Haan (P)" }, "p_mother": { "id": "p_mother", "name": "Kip (P)" }, "f1_child": { "id": "f1_child", "name": "Kuiken (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
-          "unknowns": ["p_father", "f1_partner"], "punnett_squares_needed": 6, "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen van Ouder 1 (P) en Partner (F1)?" }
-        }
+      "Kippensnavel": {
+        "narrative": "Bij de Gallus Gallus (de kip) wordt de snavelkromming mede bepaald door een gen. Een zwakke kromming is hierbij dominant (K) over een sterke kromming (k). Een haan en een kip (generatie P), waarvan de haan heterozygoot is voor een zwakke kromming en de kip homozygoot is voor een zwakke kromming. Zij krijgen een kip (F1) waarover niets bekend is. Samen met een onbekende partner krijgt deze kip (F1) een kip (F2) die homozygoot is voor een sterk gekromde snavel.",
+        "gene": { "trait": "Kippensnavel", "dominant": { "allele": "K", "phenotype": "zwakke kromming" }, "recessive": { "allele": "k", "phenotype": "sterke kromming" } },
+        "family": { "p_father": { "id": "p_father", "name": "Vader (P)" }, "p_mother": { "id": "p_mother", "name": "Moeder (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Kleinkind (F2)" } },
+        "unknowns": ["f1_child", "f1_partner"],
+        "punnett_squares_needed": 7,
+        "steps": { "step5_prompt": "Wat zijn de mogelijke genotypen voor het onbekende kind (F1) en de onbekende partner (F1)?" }
       }
     }
   }
+}
