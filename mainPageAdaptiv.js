@@ -464,6 +464,9 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     var effort = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('Effort'+(currentTaskIndex-1)));
     var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1)));
     that.hideNextButton(); // Standard Qualtrics API to hide
+    
+	Qualtrics.SurveyEngine.setEmbeddedData('Adaptivity', 'none');
+    Qualtrics.SurveyEngine.setEmbeddedData('Feedback', 'yes');
     console.log("Adaptivity: "+Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity'));
     console.log("Feedback: "+Qualtrics.SurveyEngine.getEmbeddedData('Feedback'));
     console.log("Current Task Index: "+currentTaskIndex);
