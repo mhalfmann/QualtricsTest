@@ -39,7 +39,7 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
     if (window._effortValue != null) {
-        var embeddedDataName = 'Effort'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+        var embeddedDataName = 'Effort_'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
         Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, window._effortValue);
         console.log("Effort saved: " + window._effortValue);
     }

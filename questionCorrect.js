@@ -27,7 +27,7 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
 	if(answerCount == 2) offset = 3;
 	
     var selectedValue = parseInt(value[0]) + offset; // the selected choice ID
-	var embeddedDataName = 'CorrectSteps'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+	var embeddedDataName = 'CorrectSteps_'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
 	console.log('Setting '+embeddedDataName+' to '+selectedValue); 
 	Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
 });
