@@ -7,10 +7,9 @@
 var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
 if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
-// Welcher Eintrag in den Arrays (1-basiert: 1 = erstes Element). Entweder Embedded Data
-// "PreTestItemIndex" in Qualtrics, oder Fallback hier hochzählen (pro Frage / Block).
-// Hilfe ist immer „alles selbst“; in der JSON pro Aufgabe nur eine numerische "id" (1, 2, …).
-var PRE_TEST_ITEM_INDEX_FALLBACK = 1;
+// Beim Laden: Embedded Data "PreTestIndex" lesen, +1, wieder speichern; der neue Wert (1-basiert)
+// wählt die Aufgabe in preTestConfig / preTestAnswerKey (erstes Leeren → 0 → nach +1 = 1).
+// Hilfe ist immer „alles selbst“; in der JSON pro Aufgabe numerische "id" (1, 2, …).
 var debugMode = false;
 
 // --- CONSTANTS ---
@@ -52,15 +51,17 @@ function showScreen(screenId) {
     }
 }
 
-function resolvePreTestItemIndex1Based() {
-    var raw = Qualtrics.SurveyEngine.getEmbeddedData('PreTestItemIndex');
-    var n = parseInt(raw, 10);
-    if (!isNaN(n) && n >= 1) return n;
-    return PRE_TEST_ITEM_INDEX_FALLBACK;
+function bumpPreTestIndex1Based() {
+    var raw = Qualtrics.SurveyEngine.getEmbeddedData('PreTestIndex');
+    var prev = parseInt(raw, 10);
+    if (isNaN(prev) || prev < 0) prev = 0;
+    var n = prev + 1;
+    Qualtrics.SurveyEngine.setEmbeddedData('PreTestIndex', String(n));
+    return n;
 }
 
 function startPreTestFromArrays(configArray, answerKeyArray) {
-    var n = resolvePreTestItemIndex1Based();
+    var n = bumpPreTestIndex1Based();
     var i = n - 1;
     var count = configArray ? configArray.length : 0;
     if (!configArray || !answerKeyArray || !Array.isArray(configArray) || !Array.isArray(answerKeyArray)) {
@@ -92,7 +93,7 @@ function startPreTestFromArrays(configArray, answerKeyArray) {
     if (levelSel) levelSel.style.display = 'none';
 
     var loopEl = document.getElementById('loop-counter-display');
-    if (loopEl) loopEl.innerText = taskId;
+    if (loopEl) loopEl.innerText = String(n);
 
     initializeTask();
 }

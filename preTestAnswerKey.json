@@ -1,8 +1,19 @@
 [
   {
-    "step1": { "p_father": "BB", "p_mother": "BB" },
-    "step2": { "p_father": "BB", "p_mother": "BB" },
-    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step1": {
+      "p_father": "BB",
+      "p_mother": "BB"
+    },
+    "step2": {
+      "p_father": "BB",
+      "p_mother": "BB"
+    },
+    "step3": {
+      "reasoning": [
+        "deductief"
+      ],
+      "punnett_squares": 1
+    },
     "step4": [
       {
         "p2a1": "B",
@@ -15,24 +26,258 @@
         "o4": "BB"
       }
     ],
-    "step5": ["BB"]
+    "step5": [
+      "BB"
+    ]
   },
   {
-    "step1": { "p_father": "BB", "p_mother": "bb" },
-    "step2": { "p_father": "BB", "p_mother": "bb" },
-    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step1": {
+      "p_father": "HH",
+      "p_mother": "hh"
+    },
+    "step2": {
+      "p_father": "HH",
+      "p_mother": "hh"
+    },
+    "step3": {
+      "reasoning": [
+        "deductief"
+      ],
+      "punnett_squares": 1
+    },
     "step4": [
       {
-        "p2a1": "b",
-        "p2a2": "b",
-        "p1a1": "B",
-        "o1": "Bb",
-        "o2": "Bb",
-        "p1a2": "B",
-        "o3": "Bb",
-        "o4": "Bb"
+        "p2a1": "h",
+        "p2a2": "h",
+        "p1a1": "H",
+        "o1": "Hh",
+        "o2": "Hh",
+        "p1a2": "H",
+        "o3": "Hh",
+        "o4": "Hh"
       }
     ],
-    "step5": ["Bb"]
+    "step5": [
+      "Hh"
+    ]
+  },
+  {
+    "step1": {
+      "p_father": "Tt",
+      "f1_child": "Tt"
+    },
+    "step2": {
+      "p_father": "Tt",
+      "f1_child": "Tt"
+    },
+    "step3": {
+      "reasoning": [
+        "inductief"
+      ],
+      "punnett_squares": 3
+    },
+    "step4": [
+      {
+        "p2a1": "T",
+        "p2a2": "T",
+        "p1a1": "T",
+        "o1": "TT",
+        "o2": "TT",
+        "p1a2": "t",
+        "o3": "Tt",
+        "o4": "Tt"
+      },
+      {
+        "p2a1": "T",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "TT",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "Tt",
+        "o4": "tt"
+      },
+      {
+        "p2a1": "t",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "tt",
+        "o4": "tt"
+      }
+    ],
+    "step5": [
+      "TT",
+      "Tt",
+      "tt"
+    ]
+  },
+  {
+    "step1": {
+      "p_father": "Pp",
+      "p_mother": "pp",
+      "f1_partner": "PP",
+      "f2_grandchild": "PP"
+    },
+    "step2": {
+      "p_father": "Pp",
+      "p_mother": "pp",
+      "f1_partner": "PP",
+      "f2_grandchild": "PP"
+    },
+    "step3": {
+      "reasoning": [
+        "deductief",
+        "inductief"
+      ],
+      "punnett_squares": 4
+    },
+    "step4": [
+      {
+        "p2a1": "p",
+        "p2a2": "p",
+        "p1a1": "P",
+        "o1": "Pp",
+        "o2": "Pp",
+        "p1a2": "p",
+        "o3": "pp",
+        "o4": "pp"
+      },
+      {
+        "p2a1": "P",
+        "p2a2": "P",
+        "p1a1": "P",
+        "o1": "PP",
+        "o2": "PP",
+        "p1a2": "P",
+        "o3": "PP",
+        "o4": "PP"
+      },
+      {
+        "p2a1": "P",
+        "p2a2": "p",
+        "p1a1": "P",
+        "o1": "PP",
+        "o2": "Pp",
+        "p1a2": "P",
+        "o3": "PP",
+        "o4": "Pp"
+      },
+      {
+        "p2a1": "p",
+        "p2a2": "p",
+        "p1a1": "P",
+        "o1": "Pp",
+        "o2": "Pp",
+        "p1a2": "P",
+        "o3": "Pp",
+        "o4": "Pp"
+      }
+    ],
+    "step5": [
+      "Pp"
+    ]
+  },
+  {
+    "step1": {
+      "p_father": "Kk",
+      "p_mother": "KK",
+      "f2_grandchild": "kk"
+    },
+    "step2": {
+      "p_father": "Kk",
+      "p_mother": "KK",
+      "f2_grandchild": "kk"
+    },
+    "step3": {
+      "reasoning": [
+        "deductief",
+        "inductief"
+      ],
+      "punnett_squares": 7
+    },
+    "step4": [
+      {
+        "p1a1": "K",
+        "p1a2": "k",
+        "p2a1": "K",
+        "p2a2": "K",
+        "o1": "KK",
+        "o2": "Kk",
+        "o3": "KK",
+        "o4": "Kk"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "K",
+        "p2a1": "K",
+        "p2a2": "K",
+        "o1": "KK",
+        "o2": "KK",
+        "o3": "KK",
+        "o4": "KK"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "K",
+        "p2a1": "K",
+        "p2a2": "k",
+        "o1": "KK",
+        "o2": "KK",
+        "o3": "Kk",
+        "o4": "Kk"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "K",
+        "p2a1": "k",
+        "p2a2": "k",
+        "o1": "Kk",
+        "o2": "Kk",
+        "o3": "Kk",
+        "o4": "Kk"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "k",
+        "p2a1": "K",
+        "p2a2": "K",
+        "o1": "KK",
+        "o2": "Kk",
+        "o3": "KK",
+        "o4": "Kk"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "k",
+        "p2a1": "K",
+        "p2a2": "k",
+        "o1": "KK",
+        "o2": "Kk",
+        "o3": "Kk",
+        "o4": "kk"
+      },
+      {
+        "p1a1": "K",
+        "p1a2": "k",
+        "p2a1": "k",
+        "p2a2": "k",
+        "o1": "Kk",
+        "o2": "kk",
+        "o3": "Kk",
+        "o4": "kk"
+      }
+    ],
+    "step5": {
+      "f1_child": [
+        "Kk"
+      ],
+      "f1_partner": [
+        "Kk",
+        "kk"
+      ]
+    }
   }
 ]

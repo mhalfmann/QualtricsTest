@@ -4,33 +4,196 @@
     "narrative": "Zwei Eltern bekommen ein Kind. Beide haben braune Augen und sind homozygot für dieses Merkmal.",
     "gene": {
       "trait": "Augenfarbe",
-      "dominant": { "allele": "B", "phenotype": "braun" },
-      "recessive": { "allele": "b", "phenotype": "blau" }
+      "dominant": {
+        "allele": "B",
+        "phenotype": "braun"
+      },
+      "recessive": {
+        "allele": "b",
+        "phenotype": "blau"
+      }
     },
     "family": {
-      "p_father": { "id": "p_father", "name": "Vater (P)" },
-      "p_mother": { "id": "p_mother", "name": "Mutter (P)" },
-      "f1_child": { "id": "f1_child", "name": "Kind (F1)" }
+      "p_father": {
+        "id": "p_father",
+        "name": "Vater (P)"
+      },
+      "p_mother": {
+        "id": "p_mother",
+        "name": "Mutter (P)"
+      },
+      "f1_child": {
+        "id": "f1_child",
+        "name": "Kind (F1)"
+      }
     },
-    "unknowns": ["f1_child"],
+    "unknowns": [
+      "f1_child"
+    ],
     "punnett_squares_needed": 1,
-    "steps": { "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?" }
+    "steps": {
+      "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?"
+    }
   },
   {
     "id": 2,
-    "narrative": "Zwei Eltern bekommen ein Kind. Ein Elternteil hat braune Augen, der andere blaue. Beide sind homozygot.",
+    "narrative": "Zwei Eltern bekommen ein Kind. Der Vater hat lockiges Haar und ist homozygot, die Mutter glattes Haar.",
     "gene": {
-      "trait": "Augenfarbe",
-      "dominant": { "allele": "B", "phenotype": "braun" },
-      "recessive": { "allele": "b", "phenotype": "blau" }
+      "trait": "Haarform",
+      "dominant": {
+        "allele": "H",
+        "phenotype": "lockig"
+      },
+      "recessive": {
+        "allele": "h",
+        "phenotype": "glatt"
+      }
     },
     "family": {
-      "p_father": { "id": "p_father", "name": "Vater (P)" },
-      "p_mother": { "id": "p_mother", "name": "Mutter (P)" },
-      "f1_child": { "id": "f1_child", "name": "Kind (F1)" }
+      "p_father": {
+        "id": "p_father",
+        "name": "Vater (P)"
+      },
+      "p_mother": {
+        "id": "p_mother",
+        "name": "Mutter (P)"
+      },
+      "f1_child": {
+        "id": "f1_child",
+        "name": "Kind (F1)"
+      }
     },
-    "unknowns": ["f1_child"],
+    "unknowns": [
+      "f1_child"
+    ],
     "punnett_squares_needed": 1,
-    "steps": { "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?" }
+    "steps": {
+      "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen möglich?"
+    }
+  },
+  {
+    "id": 3,
+    "narrative": "Ein Elternteil kann die Zunge einrollen und ist heterozygot. Das andere ist unbekannt. Das Kind kann es auch und ist heterozygot.",
+    "gene": {
+      "trait": "Zunge",
+      "dominant": {
+        "allele": "T",
+        "phenotype": "kann einrollen"
+      },
+      "recessive": {
+        "allele": "t",
+        "phenotype": "kann nicht einrollen"
+      }
+    },
+    "family": {
+      "p_father": {
+        "id": "p_father",
+        "name": "Elternteil 1 (P)"
+      },
+      "p_mother": {
+        "id": "p_mother",
+        "name": "Elternteil 2 (P)"
+      },
+      "f1_child": {
+        "id": "f1_child",
+        "name": "Kind (F1)"
+      }
+    },
+    "unknowns": [
+      "p_mother"
+    ],
+    "punnett_squares_needed": 3,
+    "steps": {
+      "step5_prompt": "Welche Genotypen sind für das unbekannte Elternteil möglich?"
+    }
+  },
+  {
+    "id": 4,
+    "narrative": "Zwei Hunde bekommen einen Welpen. Der Vater hat keine PRA und ist heterozygot, die Mutter hat PRA und ist homozygot. Über den Welpen ist nichts bekannt. Mit einer Partnerhündin ohne PRA, homozygot, bekommt der Welpe später ein Enkelkind, ebenfalls ohne PRA und homozygot.",
+    "gene": {
+      "trait": "PRA",
+      "dominant": {
+        "allele": "P",
+        "phenotype": "gesund"
+      },
+      "recessive": {
+        "allele": "p",
+        "phenotype": "erkrankt"
+      }
+    },
+    "family": {
+      "p_father": {
+        "id": "p_father",
+        "name": "Hund 1 (P)"
+      },
+      "p_mother": {
+        "id": "p_mother",
+        "name": "Hund 2 (P)"
+      },
+      "f1_child": {
+        "id": "f1_child",
+        "name": "Kind (F1)"
+      },
+      "f1_partner": {
+        "id": "f1_partner",
+        "name": "Partner (F1)"
+      },
+      "f2_grandchild": {
+        "id": "f2_grandchild",
+        "name": "Enkelkind (F2)"
+      }
+    },
+    "unknowns": [
+      "f1_child"
+    ],
+    "punnett_squares_needed": 4,
+    "steps": {
+      "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) möglich?"
+    }
+  },
+  {
+    "id": 5,
+    "narrative": "Bei Gallus gallus (dem Haushuhn) wird die Schnabelkrümmung mitbestimmt durch ein Gen: schwache Krümmung ist dominant (K) über starke (k). Hahn und Henne (P): Der Hahn ist heterozygot für schwache Krümmung, die Henne homozygot für schwache Krümmung. Sie erhalten ein Huhn (F1), über das nichts bekannt ist. Mit einem unbekannten Partner bekommt dieses Huhn (F1) ein Huhn (F2), homozygot für stark gekrümmten Schnabel.",
+    "gene": {
+      "trait": "Huhnschnabel",
+      "dominant": {
+        "allele": "K",
+        "phenotype": "schwache Krümmung"
+      },
+      "recessive": {
+        "allele": "k",
+        "phenotype": "starke Krümmung"
+      }
+    },
+    "family": {
+      "p_father": {
+        "id": "p_father",
+        "name": "Vater (P)"
+      },
+      "p_mother": {
+        "id": "p_mother",
+        "name": "Mutter (P)"
+      },
+      "f1_child": {
+        "id": "f1_child",
+        "name": "Kind (F1)"
+      },
+      "f1_partner": {
+        "id": "f1_partner",
+        "name": "Partner (F1)"
+      },
+      "f2_grandchild": {
+        "id": "f2_grandchild",
+        "name": "Enkelkind (F2)"
+      }
+    },
+    "unknowns": [
+      "f1_child",
+      "f1_partner"
+    ],
+    "punnett_squares_needed": 7,
+    "steps": {
+      "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?"
+    }
   }
 ]
