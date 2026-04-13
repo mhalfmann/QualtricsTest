@@ -1,0 +1,37 @@
+[
+  {
+    "id": "Augenfarbe_alles_zelf",
+    "narrative": "Zwei Eltern bekommen ein Kind. Beide haben braune Augen und sind homozygot für dieses Merkmal.",
+    "gene": {
+      "trait": "Augenfarbe",
+      "dominant": { "allele": "B", "phenotype": "braun" },
+      "recessive": { "allele": "b", "phenotype": "blau" }
+    },
+    "family": {
+      "p_father": { "id": "p_father", "name": "Vater (P)" },
+      "p_mother": { "id": "p_mother", "name": "Mutter (P)" },
+      "f1_child": { "id": "f1_child", "name": "Kind (F1)" }
+    },
+    "unknowns": ["f1_child"],
+    "punnett_squares_needed": 1,
+    "steps": { "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?" }
+  },
+  {
+    "id": "Augenfarbe_enige_hulp",
+    "help": "enige_hulp",
+    "narrative": "Zwei Eltern bekommen ein Kind. Ein Elternteil hat braune Augen, der andere blaue. Beide sind homozygot.",
+    "gene": {
+      "trait": "Augenfarbe",
+      "dominant": { "allele": "B", "phenotype": "braun" },
+      "recessive": { "allele": "b", "phenotype": "blau" }
+    },
+    "family": {
+      "p_father": { "id": "p_father", "name": "Vater (P)" },
+      "p_mother": { "id": "p_mother", "name": "Mutter (P)" },
+      "f1_child": { "id": "f1_child", "name": "Kind (F1)" }
+    },
+    "unknowns": ["f1_child"],
+    "punnett_squares_needed": 1,
+    "steps": { "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?" }
+  }
+]

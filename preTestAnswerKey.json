@@ -1,0 +1,38 @@
+[
+  {
+    "step1": { "p_father": "BB", "p_mother": "BB" },
+    "step2": { "p_father": "BB", "p_mother": "BB" },
+    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step4": [
+      {
+        "p2a1": "B",
+        "p2a2": "B",
+        "p1a1": "B",
+        "o1": "BB",
+        "o2": "BB",
+        "p1a2": "B",
+        "o3": "BB",
+        "o4": "BB"
+      }
+    ],
+    "step5": ["BB"]
+  },
+  {
+    "step1": { "p_father": "BB", "p_mother": "bb" },
+    "step2": { "p_father": "BB", "p_mother": "bb" },
+    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step4": [
+      {
+        "p2a1": "b",
+        "p2a2": "b",
+        "p1a1": "B",
+        "o1": "Bb",
+        "o2": "Bb",
+        "p1a2": "B",
+        "o3": "Bb",
+        "o4": "Bb"
+      }
+    ],
+    "step5": ["Bb"]
+  }
+]
