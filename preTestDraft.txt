@@ -1,0 +1,144 @@
+Fragestellung Komplexitätsniveau 1:
+Ein dominantes Allel (R) sorgt dafür, dass Maissamen gefärbt sind, während das rezessive Allel (r) farblose Samen verursacht. Eine Pflanze mit gefärbten Samen, die für dieses Merkmal homozygot ist, bekommt Nachkommen mit einer Pflanze mit farblosen Samen. Was ist der Genotyp der Nachkommen?
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: RR
+Elternteil 2: rr
+Nachkomme: unbekannt
+Schritt 2 – Darstellung im Stammbaum:
+Vater und Mutter eintragen (RR × rr)
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv
+1 Kreuzungstabelle
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+	R	R
+r	Rr	Rr
+r	Rr	Rr
+
+Schritt 5 – Antwort:
+Rr
+
+Fragestellung Komplexitätsniveau 2:
+Das Vorhandensein von Sommersprossen auf den Wangen wird durch ein Gen bestimmt, bei dem die dominante Form (S) zu Sommersprossen führt, die rezessive Form (s) jedoch nicht. Zwei Eltern bekommen ein Kind. Ein Elternteil hat keine Sommersprossen, der andere Elternteil hat Sommersprossen und ist heterozygot für dieses Merkmal. Welche Genotypen sind für das Kind möglich?
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: ss
+Elternteil 2: Ss
+Schritt 2 – Darstellung im Stammbaum:
+Oben die beiden Eltern (ss × Ss)
+Darunter das Kind
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv
+1 Kreuzungstabelle
+Schritt 4 – Erstellen Sie die Kreuzungstabelle:
+	s	s
+S	Ss	Ss
+s	ss	ss
+
+Schritt 5 – Antwort:
+Ss oder ss
+
+Fragestellung Komplexitätsniveau 3:
+Sichelzellanämie wird durch ein Gen verursacht, das in seiner rezessiven Form (s) zur Krankheit führt und in seiner dominanten Form (S) nicht. Ein Elternteil ohne Sichelzellanämie, der für dieses Merkmal heterozygot ist, bekommt ein Kind, das die Krankheit hat. Welche Genotypen sind für den anderen Elternteil möglich?
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: Ss
+Kind: ss
+Schritt 2 – Darstellung im Stammbaum:
+Oben Elternteil 1 (Ss) und der unbekannte Elternteil (?)
+Darunter das Kind (ss)
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Induktiv
+3 Kreuzungstabellen
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+
+	S	S
+S	SS	SS
+s	Ss	Ss
+ 
+	S	s
+S	SS	Ss
+s	Ss	ss
+
+	s	s
+S	Ss	Ss
+s	ss	ss
+
+Schritt 5 – Antwort:
+Ss oder ss
+
+Fragestellung Komplexitätsniveau 4:
+Die Fellfarbe von Mäusen wird durch ein Gen bestimmt, das dominant für gelbes Fell (Y) und rezessiv für graues Fell (y) ist. Zwei Mäuse bekommen Nachwuchs. Beide Mäuse haben einen heterozygoten Genotyp und beide haben gelbes Fell. Über den Nachwuchs ist weiter nichts bekannt. Dieser Nachwuchs bekommt anschließend mit einer Maus mit grauem Fell ein Junges, das gelbes Fell hat und heterozygot ist. Welche Genotypen sind für den unbekannten Nachwuchs möglich?
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: Yy
+Elternteil 2: Yy
+Nachkomme: unbekannt
+Partner: yy
+Enkel: Yy
+Schritt 2 – Darstellung im Stammbaum:
+Vater und Mutter eintragen (Yy × Yy)
+Darunter der unbekannte Nachkomme
+Daneben der Partner und darunter der Enkel
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv (1)
+Induktiv (3)
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+
+	Y	y
+Y	YY	Yy
+y	Yy	yy
+
+	y	y
+Y	Yy	Yy
+Y	Yy	Yy
+
+	y	y
+Y	Yy	Yy
+y	yy	yy
+
+	y	y
+y	yy	yy
+y	yy	yy
+
+Schritt 5 – Antwort:
+YY oder Yy
+
+Fragestellung Komplexitätsniveau 5:
+Das Vorhandensein eines Grübchens im Kinn wird durch ein Gen bestimmt, das dominant für ein glattes Kinn (K) und rezessiv für ein Grübchen im Kinn (k) ist.
+Zwei Eltern bekommen ein Kind. Einer der Elternteile hat ein Grübchen im Kinn, der andere Elternteil nicht, weitere Informationen sind nicht bekannt.
+Das Kind hat ebenfalls ein Grübchen im Kinn.
+Dieses Kind bekommt anschließend mit einem Partner mit glattem Kinn, der dafür homozygot ist, ein Kind (Enkel).
+Welche Genotypen sind für den unbekannten Elternteil und den unbekannten Enkel möglich?
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: kk
+Elternteil 2: unbekannt
+Kind: kk
+Partner: KK
+Enkel: unbekannt
+Schritt 2 – Darstellung im Stammbaum:
+Oben Elternteil 1 (kk) und Elternteil 2 (unbekannt)
+Darunter das Kind (kk) mit daneben dem Partner (KK)
+Ganz unten der Enkel (unbekannt)
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Induktiv (3)
+Deduktiv (1)
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+
+	k	k
+K	Kk	Kk
+K	Kk	Kk
+
+	k	k
+K	Kk	Kk
+k	kk	kk
+
+	k	k
+k	kk	kk
+k	kk	kk
+
+	K	K
+k	Kk	Kk
+k	Kk	Kk
+
+Schritt 5 – Antwort:
+Unbekannter Elternteil: Kk
+Unbekannter Enkel: Kk
+Kostons, D., Van Gog, T., & Paas, F. (2012). Training self-assessment and task-selection skills: A cognitive approach to improving self-regulated learning.Learning and Instruction, 22(2), 121-132.
+

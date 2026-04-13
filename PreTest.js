@@ -11,6 +11,8 @@ if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 // wählt die Aufgabe in preTestConfig / preTestAnswerKey (erstes Leeren → 0 → nach +1 = 1).
 // Hilfe ist immer „alles selbst“; in der JSON pro Aufgabe numerische "id" (1, 2, …).
 var debugMode = false;
+// true: Button „Aufgabe abschließen“ immer aktiv, Klick ohne vollständige Kreuztabellen/Finalantworten (nur zum Testen).
+var skipCompleteTaskValidation = true;
 
 // --- CONSTANTS ---
 var preTestConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/preTestConfig.json';
@@ -275,6 +277,10 @@ function updateCompleteTaskButtonState() {
     var btn = document.getElementById('complete-task-btn');
     if (!btn) return;
     if (btn.style.display === 'none') return;
+    if (skipCompleteTaskValidation) {
+        btn.disabled = false;
+        return;
+    }
     btn.disabled = !(isStep4PunnettComplete() && isStep5FinalAnswersComplete());
 }
 
@@ -440,7 +446,7 @@ function collectTaskData() {
 function completeTask() {
     var btn = document.getElementById('complete-task-btn');
     if (btn && btn.disabled) return;
-    if (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete()) return;
+    if (!skipCompleteTaskValidation && (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete())) return;
     finalTaskData = collectTaskData();
     document.getElementById('NextButton').click();
 }
@@ -469,8 +475,8 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
     if (finalTaskData) {
         // 1. Save specific fields for this task index
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskOutput_' + currentTaskIndex, JSON.stringify(finalTaskData));
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficulty_' + currentTaskIndex, finalTaskData.level);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskOutputPreTest_' + currentTaskIndex, JSON.stringify(finalTaskData));
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficultyPreTest_' + currentTaskIndex, finalTaskData.level);
         
         // CONVERT KEY TO READABLE TEXT
         // "veel_hulp" -> "veel hulp", "enige_hulp" -> "enige hulp", "alles_zelf" -> "alles zelf"
@@ -478,10 +484,10 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         if(formattedHelp=="veel hulp")formattedHelp = "viel Hilfe";
         if(formattedHelp=="enige hulp")formattedHelp = "etwas Hilfe";
         if(formattedHelp=="alles zelf")formattedHelp = "alles selbst";
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskHelp_' + currentTaskIndex, formattedHelp);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskHelpPreTest_' + currentTaskIndex, formattedHelp);
         
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskType_' + currentTaskIndex, finalTaskData.task);
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskScore_' + currentTaskIndex, finalTaskData.score);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskTypePreTest_' + currentTaskIndex, finalTaskData.task);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskScorePreTest_' + currentTaskIndex, finalTaskData.score);
         console.log("final score: "+finalTaskData.score);
        
     }

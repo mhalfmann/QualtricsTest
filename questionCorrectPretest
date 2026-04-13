@@ -1,0 +1,33 @@
+Qualtrics.SurveyEngine.addOnload(function()
+{
+	/*Place your JavaScript here to run when the page loads*/
+
+});
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+	/*Place your JavaScript here to run when the page is fully displayed*/
+
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+	
+	/*Place your JavaScript here to run when the page is unloaded*/
+
+});
+Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+	var currentTaskIndex = 1; 
+    var value = this.getSelectedChoices(); // returns array, e.g. ["3"]
+	var answerCount = this.getChoices().length;
+	var offset = 0;
+	console.log('Answer Count: '+answerCount);
+	if(answerCount == 6) offset = -1;
+	if(answerCount == 4) offset = 1;
+	if(answerCount == 2) offset = 3;
+	
+    var selectedValue = parseInt(value[0]) + offset; // the selected choice ID
+	var embeddedDataName = 'CorrectStepsPretest'+Qualtrics.SurveyEngine.getEmbeddedData('PreTestIndex');
+	console.log('Setting '+embeddedDataName+' to '+selectedValue); 
+	Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
+});
