@@ -7,8 +7,9 @@
 var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
 if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
-// Welcher Eintrag in preTestConfig.json / preTestAnswerKey.json (1-basiert: 1 = erstes Element).
-// Entweder Embedded Data "PreTestItemIndex" in Qualtrics setzen, oder Fallback pro Frage hier ändern.
+// Welcher Eintrag in den Arrays (1-basiert: 1 = erstes Element). Entweder Embedded Data
+// "PreTestItemIndex" in Qualtrics, oder Fallback hier hochzählen (pro Frage / Block).
+// Hilfe ist immer „alles selbst“; in der JSON pro Aufgabe nur eine numerische "id" (1, 2, …).
 var PRE_TEST_ITEM_INDEX_FALLBACK = 1;
 var debugMode = false;
 
@@ -77,12 +78,13 @@ function startPreTestFromArrays(configArray, answerKeyArray) {
 
     var entry = configArray[i];
     currentTaskConfig = JSON.parse(JSON.stringify(entry));
-    var helpMode = entry.help || 'alles_zelf';
-    var taskId = entry.id || ('pre_' + n);
+    var taskId = (entry.id !== undefined && entry.id !== null) ? String(entry.id) : String(n);
+    delete currentTaskConfig.help;
+    delete currentTaskConfig.id;
     currentTaskConfig.level = 'pre';
-    currentTaskConfig.help = helpMode;
+    currentTaskConfig.help = 'alles_zelf';
     currentTaskConfig.task = taskId;
-    currentTaskConfig.uniqueId = 'pre_' + n;
+    currentTaskConfig.uniqueId = 'pre_' + taskId;
 
     currentAnswerKey = answerKeyArray[i];
 
@@ -90,7 +92,7 @@ function startPreTestFromArrays(configArray, answerKeyArray) {
     if (levelSel) levelSel.style.display = 'none';
 
     var loopEl = document.getElementById('loop-counter-display');
-    if (loopEl) loopEl.innerText = String(n);
+    if (loopEl) loopEl.innerText = taskId;
 
     initializeTask();
 }

@@ -1,6 +1,6 @@
 [
   {
-    "id": "Augenfarbe_alles_zelf",
+    "id": 1,
     "narrative": "Zwei Eltern bekommen ein Kind. Beide haben braune Augen und sind homozygot für dieses Merkmal.",
     "gene": {
       "trait": "Augenfarbe",
@@ -17,8 +17,7 @@
     "steps": { "step5_prompt": "Welcher Genotyp ist für den unbekannten Nachkommen möglich?" }
   },
   {
-    "id": "Augenfarbe_enige_hulp",
-    "help": "enige_hulp",
+    "id": 2,
     "narrative": "Zwei Eltern bekommen ein Kind. Ein Elternteil hat braune Augen, der andere blaue. Beide sind homozygot.",
     "gene": {
       "trait": "Augenfarbe",
