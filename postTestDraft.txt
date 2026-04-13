@@ -1,0 +1,165 @@
+Post-test
+
+Fragestellung Komplexitätsniveau 1:
+
+Die Fellfarbe von Meerschweinchen wird durch ein Gen bestimmt, das dominant für schwarzes Fell (V) und rezessiv für weißes Fell (v) ist. Zwei Meerschweinchen haben einen Nachkommen. Die Meerschweinchen haben einen homozygoten Genotyp und haben beide schwarzes Fell. Welchen Genotyp hat der Nachkomme?
+
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: VV
+Elternteil 2: VV
+
+Schritt 2 – Darstellung im Stammbaum:
+Tragen Sie Vater und Mutter ein.
+
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv
+1 Kreuzungstabelle
+
+Schritt 4 – Erstellen Sie die Kreuzungstabelle:
+	V	V
+V	VV	VV
+V	VV	VV
+
+Schritt 5 – Antwort:
+VV
+
+
+Fragestellung Komplexitätsniveau 2:
+
+Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow’s peak. Im Deutschen sagen wir dazu: Geheimraatsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Zwei Elternteile, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?
+
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: Vv
+Elternteil 2: Vv
+
+Schritt 2 – Darstellung im Stammbaum:
+Tragen Sie Vater und Mutter ein.
+
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv
+1 Kreuzungstabelle
+
+Schritt 4 – Erstellen Sie die Kreuzungstabelle:
+	V	v
+V	VV	Vv
+v	Vv	Vv
+
+Schritt 5 – Antwort:
+VV, Vv oder vv.
+
+
+Fragestellung Komplexitätsniveau 3:
+
+Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem runden Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Ein Elternteil mit einem runden Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?
+
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: Oo
+Kind: oo
+
+Schritt 2 – Darstellung im Stammbaum:
+Tragen Sie Elternteil 1 und das Kind ein.
+
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Induktiv
+3 Kreuzungstabellen
+
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+	O	O
+O	OO	OO
+o	Oo	Oo
+ 
+	O	o
+O	OO	Oo
+o	Oo	oo
+
+	o	o
+O	Oo	Oo
+o	oo	oo
+
+Schritt 5: Antwort
+
+Oo oder oo.
+
+
+Fragestellung Komplexitätsniveau 4:
+Die Farbe von Erbsen wird durch ein Gen bestimmt, das in seiner dominanten Form (W) zu gelben Erbsen führt und in seiner rezessiven Form (w) zu grünen Erbsen. Zwei Erbsenpflanzen, die beide gelb und heterozygot für dieses Merkmal sind, produzieren einen Nachkommen. Über diesen Nachkommen ist weiter nichts bekannt. Der Nachkomme hat mit einer anderen Erbsenpflanze, die grün ist, einen gelben Nachkommen, der heterozygot für dieses Merkmal ist. Welche Genotypen sind für die unbekannte Erbsenpflanze möglich?
+
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: Ww
+Elternteil 2: Ww
+Nachkomme: unbekannt
+Partner: ww
+Enkelkind: Ww
+
+Schritt 2 – Darstellung im Stammbaum:
+Tragen Sie oben Ww × Ww ein.
+Tragen Sie darunter den unbekannten Nachkommen ein.
+Tragen Sie daneben den Partner und darunter das Enkelkind ein.
+
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Deduktiv (1) und induktiv (3)
+4 Kreuzungstabellen
+
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+	W	w
+W	WW	Ww
+w	Ww	ww
+
+	w	w
+W	Ww	Ww
+W	Ww	Ww
+
+	w	w
+W	Ww	Ww
+w	ww	ww
+
+	w	w
+w	ww	ww
+w	ww	ww
+
+Schritt 5 – Antwort:
+WW oder Ww
+
+Fragestellung Komplexitätsniveau 5:
+
+Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Zwei Elternteile haben ein Kind. Ein Elternteil hat die Krankheit, der andere Elternteil nicht, aber darüber hinaus ist nichts bekannt. Das Kind hat ebenfalls Mukoviszidose. Dieses Kind hat Kinder mit einem Partner, der keine Mukoviszidose hat und für dieses Merkmal homozygot ist. Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?
+
+Schritt 1 – Übersetzen in Genotypen:
+Elternteil 1: tt
+Elternteil 2: unbekannt
+Kind: tt
+Partner: TT
+Enkelkind: unbekannt
+
+Schritt 2 – Darstellung im Stammbaum:
+Tragen Sie oben die beiden Eltern ein (tt × unbekannt).
+Tragen Sie darunter das Kind mit Mukoviszidose ein (tt).
+Tragen Sie neben dem Kind den Partner ein (TT).
+Tragen Sie darunter das Enkelkind ein (unbekannt).
+
+Schritt 3 – Bestimmen Sie Richtung und Anzahl der Kreuzungstabellen:
+Induktiv (3) und deduktiv (1)
+
+Schritt 4 – Erstellen Sie die Kreuzungstabellen:
+	t	t
+T	Tt	Tt
+t	tt	tt
+
+	t	t
+T	Tt	Tt
+T	Tt	Tt
+
+	T	t
+t	tt	tt
+t	tt	tt
+
+
+	T	T
+t	Tt	Tt
+t	Tt	Tt
+
+
+Schritt 5 – Antwort:
+
+Unbekannte Eltern: Tt
+Unbekannte Kind: Tt

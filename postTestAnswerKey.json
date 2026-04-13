@@ -1,0 +1,172 @@
+[
+  {
+    "step1": { "p_father": "VV", "p_mother": "VV" },
+    "step2": { "p_father": "VV", "p_mother": "VV" },
+    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step4": [
+      {
+        "p2a1": "V",
+        "p2a2": "V",
+        "p1a1": "V",
+        "o1": "VV",
+        "o2": "VV",
+        "p1a2": "V",
+        "o3": "VV",
+        "o4": "VV"
+      }
+    ],
+    "step5": ["VV"]
+  },
+  {
+    "step1": { "p_father": "Vv", "p_mother": "Vv" },
+    "step2": { "p_father": "Vv", "p_mother": "Vv" },
+    "step3": { "reasoning": ["deductief"], "punnett_squares": 1 },
+    "step4": [
+      {
+        "p2a1": "V",
+        "p2a2": "v",
+        "p1a1": "V",
+        "o1": "VV",
+        "o2": "Vv",
+        "p1a2": "v",
+        "o3": "Vv",
+        "o4": "vv"
+      }
+    ],
+    "step5": ["VV", "Vv", "vv"]
+  },
+  {
+    "step1": { "p_father": "Oo", "f1_child": "oo" },
+    "step2": { "p_father": "Oo", "f1_child": "oo" },
+    "step3": { "reasoning": ["inductief"], "punnett_squares": 3 },
+    "step4": [
+      {
+        "p2a1": "O",
+        "p2a2": "O",
+        "p1a1": "O",
+        "o1": "OO",
+        "o2": "OO",
+        "p1a2": "o",
+        "o3": "Oo",
+        "o4": "Oo"
+      },
+      {
+        "p2a1": "O",
+        "p2a2": "o",
+        "p1a1": "O",
+        "o1": "OO",
+        "o2": "Oo",
+        "p1a2": "o",
+        "o3": "Oo",
+        "o4": "oo"
+      },
+      {
+        "p2a1": "o",
+        "p2a2": "o",
+        "p1a1": "O",
+        "o1": "Oo",
+        "o2": "Oo",
+        "p1a2": "o",
+        "o3": "oo",
+        "o4": "oo"
+      }
+    ],
+    "step5": ["Oo", "oo"]
+  },
+  {
+    "step1": { "p_father": "Ww", "p_mother": "Ww", "f1_partner": "ww", "f2_grandchild": "Ww" },
+    "step2": { "p_father": "Ww", "p_mother": "Ww", "f1_partner": "ww", "f2_grandchild": "Ww" },
+    "step3": { "reasoning": ["deductief", "inductief"], "punnett_squares": 4 },
+    "step4": [
+      {
+        "p2a1": "W",
+        "p2a2": "w",
+        "p1a1": "W",
+        "o1": "WW",
+        "o2": "Ww",
+        "p1a2": "w",
+        "o3": "Ww",
+        "o4": "ww"
+      },
+      {
+        "p2a1": "w",
+        "p2a2": "w",
+        "p1a1": "W",
+        "o1": "Ww",
+        "o2": "Ww",
+        "p1a2": "W",
+        "o3": "Ww",
+        "o4": "Ww"
+      },
+      {
+        "p2a1": "w",
+        "p2a2": "w",
+        "p1a1": "W",
+        "o1": "Ww",
+        "o2": "Ww",
+        "p1a2": "w",
+        "o3": "ww",
+        "o4": "ww"
+      },
+      {
+        "p2a1": "w",
+        "p2a2": "w",
+        "p1a1": "w",
+        "o1": "ww",
+        "o2": "ww",
+        "p1a2": "w",
+        "o3": "ww",
+        "o4": "ww"
+      }
+    ],
+    "step5": ["WW", "Ww"]
+  },
+  {
+    "step1": { "p_father": "tt", "f1_child": "tt", "f1_partner": "TT" },
+    "step2": { "p_father": "tt", "f1_child": "tt", "f1_partner": "TT" },
+    "step3": { "reasoning": ["deductief", "inductief"], "punnett_squares": 4 },
+    "step4": [
+      {
+        "p2a1": "t",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "tt",
+        "o4": "tt"
+      },
+      {
+        "p2a1": "t",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "T",
+        "o3": "Tt",
+        "o4": "Tt"
+      },
+      {
+        "p2a1": "T",
+        "p2a2": "t",
+        "p1a1": "t",
+        "o1": "tt",
+        "o2": "tt",
+        "p1a2": "t",
+        "o3": "tt",
+        "o4": "tt"
+      },
+      {
+        "p2a1": "T",
+        "p2a2": "T",
+        "p1a1": "t",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "Tt",
+        "o4": "Tt"
+      }
+    ],
+    "step5": { "p_mother": ["Tt"], "f2_grandchild": ["Tt"] }
+  }
+]
