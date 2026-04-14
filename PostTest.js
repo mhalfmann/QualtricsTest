@@ -9,7 +9,7 @@ if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
 // Beim Laden: Embedded Data "PostTestIndex" lesen, +1, wieder speichern; der neue Wert (1-basiert)
 // wählt die Aufgabe in postTestConfig / postTestAnswerKey (erstes Leeren → 0 → nach +1 = 1).
-// Hilfe ist immer „alles selbst“; in der JSON pro Aufgabe numerische "id" (1, 2, …).
+// Hilfe ist immer „alles selbst“. Ausgabe: level = JSON-Feld "level" (Pflicht pro Aufgabe); task = gene.trait.
 var debugMode = false;
 // true: Button „Aufgabe abschließen“ immer aktiv, Klick ohne vollständige Kreuztabellen/Finalantworten (nur zum Testen).
 var skipCompleteTaskValidation = true;
@@ -82,11 +82,13 @@ function startPostTestFromArrays(configArray, answerKeyArray) {
     var entry = configArray[i];
     currentTaskConfig = JSON.parse(JSON.stringify(entry));
     var taskId = (entry.id !== undefined && entry.id !== null) ? String(entry.id) : String(n);
+    var complexityLevel = (entry.level !== undefined && entry.level !== null) ? String(entry.level) : taskId;
+    var traitLabel = (entry.gene && entry.gene.trait) ? entry.gene.trait : taskId;
     delete currentTaskConfig.help;
     delete currentTaskConfig.id;
-    currentTaskConfig.level = 'post';
+    currentTaskConfig.level = complexityLevel;
     currentTaskConfig.help = 'alles_zelf';
-    currentTaskConfig.task = taskId;
+    currentTaskConfig.task = traitLabel;
     currentTaskConfig.uniqueId = 'post_' + taskId;
 
     currentAnswerKey = answerKeyArray[i];

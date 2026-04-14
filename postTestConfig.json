@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+    "level": 1,
     "narrative": "Die Fellfarbe von Meerschweinchen wird durch ein Gen bestimmt, das dominant für schwarzes Fell (V) und rezessiv für weißes Fell (v) ist. Zwei Meerschweinchen haben einen Nachkommen. Die Meerschweinchen haben einen homozygoten Genotyp und haben beide schwarzes Fell. Welchen Genotyp hat der Nachkomme?",
     "gene": {
       "trait": "Meerschweinchen-Fellfarbe",
@@ -18,6 +19,7 @@
   },
   {
     "id": 2,
+    "level": 2,
     "narrative": "Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow's peak“. Im Deutschen sagen wir dazu: Geheimraatsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Zwei Elternteile, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?",
     "gene": {
       "trait": "Geheimratsecken",
@@ -35,6 +37,7 @@
   },
   {
     "id": 3,
+    "level": 3,
     "narrative": "Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem runden Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Ein Elternteil mit einem runden Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?",
     "gene": {
       "trait": "Ohrläppchen",
@@ -52,6 +55,7 @@
   },
   {
     "id": 4,
+    "level": 4,
     "narrative": "Die Farbe von Erbsen wird durch ein Gen bestimmt, das in seiner dominanten Form (W) zu gelben Erbsen führt und in seiner rezessiven Form (w) zu grünen Erbsen. Zwei Erbsenpflanzen, die beide gelb und heterozygot für dieses Merkmal sind, produzieren einen Nachkommen. Über diesen Nachkommen ist weiter nichts bekannt. Der Nachkomme hat mit einer anderen Erbsenpflanze, die grün ist, einen gelben Nachkommen, der heterozygot für dieses Merkmal ist. Welche Genotypen sind für die unbekannte Erbsenpflanze möglich?",
     "gene": {
       "trait": "Erbsenfarbe",
@@ -71,6 +75,7 @@
   },
   {
     "id": 5,
+    "level": 5,
     "narrative": "Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Zwei Elternteile haben ein Kind. Ein Elternteil hat die Krankheit, der andere Elternteil nicht, aber darüber hinaus ist nichts bekannt. Das Kind hat ebenfalls Mukoviszidose. Dieses Kind hat Kinder mit einem Partner, der keine Mukoviszidose hat und für dieses Merkmal homozygot ist. Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?",
     "gene": {
       "trait": "Mukoviszidose",
