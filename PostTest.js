@@ -491,6 +491,7 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         Qualtrics.SurveyEngine.setEmbeddedData('TaskTypePostTest_' + currentTaskIndex, finalTaskData.task);
         Qualtrics.SurveyEngine.setEmbeddedData('TaskScorePostTest_' + currentTaskIndex, finalTaskData.score);
         console.log("final score: "+finalTaskData.score);
+        console.log("finalTaskData: "+JSON.stringify(finalTaskData));
        
     }
     // currentTaskIndex++;
