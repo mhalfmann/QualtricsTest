@@ -8,8 +8,8 @@ var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentT
 var debugMode = false; // Set to false to hide red debug text
 
 // --- CONSTANTS ---
-var mainConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/mainConfigDE.json'; // Tasks
-var answerKeyUrl = 'https://mhalfmann.github.io/QualtricsTest/answerKeyDE.json';
+var mainConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/mainConfigDE-6.json'; // Tasks
+var answerKeyUrl = 'https://mhalfmann.github.io/QualtricsTest/answerKeyDE-6.json';
 
 // --- STATE ---
 var allConfigs = {};
