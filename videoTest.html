@@ -3,80 +3,51 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Video test</title>
+  <title>Video question (local test)</title>
   <style>
     body { font-family: system-ui, sans-serif; margin: 1rem; }
-    #videoBlock { max-width: 720px; }
-    #lesson {
+  </style>
+</head>
+<body>
+  <!-- Same markup as videoQuestion.html (Qualtrics HTML field) -->
+  <style>
+    .video-question-wrap { max-width: 720px; }
+    .video-question-wrap video#lesson {
       width: 100%;
       vertical-align: middle;
       background: #000;
       border-radius: 4px;
     }
-    #btnPlay, #btnContinue {
+    .video-question-wrap #btnPlay,
+    .video-question-wrap #btnContinue {
       font: inherit;
       padding: 0.5rem 1rem;
       cursor: pointer;
     }
-    #btnPlay:disabled, #btnContinue:disabled { cursor: not-allowed; opacity: 0.6; }
-    #continueWrap { margin-top: 0.75rem; }
+    .video-question-wrap #btnPlay:disabled,
+    .video-question-wrap #btnContinue:disabled {
+      cursor: not-allowed;
+      opacity: 0.6;
+    }
+    .video-question-wrap #continueWrap { margin-top: 0.75rem; }
   </style>
-</head>
-<body>
-  <div id="videoBlock">
+  <div class="video-question-wrap">
     <video
       id="lesson"
       playsinline
       preload="metadata"
       controlsList="nodownload noplaybackrate"
       disablePictureInPicture
-      src="Video/test.mp4">
+      src="https://mhalfmann.github.io/QualtricsTest/Video/test.mp4">
     </video>
-
     <div id="playWrap" style="margin-top: 0.5rem;">
       <button type="button" id="btnPlay">Play</button>
     </div>
-
-    <div id="continueWrap" style="display: none;">
-      <button type="button" id="btnContinue">Continue</button>
+    <div id="continueWrap" style="display: none;" aria-live="polite">
+      <button type="button" id="btnContinue" disabled>Continue</button>
     </div>
   </div>
 
-  <script>
-    (function () {
-      var v = document.getElementById("lesson");
-      var btnPlay = document.getElementById("btnPlay");
-      var continueWrap = document.getElementById("continueWrap");
-      var btnContinue = document.getElementById("btnContinue");
-
-      var maxSeen = 0;
-
-      btnPlay.addEventListener("click", function () {
-        v.play().catch(function () {});
-        btnPlay.disabled = true;
-      });
-
-      v.addEventListener("timeupdate", function () {
-        if (!v.seeking && v.currentTime > maxSeen) {
-          maxSeen = v.currentTime;
-        }
-      });
-
-      v.addEventListener("seeking", function () {
-        if (v.currentTime > maxSeen + 0.25) {
-          v.currentTime = maxSeen;
-        }
-      });
-
-      v.addEventListener("ended", function () {
-        continueWrap.style.display = "block";
-        btnContinue.disabled = false;
-      });
-
-      btnContinue.addEventListener("click", function () {
-        alert("Replace this handler with your Qualtrics next-step logic.");
-      });
-    })();
-  </script>
+  <script src="videoQuestion.js"></script>
 </body>
 </html>

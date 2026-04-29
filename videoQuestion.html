@@ -1,0 +1,43 @@
+<!--
+  Qualtrics: paste everything below this comment into the question’s HTML / rich content.
+  Keep the video src on GitHub Pages (absolute URL), not a relative path.
+-->
+<style>
+  .video-question-wrap { max-width: 720px; }
+  .video-question-wrap video#lesson {
+    width: 100%;
+    vertical-align: middle;
+    background: #000;
+    border-radius: 4px;
+  }
+  .video-question-wrap #btnPlay,
+  .video-question-wrap #btnContinue {
+    font: inherit;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+  }
+  .video-question-wrap #btnPlay:disabled,
+  .video-question-wrap #btnContinue:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+  }
+  .video-question-wrap #continueWrap { margin-top: 0.75rem; }
+</style>
+<div class="video-question-wrap">
+  <video
+    id="lesson"
+    playsinline
+    preload="metadata"
+    controlsList="nodownload noplaybackrate"
+    disablePictureInPicture
+    src="https://mhalfmann.github.io/QualtricsTest/Video/test.mp4">
+  </video>
+  <div id="playWrap" style="margin-top: 0.5rem;">
+    <button type="button" id="btnPlay">Play</button>
+  </div>
+  <div id="continueWrap" style="display: none;" aria-live="polite">
+    <button type="button" id="btnContinue" disabled>Continue</button>
+  </div>
+</div>
+<!-- Logic: add videoQuestion.js in the question’s JavaScript (gear), or for a one-file
+     preview host the script after this HTML. See videoTest.html for local testing. -->
