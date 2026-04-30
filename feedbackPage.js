@@ -8,7 +8,7 @@ Qualtrics.SurveyEngine.addOnload(function()
 Qualtrics.SurveyEngine.addOnReady(function()
 {
     var currentScore = Qualtrics.SurveyEngine.getEmbeddedData('CurrentScore');
-    var correctSteps = Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1));
+    var correctSteps = Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps_'+(currentTaskIndex-1));
     var step1correct = Qualtrics.SurveyEngine.getEmbeddedData('Step1correct') == 'true' ? true : false;
     var step2correct = Qualtrics.SurveyEngine.getEmbeddedData('Step2correct') == 'true' ? true : false;
     var step3correct = Qualtrics.SurveyEngine.getEmbeddedData('Step3correct') == 'true' ? true : false;
@@ -22,7 +22,7 @@ Qualtrics.SurveyEngine.addOnReady(function()
         feedback = "Ihre Selbstbewertung war inkorrekt.";
      }
      
-     document.getElementById('feedbacktext').innerText = feedback + " Sie haben "+currentScore +" Schritte richtig gelöst.";
+     document.getElementById('feedbacktext').innerText = feedback + " Sie dachten sie hätte "+correctSteps+" von 5 Schritten korrekt verstanden. Sie haben "+currentScore +" von 5 Schritten richtig gelöst.";
 
      var stepLabelsDe = [
          'Genotyp übersetzen',

@@ -12,7 +12,7 @@ if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 // Hilfe ist immer „alles selbst“. Ausgabe: level = JSON-Feld "level" (Pflicht pro Aufgabe); task = gene.trait.
 var debugMode = false;
 // true: Button „Aufgabe abschließen“ immer aktiv, Klick ohne vollständige Kreuztabellen/Finalantworten (nur zum Testen).
-var skipCompleteTaskValidation = true;
+var skipCompleteTaskValidation = false;
 
 // --- CONSTANTS ---
 var postTestConfigUrl = 'https://mhalfmann.github.io/QualtricsTest/postTestConfig.json';
@@ -37,7 +37,8 @@ function injectStyles() {
         '.choice-label.selected { border-color: #2a7ac2; background-color: #eaf2fa; font-weight: bold; }' +
         '.choice-label input { display: none; }' +
         '.choice-label.disabled { cursor: not-allowed; background-color: #e0e0e0; color: #555; border-color: #ccc; }' +
-        '.punnett-square-wrapper { display: inline-block; margin-right: 20px; vertical-align: top; } .punnett-square-wrapper h5{margin-top:0;text-align:center;} .punnett-square-table{border-collapse:collapse;} .punnett-square-table td{width:45px;height:45px;text-align:center;} .punnett-square-table input{width:100%;height:100%;border:1px solid #ccc;text-align:center;font-family:monospace;font-size:1.2em;box-sizing:border-box;} .punnett-square-table input:disabled { background-color: #e0e0e0; color: #333; font-weight: bold; } .punnett-square-table .corner{background-color:#f0f0f0;border:none;}';
+        '.punnett-square-wrapper { display: inline-block; margin-right: 20px; vertical-align: top; } .punnett-square-wrapper h5{margin-top:0;text-align:center;} .punnett-square-table{border-collapse:collapse;} .punnett-square-table td{width:45px;height:45px;text-align:center;} .punnett-square-table input{width:100%;height:100%;border:1px solid #ccc;text-align:center;font-family:monospace;font-size:1.2em;box-sizing:border-box;} .punnett-square-table input:disabled { background-color: #e0e0e0; color: #333; font-weight: bold; } .punnett-square-table .corner{background-color:#f0f0f0;border:none;}' +
+        '#generate-tables-btn:disabled { background-color: #e0e0e0 !important; color: #999 !important; cursor: not-allowed; border-color: #ddd !important; }';
     
     var styleElement = document.createElement('style'); 
     styleElement.type = 'text/css'; 
@@ -169,7 +170,9 @@ function renderStep2() {
 function renderStep3() {
     var isVeelHulp = (currentTaskConfig.help === 'veel_hulp');
     var container = document.getElementById('step3-inputs');
-    var buttonHtml = '<button type="button" id="generate-tables-btn" style="margin-left: 10px;" ' + (isVeelHulp ? 'disabled style="display:none;"' : '') + '>Tabellen generieren</button>';
+    var buttonHtml = '<button type="button" id="generate-tables-btn" ' +
+        (isVeelHulp ? 'style="margin-left: 10px; display: none;" disabled' : 'style="margin-left: 10px;" disabled') +
+        '>Tabellen generieren</button>';
     var valCount = (isVeelHulp && currentAnswerKey) ? currentAnswerKey.step3.punnett_squares : "";
     var correctReasoning = (currentAnswerKey) ? currentAnswerKey.step3.reasoning : [];
     
@@ -188,7 +191,15 @@ function renderStep3() {
         }
     } else {
         var labels = container.getElementsByClassName('choice-label');
-        for(var j=0; j<labels.length; j++){ labels[j].onclick = function(e){ e.preventDefault(); var i=this.querySelector('input'); i.checked=!i.checked; this.classList.toggle('selected'); } }
+        for (var j = 0; j < labels.length; j++) {
+            labels[j].onclick = function(e) {
+                e.preventDefault();
+                var inp = this.querySelector('input');
+                inp.checked = !inp.checked;
+                this.classList.toggle('selected');
+                updateGenerateTablesButtonState();
+            };
+        }
     }
 
     var generateTables = function() {
@@ -207,6 +218,7 @@ function renderStep3() {
         generateTables();
     } else {
         document.getElementById('generate-tables-btn').onclick = function() {
+            if (!isSteps123Complete()) return;
             var inputsToDisable = document.querySelectorAll('#step1-inputs input, #step2-tree input, #step3-inputs input');
             for (var i = 0; i < inputsToDisable.length; i++) { inputsToDisable[i].disabled = true; }
             var labelsToDisable = document.querySelectorAll('#step3-inputs .choice-label');
@@ -218,6 +230,7 @@ function renderStep3() {
             document.getElementById('complete-task-btn').style.display = 'block';
             updateCompleteTaskButtonState();
         };
+        updateGenerateTablesButtonState();
     }
 }
 
@@ -247,6 +260,52 @@ function renderStep5() {
         }
     }
     updateCompleteTaskButtonState();
+}
+
+function isStep1KnownGenotypesComplete() {
+    var inputs = document.querySelectorAll('#step1-inputs input');
+    for (var i = 0; i < inputs.length; i++) {
+        var el = inputs[i];
+        if (el.disabled) continue;
+        if ((el.value || '').trim().length !== 2) return false;
+    }
+    return true;
+}
+
+function isStep2TreeKnownGenotypesComplete() {
+    var inputs = document.querySelectorAll('#step2-tree input');
+    for (var i = 0; i < inputs.length; i++) {
+        var el = inputs[i];
+        if (el.disabled) continue;
+        if ((el.value || '').trim().length !== 2) return false;
+    }
+    return true;
+}
+
+function isStep3ReasoningAndCountComplete() {
+    var container = document.getElementById('step3-inputs');
+    if (!container) return false;
+    var checked = container.querySelectorAll('input[name="reasoning"]:checked');
+    if (!checked || checked.length === 0) return false;
+    var pi = document.getElementById('punnett-squares-needed');
+    if (!pi || pi.disabled) return true;
+    var raw = (pi.value || '').trim();
+    if (raw === '') return false;
+    var n = parseInt(raw, 10);
+    if (isNaN(n) || n < 0 || n > 10) return false;
+    return true;
+}
+
+function isSteps123Complete() {
+    return isStep1KnownGenotypesComplete() && isStep2TreeKnownGenotypesComplete() && isStep3ReasoningAndCountComplete();
+}
+
+function updateGenerateTablesButtonState() {
+    var btn = document.getElementById('generate-tables-btn');
+    if (!btn) return;
+    if (currentTaskConfig && currentTaskConfig.help === 'veel_hulp') return;
+    if (btn.style.display === 'none') return;
+    btn.disabled = !isSteps123Complete();
 }
 
 function isStep4PunnettComplete() {
@@ -287,8 +346,26 @@ function updateCompleteTaskButtonState() {
 }
 
 function ensureCompleteTaskValidationListeners() {
+    var p1 = document.getElementById('step1-inputs');
+    var p2 = document.getElementById('step2-tree');
+    var p3 = document.getElementById('step3-inputs');
     var p4 = document.getElementById('step4-punnett-squares');
     var p5 = document.getElementById('step5-answer');
+    if (p1 && !p1.dataset.validationBound) {
+        p1.dataset.validationBound = '1';
+        p1.addEventListener('input', updateGenerateTablesButtonState);
+        p1.addEventListener('change', updateGenerateTablesButtonState);
+    }
+    if (p2 && !p2.dataset.validationBound) {
+        p2.dataset.validationBound = '1';
+        p2.addEventListener('input', updateGenerateTablesButtonState);
+        p2.addEventListener('change', updateGenerateTablesButtonState);
+    }
+    if (p3 && !p3.dataset.validationBound) {
+        p3.dataset.validationBound = '1';
+        p3.addEventListener('input', updateGenerateTablesButtonState);
+        p3.addEventListener('change', updateGenerateTablesButtonState);
+    }
     if (p4 && !p4.dataset.validationBound) {
         p4.dataset.validationBound = '1';
         p4.addEventListener('input', updateCompleteTaskButtonState);

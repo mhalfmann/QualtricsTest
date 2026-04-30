@@ -26,7 +26,7 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
 	if(answerCount == 4) offset = 1;
 	if(answerCount == 2) offset = 3;
 	
-    var selectedValue = parseInt(value[0]) + offset; // the selected choice ID
+    var selectedValue = parseInt(value[0])-1;// + offset; // the selected choice ID
 	var embeddedDataName = 'CorrectStepsPosttest_'+Qualtrics.SurveyEngine.getEmbeddedData('PreTestIndex');
 	console.log('Setting '+embeddedDataName+' to '+selectedValue); 
 	Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
