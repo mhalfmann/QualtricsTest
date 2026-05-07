@@ -22,14 +22,14 @@ Qualtrics.SurveyEngine.addOnReady(function()
         feedback = "Ihre Selbstbewertung war inkorrekt.";
      }
      
-     document.getElementById('feedbacktext').innerText = feedback + " Sie dachten sie hätte "+correctSteps+" von 5 Schritten korrekt verstanden. Sie haben "+currentScore +" von 5 Schritten richtig gelöst.";
-
+    // document.getElementById('feedbacktext').innerText = feedback + " Sie dachten sie hätte "+correctSteps+" von 5 Schritten korrekt verstanden. Sie haben "+currentScore +" von 5 Schritten richtig gelöst.";
+    document.getElementById('feedbacktext').innerText = "Hier sehen Sie, welche Schritte richtig (\u2705) und falsch (\u274C) waren:";
      var stepLabelsDe = [
-         'Genotyp übersetzen',
-         'Stammbaum',
-         'Begründung',
-         'Punnett-Quadrate',
-         'Antwort aus der Tabelle'
+         'In Genotypen übersetzen',
+         'Stammbaum ausfüllen',
+         'Richtung und Anzahl der Kreuztabellen bestimmen',
+         'Kreuztabellen ausfüllen',
+         'Antwort aus den Kreuztabellen ablesen'
      ];
      var stepFlags = [step1correct, step2correct, step3correct, step4correct, step5correct];
      for (var si = 0; si < 5; si++) {

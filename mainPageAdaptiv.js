@@ -605,8 +605,8 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     var selectedColumn = 0;
     var currentColumn = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentColumn'));
     console.log("Current Column: "+currentColumn);
-    var effort = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('Effort'+(currentTaskIndex-1)));
-    var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps'+(currentTaskIndex-1)));
+    var effort = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('Effort_'+(currentTaskIndex-1)));
+    var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps_'+(currentTaskIndex-1)));
     that.hideNextButton(); // Standard Qualtrics API to hide
     
 	// Qualtrics.SurveyEngine.setEmbeddedData('Adaptivity', 'none');

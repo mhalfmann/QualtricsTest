@@ -7,6 +7,10 @@
 var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
 if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
+// If false, participants may proceed without completing everything.
+// If true, "Next" is gated until inputs are complete and "Aufgabe abschließen" is enabled.
+var USE_POSTTEST_RESTRICTIONS = false;
+
 // Beim Laden: Embedded Data "PostTestIndex" lesen, +1, wieder speichern; der neue Wert (1-basiert)
 // wählt die Aufgabe in postTestConfig / postTestAnswerKey (erstes Leeren → 0 → nach +1 = 1).
 // Hilfe ist immer „alles selbst“. Ausgabe: level = JSON-Feld "level" (Pflicht pro Aufgabe); task = gene.trait.
@@ -218,7 +222,7 @@ function renderStep3() {
         generateTables();
     } else {
         document.getElementById('generate-tables-btn').onclick = function() {
-            if (!isSteps123Complete()) return;
+            if (USE_POSTTEST_RESTRICTIONS && !isSteps123Complete()) return;
             var inputsToDisable = document.querySelectorAll('#step1-inputs input, #step2-tree input, #step3-inputs input');
             for (var i = 0; i < inputsToDisable.length; i++) { inputsToDisable[i].disabled = true; }
             var labelsToDisable = document.querySelectorAll('#step3-inputs .choice-label');
@@ -305,6 +309,10 @@ function updateGenerateTablesButtonState() {
     if (!btn) return;
     if (currentTaskConfig && currentTaskConfig.help === 'veel_hulp') return;
     if (btn.style.display === 'none') return;
+    if (!USE_POSTTEST_RESTRICTIONS) {
+        btn.disabled = false;
+        return;
+    }
     btn.disabled = !isSteps123Complete();
 }
 
@@ -339,6 +347,10 @@ function updateCompleteTaskButtonState() {
     if (!btn) return;
     if (btn.style.display === 'none') return;
     if (skipCompleteTaskValidation) {
+        btn.disabled = false;
+        return;
+    }
+    if (!USE_POSTTEST_RESTRICTIONS) {
         btn.disabled = false;
         return;
     }
@@ -525,7 +537,7 @@ function collectTaskData() {
 function completeTask() {
     var btn = document.getElementById('complete-task-btn');
     if (btn && btn.disabled) return;
-    if (!skipCompleteTaskValidation && (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete())) return;
+    if (USE_POSTTEST_RESTRICTIONS && !skipCompleteTaskValidation && (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete())) return;
     finalTaskData = collectTaskData();
     document.getElementById('NextButton').click();
 }
@@ -536,7 +548,18 @@ function completeTask() {
 
 Qualtrics.SurveyEngine.addOnReady(function() {
     var that = this;
-    that.hideNextButton(); // Standard Qualtrics API to hide
+    if (USE_POSTTEST_RESTRICTIONS) {
+        that.hideNextButton(); // Standard Qualtrics API to hide
+    } else {
+        that.showNextButton();
+        var nextBtn = document.getElementById('NextButton');
+        if (nextBtn && !nextBtn.dataset.posttestCollectBound) {
+            nextBtn.dataset.posttestCollectBound = '1';
+            nextBtn.addEventListener('click', function () {
+                try { finalTaskData = collectTaskData(); } catch (e) {}
+            });
+        }
+    }
     
     // Start main process
     injectStyles();
