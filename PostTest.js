@@ -7,8 +7,8 @@
 var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
 if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
-// If false, participants may proceed without completing everything.
-// If true, "Next" is gated until inputs are complete and "Aufgabe abschließen" is enabled.
+// If false, "Antworten einreichen" stays enabled even when Kreuztabellen / Finalantworten incomplete.
+// If true, that button is disabled until everything is complete. Qualtrics Next is always hidden.
 var USE_POSTTEST_RESTRICTIONS = false;
 
 // Beim Laden: Embedded Data "PostTestIndex" lesen, +1, wieder speichern; der neue Wert (1-basiert)
@@ -595,19 +595,8 @@ function completeTask() {
 
 Qualtrics.SurveyEngine.addOnReady(function() {
     var that = this;
-    if (USE_POSTTEST_RESTRICTIONS) {
-        that.hideNextButton(); // Standard Qualtrics API to hide
-    } else {
-        that.showNextButton();
-        var nextBtn = document.getElementById('NextButton');
-        if (nextBtn && !nextBtn.dataset.posttestCollectBound) {
-            nextBtn.dataset.posttestCollectBound = '1';
-            nextBtn.addEventListener('click', function () {
-                try { finalTaskData = collectTaskData(); } catch (e) {}
-            });
-        }
-    }
-    
+    that.hideNextButton();
+
     // Start main process
     injectStyles();
 
