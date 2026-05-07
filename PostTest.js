@@ -404,6 +404,57 @@ function normalizeStep5KeyAnswers(step5) {
     return out.sort();
 }
 
+function punnettSortedGametePair(a, b) {
+    var x = [(a || '').trim(), (b || '').trim()];
+    x.sort();
+    return x[0] + x[1];
+}
+
+function punnettTableCanonicalSig(t) {
+    if (!t || typeof t !== 'object') t = {};
+    var pair1 = punnettSortedGametePair(t.p1a1, t.p1a2);
+    var pair2 = punnettSortedGametePair(t.p2a1, t.p2a2);
+    var parents = [pair1, pair2].sort().join('|');
+    var os = [t.o1, t.o2, t.o3, t.o4].map(function (x) { return (x || '').trim(); }).sort().join(',');
+    return parents + '||' + os;
+}
+
+function punnettTableStrictCellsMatch(userTable, keyTable) {
+    if (!keyTable || typeof keyTable !== 'object') return false;
+    if (!userTable || typeof userTable !== 'object') userTable = {};
+    for (var cell in keyTable) {
+        if (!Object.prototype.hasOwnProperty.call(keyTable, cell)) continue;
+        if ((userTable[cell] || '').trim() !== (keyTable[cell] || '').trim()) return false;
+    }
+    return true;
+}
+
+function punnettTableMatchesKey(userTable, keyTable) {
+    if (!keyTable) return false;
+    if (punnettTableStrictCellsMatch(userTable, keyTable)) return true;
+    return punnettTableCanonicalSig(userTable) === punnettTableCanonicalSig(keyTable);
+}
+
+function step4MatchUnordered(userTables, keyTables) {
+    var n = keyTables.length;
+    if (userTables.length !== n) return false;
+    var used = new Array(n);
+    for (var i = 0; i < n; i++) used[i] = false;
+    function dfs(ui) {
+        if (ui === n) return true;
+        for (var kj = 0; kj < n; kj++) {
+            if (used[kj]) continue;
+            if (punnettTableMatchesKey(userTables[ui], keyTables[kj])) {
+                used[kj] = true;
+                if (dfs(ui + 1)) return true;
+                used[kj] = false;
+            }
+        }
+        return false;
+    }
+    return dfs(0);
+}
+
 function calculateScore(data, key) {
     if (!key) return 0;
     var score = 0;
@@ -466,25 +517,21 @@ function calculateScore(data, key) {
         Qualtrics.SurveyEngine.setEmbeddedData('Step3correct', 'true');
     }
 
-    // Step 4
+    // Step 4 — ignore order of multiple tables; ignore row/column swap of parents (same cross)
     var s4Correct = true;
     Qualtrics.SurveyEngine.setEmbeddedData('Step4correct', 'false');
+    var keyS4 = key.step4 || [];
     var userTableKeys = Object.keys(data.step4_tables);
-    // Basic check: did they fill at least one table if required?
-    if (key.step4.length > 0 && userTableKeys.length === 0) {
+    if (keyS4.length === 0) {
+        s4Correct = (userTableKeys.length === 0);
+    } else if (userTableKeys.length !== keyS4.length) {
         s4Correct = false;
     } else {
-        // Compare each table. 
-        for(var t in data.step4_tables) {
-            var idx = parseInt(t.replace('table_', '')) - 1;
-            var userTable = data.step4_tables[t];
-            var keyTable = key.step4[idx];
-            if (keyTable) {
-                for (var cell in keyTable) { 
-                    if ((userTable[cell] || "").trim() !== keyTable[cell]) s4Correct = false; 
-                }
-            }
+        var userList = [];
+        for (var ti = 0; ti < keyS4.length; ti++) {
+            userList.push(data.step4_tables['table_' + (ti + 1)] || {});
         }
+        s4Correct = step4MatchUnordered(userList, keyS4);
     }
     if(s4Correct) {
         score++;
