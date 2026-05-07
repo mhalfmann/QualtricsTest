@@ -660,6 +660,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     console.log("Current Column: "+currentColumn);
     var effort = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('Effort_'+(currentTaskIndex-1)));
     var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps_'+(currentTaskIndex-1)));
+    var score = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('TaskScore_'+(currentTaskIndex-1)));
     that.hideNextButton(); // Standard Qualtrics API to hide
     
 	// Qualtrics.SurveyEngine.setEmbeddedData('Adaptivity', 'none');
@@ -670,9 +671,10 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     if(currentTaskIndex>1){
         console.log("Current Column: "+currentColumn);
         console.log("Correct Steps: "+correctSteps);
+        console.log("Score: "+score);
         console.log("Effort: "+effort);
         //if correctSteps is between 0 and 1
-        if(correctSteps >= 0 && correctSteps <= 1){
+        if(score >= 0 && score <= 1){
             if(effort >= 1 && effort <= 3){
                 adaptivity = 0;
             }
@@ -684,7 +686,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             }
         }
         //if correctSteps is between 2 and 3
-        if(correctSteps >= 2 && correctSteps <= 3){
+        if(score >= 2 && score <= 3){
             if(effort >= 1 && effort <= 3){
                 adaptivity = 1;
             }
@@ -696,7 +698,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
             }
         }
         //if correctSteps is between 4 and 5
-        if(correctSteps >= 4 && correctSteps <= 5){
+        if(score >= 4 && score <= 5){
             if(effort >= 1 && effort <= 3){
                 adaptivity = 2;
             }
