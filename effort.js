@@ -4,29 +4,45 @@ Qualtrics.SurveyEngine.addOnload(function()
 
 });
 
+var effortContainer = null;
+var effortRadios = [];
+var effortValueToPosition = {};
+var effortUniqueCount = 0;
+
 Qualtrics.SurveyEngine.addOnReady(function()
 {
-    var container = this.getQuestionContainer();
+    effortContainer = this.getQuestionContainer();
     window._effortValue = null;
 
-    var radios = Array.prototype.slice.call(container.querySelectorAll('input[type="radio"]'));
+    effortRadios = Array.prototype.slice.call(
+        effortContainer.querySelectorAll('input[type="radio"]')
+    );
 
-    // Count distinct radio values to determine how many unique choices exist.
-    // Qualtrics sometimes duplicates radios (e.g. for mobile/desktop layouts),
-    // so we use index % uniqueCount to map any radio to its 1-based scale position.
-    var seen = {};
-    var uniqueCount = 0;
-    radios.forEach(function(r) {
-        if (!seen[r.value]) { seen[r.value] = true; uniqueCount++; }
+    // Count distinct radio values and map each Qualtrics radio value
+    // to its 1-based scale position.
+    // This is more robust than relying only on click events.
+    effortValueToPosition = {};
+    effortUniqueCount = 0;
+
+    effortRadios.forEach(function(radio) {
+        if (!effortValueToPosition[radio.value]) {
+            effortUniqueCount++;
+            effortValueToPosition[radio.value] = effortUniqueCount;
+        }
     });
 
-    console.log("Effort: found " + radios.length + " radios, " + uniqueCount + " unique choices");
+    console.log(
+        "Effort: found " + effortRadios.length +
+        " radios, " + effortUniqueCount + " unique choices"
+    );
 
-    radios.forEach(function(radio, idx) {
+    effortRadios.forEach(function(radio) {
         radio.addEventListener('click', function() {
-            var pos = (idx % uniqueCount) + 1;
-            window._effortValue = pos;
-            console.log("Effort: clicked idx=" + idx + " → scale value=" + pos);
+            window._effortValue = effortValueToPosition[radio.value];
+            console.log(
+                "Effort clicked: radio value=" + radio.value +
+                " → scale value=" + window._effortValue
+            );
         });
     });
 });
@@ -38,13 +54,44 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 });
 
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
-    if (window._effortValue != null) {
-        var embeddedDataName = 'Effort_'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
-        Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, window._effortValue);
-        console.log("Effort saved: " + window._effortValue);
+    var idx = Qualtrics.SurveyEngine.getEmbeddedData('LastCompletedTaskIndex');
+
+    if (!idx) {
+        idx = Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
     }
-    var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
-    //if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
-    currentTaskIndex++;
-    Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
+
+    var effortValue = window._effortValue;
+
+    if (effortValue == null && effortContainer) {
+        var checkedRadio = effortContainer.querySelector('input[type="radio"]:checked');
+
+        if (checkedRadio && effortValueToPosition[checkedRadio.value]) {
+            effortValue = effortValueToPosition[checkedRadio.value];
+            console.log(
+                "Effort recovered on submit: radio value=" + checkedRadio.value +
+                " → scale value=" + effortValue
+            );
+        }
+    }
+
+    if (effortValue != null) {
+        var embeddedDataName = 'Effort_' + idx;
+        Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, effortValue);
+        console.log("Effort saved: " + embeddedDataName + " = " + effortValue);
+    } else {
+        console.warn("Effort value was not captured for Effort_" + idx);
+    }
+
+    var completedIndex = parseInt(idx, 10);
+
+    if (!isNaN(completedIndex)) {
+        var nextTaskIndex = completedIndex + 1;
+
+        Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', String(nextTaskIndex));
+
+        console.log(
+            "CurrentTaskIndex set to " + nextTaskIndex +
+            " based on LastCompletedTaskIndex = " + completedIndex
+        );
+    }
 });

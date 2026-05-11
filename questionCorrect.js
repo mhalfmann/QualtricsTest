@@ -17,17 +17,20 @@ Qualtrics.SurveyEngine.addOnUnload(function()
 
 });
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
-	var currentTaskIndex = 1; 
-    var value = this.getSelectedChoices(); // returns array, e.g. ["3"]
-	var answerCount = this.getChoices().length;
-	var offset = 0;
-	console.log('Answer Count: '+answerCount);
-	if(answerCount == 6) offset = -1;
-	if(answerCount == 4) offset = 1;
-	if(answerCount == 2) offset = 3;
-	
-    var selectedValue = parseInt(value[0])+offset; // the selected choice ID
-	var embeddedDataName = 'CorrectSteps_'+Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
-	console.log('Setting '+embeddedDataName+' to '+selectedValue); 
-	Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
+    var selectedChoiceId = this.getSelectedChoices()[0];
+
+    // Use the Qualtrics recode value, not the internal choice ID.
+    // Recode values should equal the actual number of correct steps.
+    var selectedValue = parseInt(this.getChoiceRecodeValue(selectedChoiceId), 10);
+
+    var idx = Qualtrics.SurveyEngine.getEmbeddedData('LastCompletedTaskIndex');
+    if (!idx) {
+        idx = Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+    }
+
+    var embeddedDataName = 'CorrectSteps_' + idx;
+
+    console.log('Saving ' + embeddedDataName + ' = ' + selectedValue);
+
+    Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
 });

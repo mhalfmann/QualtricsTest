@@ -9,7 +9,7 @@ if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
 
 // If false, "Antworten einreichen" stays enabled even when Kreuztabellen / Finalantworten incomplete.
 // If true, that button is disabled until everything is complete. Qualtrics Next is always hidden.
-var USE_POSTTEST_RESTRICTIONS = false;
+var USE_POSTTEST_RESTRICTIONS = true;
 
 // Beim Laden: Embedded Data "PostTestIndex" lesen, +1, wieder speichern; der neue Wert (1-basiert)
 // wählt die Aufgabe in postTestConfig / postTestAnswerKey (erstes Leeren → 0 → nach +1 = 1).

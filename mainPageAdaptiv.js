@@ -645,6 +645,7 @@ function completeTask() {
     if (btn && btn.disabled) return;
     if (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete()) return;
     finalTaskData = collectTaskData();
+    if (btn) btn.disabled = true;
     document.getElementById('NextButton').click();
 }
 
@@ -752,7 +753,23 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 });
 
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+    if (!finalTaskData && currentTaskConfig && currentTaskConfig.task) {
+        console.warn(
+            'finalTaskData was null at page submit; collecting task data as fallback for round ' +
+            currentTaskIndex
+        );
+        finalTaskData = collectTaskData();
+        Qualtrics.SurveyEngine.setEmbeddedData(
+            'TaskSaveFallbackUsed_' + currentTaskIndex,
+            'true'
+        );
+    }
+
     if (finalTaskData) {
+        Qualtrics.SurveyEngine.setEmbeddedData(
+            'LastCompletedTaskIndex',
+            String(currentTaskIndex)
+        );
         // 1. Save specific fields for this task index
         Qualtrics.SurveyEngine.setEmbeddedData('TaskOutput_' + currentTaskIndex, JSON.stringify(finalTaskData));
         Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficulty_' + currentTaskIndex, finalTaskData.level);
