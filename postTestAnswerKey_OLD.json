@@ -122,18 +122,51 @@
     "step5": ["WW", "Ww"]
   },
   {
-    "step1": { "p_father": "tt", "p_mother": "Tt", "f2_grandchild": "TT" },
-    "step2": { "p_father": "tt", "p_mother": "Tt", "f2_grandchild": "TT" },
-    "step3": { "reasoning":["deductief", "inductief"], "punnett_squares": 7 },
-    "step4":[
-      { "p1a1": "t", "p1a2": "t", "p2a1": "T", "p2a2": "t", "o1": "Tt", "o2": "tt", "o3": "Tt", "o4": "tt" },
-      { "p1a1": "T", "p1a2": "T", "p2a1": "T", "p2a2": "T", "o1": "TT", "o2": "TT", "o3": "TT", "o4": "TT" },
-      { "p1a1": "T", "p1a2": "T", "p2a1": "T", "p2a2": "t", "o1": "TT", "o2": "TT", "o3": "Tt", "o4": "Tt" },
-      { "p1a1": "T", "p1a2": "T", "p2a1": "t", "p2a2": "t", "o1": "Tt", "o2": "Tt", "o3": "Tt", "o4": "Tt" },
-      { "p1a1": "T", "p1a2": "t", "p2a1": "T", "p2a2": "T", "o1": "TT", "o2": "Tt", "o3": "TT", "o4": "Tt" },
-      { "p1a1": "T", "p1a2": "t", "p2a1": "T", "p2a2": "t", "o1": "TT", "o2": "Tt", "o3": "Tt", "o4": "tt" },
-      { "p1a1": "T", "p1a2": "t", "p2a1": "t", "p2a2": "t", "o1": "Tt", "o2": "tt", "o3": "Tt", "o4": "tt" }
+    "step1": { "p_father": "tt", "f1_child": "tt", "f1_partner": "TT" },
+    "step2": { "p_father": "tt", "f1_child": "tt", "f1_partner": "TT" },
+    "step3": { "reasoning": ["deductief", "inductief"], "punnett_squares": 4 },
+    "step4": [
+      {
+        "p2a1": "t",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "tt",
+        "o4": "tt"
+      },
+      {
+        "p2a1": "t",
+        "p2a2": "t",
+        "p1a1": "T",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "T",
+        "o3": "Tt",
+        "o4": "Tt"
+      },
+      {
+        "p2a1": "T",
+        "p2a2": "t",
+        "p1a1": "t",
+        "o1": "tt",
+        "o2": "tt",
+        "p1a2": "t",
+        "o3": "tt",
+        "o4": "tt"
+      },
+      {
+        "p2a1": "T",
+        "p2a2": "T",
+        "p1a1": "t",
+        "o1": "Tt",
+        "o2": "Tt",
+        "p1a2": "t",
+        "o3": "Tt",
+        "o4": "Tt"
+      }
     ],
-    "step5": { "f1_child": ["Tt"], "f1_partner": ["TT", "Tt"] }
-}
+    "step5": { "p_mother": ["Tt"], "f2_grandchild": ["Tt"] }
+  }
 ]

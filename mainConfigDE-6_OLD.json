@@ -196,13 +196,13 @@
         "steps": { "step5_prompt": "Welche Genotypen sind für den unbekannten Nachkommen (F1) und den unbekannten Partner (F1) möglich?" }
       },
       "Milchallergie": {
-        "narrative": "Bestimmte Allergien, etwa gegen Milch, werden teils genetisch mitbestimmt. In seiner dominanten Form (M) bewirkt ein Gen eine Milchallergie. Zwei Eltern (P) haben beide eine Milchallergie, der Vater mit homozygotem, die Mutter mit heterozygotem Genotyp; sie bekommen ein Kind (F1). Über dieses Kind oder seinen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2), das keine Milchallergie hat und homozygot dafür ist.",
+        "narrative": "Bestimmte Allergien, etwa gegen Milch, werden teils genetisch mitbestimmt. In seiner dominanten Form (M) bewirkt ein Gen eine Milchallergie. Zwei Eltern (P) haben beide eine Milchallergie, der Vater mit homozygotem, die Mutter mit heterozygotem Genotyp; sie bekommen ein Kind (F1). Über dieses Kind oder seinen Partner ist nichts bekannt, aber diese beiden bekommen ein Kind (F2), das ebenfalls Milchallergie hat und heterozygot dafür ist.",
         "gene": { "trait": "Milchallergie", "dominant": { "allele": "M", "phenotype": "Milchallergie" }, "recessive": { "allele": "m", "phenotype": "keine Milchallergie" } },
         "family": { "p_father": { "id": "p_father", "name": "Vater (P)" }, "p_mother": { "id": "p_mother", "name": "Mutter (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Enkelkind (F2)" } },
         "unknowns": ["f1_child", "f1_partner"],
         "punnett_squares_needed": 7,
         "steps": { "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?" }
-}
+        }
     },
     "alles_zelf": {
       "Augenfarbe": {

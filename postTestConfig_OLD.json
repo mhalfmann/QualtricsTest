@@ -76,11 +76,21 @@
   {
     "id": 5,
     "level": 5,
-    "narrative": "Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Zwei Eltern (P) bekommen ein Kind. Der Vater hat Mukoviszidose und ist homozygot dafür, die Mutter hat keine Mukoviszidose und ist heterozygot dafür. Über das Kind (F1) ist nichts bekannt. Mit einem unbekannten Partner bekommt dieses Kind (F1) ein Kind (F2), das keine Mukoviszidose hat und homozygot dafür ist.",
-    "gene": { "trait": "Mukoviszidose", "dominant": { "allele": "T", "phenotype": "keine Mukoviszidose" }, "recessive": { "allele": "t", "phenotype": "Mukoviszidose" } },
-    "family": { "p_father": { "id": "p_father", "name": "Vater (P)" }, "p_mother": { "id": "p_mother", "name": "Mutter (P)" }, "f1_child": { "id": "f1_child", "name": "Kind (F1)" }, "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" }, "f2_grandchild": { "id": "f2_grandchild", "name": "Enkelkind (F2)" } },
-    "unknowns": ["f1_child", "f1_partner"],
-    "punnett_squares_needed": 7,
-    "steps": { "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?" }
+    "narrative": "Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Vater und Mutter haben ein Kind. Der Vater hat die Krankheit, die Mutter nicht, aber darüber hinaus ist nichts bekannt. Das Kind hat ebenfalls Mukoviszidose. Dieses Kind hat Kinder mit einem Partner, der keine Mukoviszidose hat und für dieses Merkmal homozygot ist. Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?",
+    "gene": {
+      "trait": "Mukoviszidose",
+      "dominant": { "allele": "T", "phenotype": "ohne Mukoviszidose" },
+      "recessive": { "allele": "t", "phenotype": "mit Mukoviszidose" }
+    },
+    "family": {
+      "p_father": { "id": "p_father", "name": "Elternteil 1 (P)" },
+      "p_mother": { "id": "p_mother", "name": "Elternteil 2 (P)" },
+      "f1_child": { "id": "f1_child", "name": "Kind (F1)" },
+      "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" },
+      "f2_grandchild": { "id": "f2_grandchild", "name": "Enkelkind (F2)" }
+    },
+    "unknowns": ["p_mother", "f2_grandchild"],
+    "punnett_squares_needed": 4,
+    "steps": { "step5_prompt": "Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?" }
   }
 ]

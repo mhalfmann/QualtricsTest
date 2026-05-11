@@ -73,24 +73,24 @@
     "punnett_squares_needed": 4,
     "steps": { "step5_prompt": "Welche Genotypen sind für den unbekannten Nachwuchs möglich?" }
   },
-{
-  "id": 5,
-  "level": 5,
-  "narrative": "Das Vorhandensein eines Grübchens im Kinn wird durch ein Gen bestimmt, das dominant für ein glattes Kinn (K) und rezessiv für ein Grübchen im Kinn (k) ist. Zwei Eltern bekommen ein Kind. Der Vater hat ein Grübchen im Kinn und ist homozygot dafür, die Mutter hat ein glattes Kinn und ist heterozygot dafür. Über das Kind (F1) ist nichts bekannt. Mit einem unbekannten Partner bekommt dieses Kind (F1) ein Kind (F2) mit Grübchen im Kinn, homozygot dafür.",
-  "gene": {
-    "trait": "Kinn (Grübchen)",
-    "dominant": { "allele": "K", "phenotype": "glattes Kinn" },
-    "recessive": { "allele": "k", "phenotype": "Grübchen im Kinn" }
-  },
-  "family": {
-    "p_father": { "id": "p_father", "name": "Vater (P)" },
-    "p_mother": { "id": "p_mother", "name": "Mutter (P)" },
-    "f1_child": { "id": "f1_child", "name": "Kind (F1)" },
-    "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" },
-    "f2_grandchild": { "id": "f2_grandchild", "name": "Enkel (F2)" }
-  },
-  "unknowns": ["f1_child", "f1_partner"],
-  "punnett_squares_needed": 7,
-  "steps": { "step5_prompt": "Welche Genotypen sind für das unbekannte Kind (F1) und den unbekannten Partner (F1) möglich?" }
-}
+  {
+    "id": 5,
+    "level": 5,
+    "narrative": "Das Vorhandensein eines Grübchens im Kinn wird durch ein Gen bestimmt, das dominant für ein glattes Kinn (K) und rezessiv für ein Grübchen im Kinn (k) ist. Zwei Eltern bekommen ein Kind. Der Vater hat ein Grübchen im Kinn, die Mutter nicht, weitere Informationen sind nicht bekannt. Das Kind hat ebenfalls ein Grübchen im Kinn. Dieses Kind bekommt anschließend mit einem Partner mit glattem Kinn, der dafür homozygot ist, ein Kind (Enkel). Welche Genotypen sind für den unbekannten Elternteil und den unbekannten Enkel möglich?",
+    "gene": {
+      "trait": "Kinn (Grübchen)",
+      "dominant": { "allele": "K", "phenotype": "glattes Kinn" },
+      "recessive": { "allele": "k", "phenotype": "Grübchen" }
+    },
+    "family": {
+      "p_father": { "id": "p_father", "name": "Elternteil 1 (P)" },
+      "p_mother": { "id": "p_mother", "name": "Elternteil 2 (P)" },
+      "f1_child": { "id": "f1_child", "name": "Kind (F1)" },
+      "f1_partner": { "id": "f1_partner", "name": "Partner (F1)" },
+      "f2_grandchild": { "id": "f2_grandchild", "name": "Enkel (F2)" }
+    },
+    "unknowns": ["p_mother", "f2_grandchild"],
+    "punnett_squares_needed": 4,
+    "steps": { "step5_prompt": "Welche Genotypen sind für den unbekannten Elternteil und den unbekannten Enkel möglich?" }
+  }
 ]

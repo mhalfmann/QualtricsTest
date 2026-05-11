@@ -867,8 +867,8 @@
         "step5": { "f1_child": ["RR", "Rr"], "f1_partner": ["RR", "Rr"] }
       },
       "Milchallergie": {
-        "step1": { "p_father": "MM", "p_mother": "Mm", "f2_grandchild": "mm" },
-        "step2": { "p_father": "MM", "p_mother": "Mm", "f2_grandchild": "mm" },
+        "step1": { "p_father": "MM", "p_mother": "Mm", "f2_grandchild": "Mm" },
+        "step2": { "p_father": "MM", "p_mother": "Mm", "f2_grandchild": "Mm" },
         "step3": { "reasoning":["deductief", "inductief"], "punnett_squares": 7 },
         "step4":[
           { "p1a1": "M", "p1a2": "M", "p2a1": "M", "p2a2": "m", "o1": "MM", "o2": "MM", "o3": "Mm", "o4": "Mm" },
@@ -879,7 +879,7 @@
           { "p1a1": "M", "p1a2": "m", "p2a1": "M", "p2a2": "m", "o1": "MM", "o2": "Mm", "o3": "Mm", "o4": "mm" },
           { "p1a1": "M", "p1a2": "m", "p2a1": "m", "p2a2": "m", "o1": "Mm", "o2": "mm", "o3": "Mm", "o4": "mm" }
         ],
-        "step5": { "f1_child": ["Mm"], "f1_partner": ["Mm", "mm"] }
+        "step5": { "f1_child": ["MM", "Mm"], "f1_partner": ["Mm", "mm", "MM"] }
       }
     },
     "alles_zelf": {
