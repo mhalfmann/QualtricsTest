@@ -20,7 +20,7 @@
   {
     "id": 2,
     "level": 2,
-    "narrative": "Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow's peak“. Im Deutschen sagen wir dazu: Geheimraatsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Vater und Mutter, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?",
+    "narrative": "Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow's peak“. Im Deutschen sagen wir dazu: Geheimraatsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Zwei Elternteile, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?",
     "gene": {
       "trait": "Geheimratsecken",
       "dominant": { "allele": "V", "phenotype": "mit Spitze" },
@@ -38,7 +38,7 @@
   {
     "id": 3,
     "level": 3,
-    "narrative": "Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem runden Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Der Vater mit einem runden Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?",
+    "narrative": "Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem runden Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Ein Elternteil mit einem runden Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?",
     "gene": {
       "trait": "Ohrläppchen",
       "dominant": { "allele": "O", "phenotype": "freies Ohrläppchen" },
@@ -76,7 +76,7 @@
   {
     "id": 5,
     "level": 5,
-    "narrative": "Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Vater und Mutter haben ein Kind. Der Vater hat die Krankheit, die Mutter nicht, aber darüber hinaus ist nichts bekannt. Das Kind hat ebenfalls Mukoviszidose. Dieses Kind hat Kinder mit einem Partner, der keine Mukoviszidose hat und für dieses Merkmal homozygot ist. Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?",
+    "narrative": "Mukoviszidose wird durch ein Gen verursacht, das sich in seiner rezessiven Form (t) ausprägt, in seiner dominanten Form (T) jedoch nicht. Zwei Elternteile haben ein Kind. Ein Elternteil hat die Krankheit, der andere Elternteil nicht, aber darüber hinaus ist nichts bekannt. Das Kind hat ebenfalls Mukoviszidose. Dieses Kind hat Kinder mit einem Partner, der keine Mukoviszidose hat und für dieses Merkmal homozygot ist. Welche Genotypen sind für den unbekannten Elternteil und das unbekannte Enkelkind möglich?",
     "gene": {
       "trait": "Mukoviszidose",
       "dominant": { "allele": "T", "phenotype": "ohne Mukoviszidose" },
