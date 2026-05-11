@@ -4,9 +4,9 @@
 
 // --- USER CONFIGURATION ---
 // Ausgabe in Embedded Data (z. B. TaskOutput_1) – wie bei der Hauptstudie.
-var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
-if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
-
+// var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
+// if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
+var PreTestIndex = 1;
 // If false, "Antworten einreichen" stays enabled even when Kreuztabellen / Finalantworten incomplete.
 // If true, that button is disabled until everything is complete. Qualtrics Next is always hidden.
 var USE_PRETEST_RESTRICTIONS = true;
@@ -110,7 +110,7 @@ function startPreTestFromArrays(configArray, answerKeyArray) {
 function initializeTask() {
     if (debugMode) {
         var debugDiv = document.getElementById('debug-info');
-        debugDiv.innerHTML = 'DEBUG MODE | Task #' + currentTaskIndex + ' | Level: ' + currentTaskConfig.level + ' | Help: ' + currentTaskConfig.help;
+        debugDiv.innerHTML = 'DEBUG MODE | Task #' + PreTestIndex + ' | Level: ' + currentTaskConfig.level + ' | Help: ' + currentTaskConfig.help;
         debugDiv.style.display = 'block';
         debugDiv.style.color = 'red';
         debugDiv.style.border = '2px dashed red';
@@ -613,8 +613,8 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
     if (finalTaskData) {
         // 1. Save specific fields for this task index
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskOutputPreTest_' + currentTaskIndex, JSON.stringify(finalTaskData));
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficultyPreTest_' + currentTaskIndex, finalTaskData.level);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskOutputPreTest_' + PreTestIndex, JSON.stringify(finalTaskData));
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficultyPreTest_' + PreTestIndex, finalTaskData.level);
         
         // CONVERT KEY TO READABLE TEXT
         // "veel_hulp" -> "veel hulp", "enige_hulp" -> "enige hulp", "alles_zelf" -> "alles zelf"
@@ -622,10 +622,10 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         if(formattedHelp=="veel hulp")formattedHelp = "viel Hilfe";
         if(formattedHelp=="enige hulp")formattedHelp = "etwas Hilfe";
         if(formattedHelp=="alles zelf")formattedHelp = "alles selbst";
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskHelpPreTest_' + currentTaskIndex, formattedHelp);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskHelpPreTest_' + PreTestIndex, formattedHelp);
         
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskTypePreTest_' + currentTaskIndex, finalTaskData.task);
-        Qualtrics.SurveyEngine.setEmbeddedData('TaskScorePreTest_' + currentTaskIndex, finalTaskData.score);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskTypePreTest_' + PreTestIndex, finalTaskData.task);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskScorePreTest_' + PreTestIndex, finalTaskData.score);
         console.log("final score: "+finalTaskData.score);
         console.log("finalTaskData: "+JSON.stringify(finalTaskData));
        
