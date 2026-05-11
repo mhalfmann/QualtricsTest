@@ -1,0 +1,285 @@
+//Issue: Last round of feedback has outdated wording
+//Solution: replace Feedback3b with code from Feedback1b
+//Note: This version does not use the feedback statement reviewing their Selbstbewertung
+//Result: Language is consistent on feedback across each round
+Qualtrics.SurveyEngine.addOnload(function()
+{
+	/*Place your JavaScript here to run when the page loads*/
+	console.log("hello world");
+
+});
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+    var currentScore = Qualtrics.SurveyEngine.getEmbeddedData('CurrentScore');
+    var correctSteps = Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps_'+(currentTaskIndex-1));
+    var step1correct = Qualtrics.SurveyEngine.getEmbeddedData('Step1correct') == 'true' ? true : false;
+    var step2correct = Qualtrics.SurveyEngine.getEmbeddedData('Step2correct') == 'true' ? true : false;
+    var step3correct = Qualtrics.SurveyEngine.getEmbeddedData('Step3correct') == 'true' ? true : false;
+    var step4correct = Qualtrics.SurveyEngine.getEmbeddedData('Step4correct') == 'true' ? true : false;
+    var step5correct = Qualtrics.SurveyEngine.getEmbeddedData('Step5correct') == 'true' ? true : false;
+    var feedback = "";
+    if(currentScore == correctSteps){
+        feedback = "Ihre Selbstbewertung war korrekt.";
+    }
+    else if(currentScore !=correctSteps){
+        feedback = "Ihre Selbstbewertung war inkorrekt.";
+     }
+     
+    document.getElementById('feedbacktext').innerText = "Hier sehen Sie, welche Schritte richtig (\u2705) und falsch (\u274C) waren:";
+     var stepLabelsDe = [
+         'In Genotypen übersetzen',
+         'Stammbaum ausfüllen',
+         'Richtung und Anzahl der Kreuztabellen bestimmen',
+         'Kreuztabellen ausfüllen',
+         'Antwort aus den Kreuztabellen ablesen'
+     ];
+     var stepFlags = [step1correct, step2correct, step3correct, step4correct, step5correct];
+     for (var si = 0; si < 5; si++) {
+         document.getElementById('step' + (si + 1) + 'correct').innerText =
+             (si + 1) + '. ' + stepLabelsDe[si] + ' ' + (stepFlags[si] ? '\u2705' : '\u274C');
+     }
+	/*Place your JavaScript here to run when the page is fully displayed*/
+
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+	/*Place your JavaScript here to run when the page is unloaded*/
+
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+	/*Place your JavaScript here to run when the page is unloaded*/
+
+});
+
+
+// Issue: In the "Sie haben angegeben, dass Sie 4 von 5 Schritten korrekt verstanden haben." feedback
+// the number of steps was often incorrect for the etwas hilfe condition
+// Solution: Click each "Wie viele Schritte..." question and on the left side select "Recode value"
+// Then: Set code value = schritte number 
+// Then: Replace Question1-5 "Wie viele Schritte..." javascript with:
+Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+    var selectedChoiceId = this.getSelectedChoices()[0];
+
+    // Use the Qualtrics recode value, not the internal choice ID.
+    // Recode values should equal the actual number of correct steps.
+    var selectedValue = parseInt(this.getChoiceRecodeValue(selectedChoiceId), 10);
+
+    var embeddedDataName =
+        'CorrectSteps_' + Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+
+    console.log('Saving ' + embeddedDataName + ' = ' + selectedValue);
+
+    Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
+});
+// Result: it is producing the correct number of steps for each support level
+
+
+
+
+// Issue: Randomization was not working properly; getting only AxNF or NAxF, never AxF or NAxNA
+// Solution: Remove randomizer with embedded data randomize = none, adaptivity, feedback, and adaptivity_feedback
+// Then: Put all four conditions in a single randomizer
+// Then: Reduced randomizer to present 1 rather than 2 of the elements (feedback, adaptivity)
+// See here: https://www.accountingexperiments.com/post/simple_qualtrics_experiment/
+// Result: In 8 test runs with preview, each condition appeared two times
+// New issue: Randomization was not working in published link 
+// Solution: Moved randomization in survey flow to just before tasks
+// Then: Added a "debug" code to before and after randomization - Feedback = ${e://Field/Feedback} Adaptivity = ${e://Field/Adaptivity}
+// Result: Randomization is evenly distributed; removed debug code blocks
+
+
+
+
+// Issue: Null in: "Sie haben soeben eine Aufgabe auf Niveau null mit Hilfsniveau null abgeschlossen."
+// Issue: This also resulted in not all of the follow-up questions (steps correct & effort) being shown in subsequent rounds
+// Isue: And an extra round of problem-solving
+// Solution: Went through several rounds of edits to figure out the issue; 
+// solutions that didn't fix but are supposed to be more robust code are still implmented
+// Solution 1: Add a "fallback save" to main task javascript final task data code (lines 754-780) with the code below:
+Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+
+    // Defensive fallback:
+    // Normally finalTaskData is created in completeTask().
+    // If the page submits before that object is available, try to collect it here
+    // so TaskDifficulty_X, TaskHelp_X, TaskScore_X, etc. are not left blank.
+    if (!finalTaskData && currentTaskConfig && currentTaskConfig.task) {
+        console.warn(
+            'finalTaskData was null at page submit; collecting task data as fallback for round ' +
+            currentTaskIndex
+        );
+        finalTaskData = collectTaskData();
+        Qualtrics.SurveyEngine.setEmbeddedData(
+            'TaskSaveFallbackUsed_' + currentTaskIndex,
+            'true'
+        );
+    }
+
+    if (finalTaskData) {
+        // 1. Save specific fields for this task index
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskOutput_' + currentTaskIndex, JSON.stringify(finalTaskData));
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficulty_' + currentTaskIndex, finalTaskData.level);
+
+        var formattedHelp = finalTaskData.help.replace(/_/g, ' ');
+        if (formattedHelp == "veel hulp") formattedHelp = "viel Hilfe";
+        if (formattedHelp == "enige hulp") formattedHelp = "etwas Hilfe";
+        if (formattedHelp == "alles zelf") formattedHelp = "alles selbst";
+
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskHelp_' + currentTaskIndex, formattedHelp);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskType_' + currentTaskIndex, finalTaskData.task);
+        Qualtrics.SurveyEngine.setEmbeddedData('TaskScore_' + currentTaskIndex, finalTaskData.score);
+
+        console.log("final score: " + finalTaskData.score);
+
+// Solution 2: Add following code to line 647 (main task code) to prevent multiple rounds being advanced from double-clicking the answer button:
+	if (btn) btn.disabled = true;
+	
+// Solution 3: Create LastCompletedTaskIndex so if the steps correct/effort rating page submits twice it still only advances the round once
+// This required changing code in several locations:
+// In main task box OnPageSubmit:
+if (finalTaskData) {
+    Qualtrics.SurveyEngine.setEmbeddedData(
+        'LastCompletedTaskIndex',
+        String(currentTaskIndex)
+    );
+
+    Qualtrics.SurveyEngine.setEmbeddedData('TaskOutput_' + currentTaskIndex, JSON.stringify(finalTaskData));
+    Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficulty_' + currentTaskIndex, finalTaskData.level);
+
+    // rest of existing save code...
+}
+
+// In "Wie viele Schritte..." add:
+   // Use the task index from the task that was just completed.
+    // This avoids problems when CurrentTaskIndex is incremented elsewhere on the same page.
+    var idx = Qualtrics.SurveyEngine.getEmbeddedData('LastCompletedTaskIndex');
+
+    // Fallback in case LastCompletedTaskIndex was not set for some reason.
+    if (!idx) {
+        idx = Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+    }
+
+    var embeddedDataName = 'CorrectSteps_' + idx;
+
+    console.log('Saving ' + embeddedDataName + ' = ' + selectedValue);
+
+    Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, selectedValue);
+});
+
+
+
+// In Effort questions, add the LastCompletedTaskIndex and change how effort is recorded with radio position and not just clicks:
+Qualtrics.SurveyEngine.addOnload(function()
+{
+    /*Place your JavaScript here to run when the page loads*/
+});
+
+var effortContainer = null;
+var effortRadios = [];
+var effortValueToPosition = {};
+var effortUniqueCount = 0;
+
+Qualtrics.SurveyEngine.addOnReady(function()
+{
+    effortContainer = this.getQuestionContainer();
+    window._effortValue = null;
+
+    effortRadios = Array.prototype.slice.call(
+        effortContainer.querySelectorAll('input[type="radio"]')
+    );
+
+    // Count distinct radio values and map each Qualtrics radio value
+    // to its 1-based scale position.
+    // This is more robust than relying only on click events.
+    effortValueToPosition = {};
+    effortUniqueCount = 0;
+
+    effortRadios.forEach(function(radio) {
+        if (!effortValueToPosition[radio.value]) {
+            effortUniqueCount++;
+            effortValueToPosition[radio.value] = effortUniqueCount;
+        }
+    });
+
+    console.log(
+        "Effort: found " + effortRadios.length +
+        " radios, " + effortUniqueCount + " unique choices"
+    );
+
+    effortRadios.forEach(function(radio) {
+        radio.addEventListener('click', function() {
+            window._effortValue = effortValueToPosition[radio.value];
+            console.log(
+                "Effort clicked: radio value=" + radio.value +
+                " → scale value=" + window._effortValue
+            );
+        });
+    });
+});
+
+Qualtrics.SurveyEngine.addOnUnload(function()
+{
+    /*Place your JavaScript here to run when the page is unloaded*/
+});
+
+Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+    // Use the task index from the task that was just completed.
+    var idx = Qualtrics.SurveyEngine.getEmbeddedData('LastCompletedTaskIndex');
+
+    // Fallback in case LastCompletedTaskIndex was not set.
+    if (!idx) {
+        idx = Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex');
+    }
+
+    var effortValue = window._effortValue;
+
+    // Fallback: if the click listener did not capture the value,
+    // read the checked radio directly at submit.
+    if (effortValue == null && effortContainer) {
+        var checkedRadio = effortContainer.querySelector('input[type="radio"]:checked');
+
+        if (checkedRadio && effortValueToPosition[checkedRadio.value]) {
+            effortValue = effortValueToPosition[checkedRadio.value];
+            console.log(
+                "Effort recovered on submit: radio value=" + checkedRadio.value +
+                " → scale value=" + effortValue
+            );
+        }
+    }
+
+    if (effortValue != null) {
+        var embeddedDataName = 'Effort_' + idx;
+        Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, effortValue);
+        console.log("Effort saved: " + embeddedDataName + " = " + effortValue);
+    } else {
+        console.warn("Effort value was not captured for Effort_" + idx);
+    }
+
+    // Set next task index based on the just-completed task.
+    // This is idempotent: if this submit handler runs twice, it sets the same value.
+    var completedIndex = parseInt(idx, 10);
+
+    if (!isNaN(completedIndex)) {
+        var nextTaskIndex = completedIndex + 1;
+
+        Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', String(nextTaskIndex));
+
+        console.log(
+            "CurrentTaskIndex set to " + nextTaskIndex +
+            " based on LastCompletedTaskIndex = " + completedIndex
+        );
+    }
+});
+// Result: I did 10 tests in my "test" survey with this and no issues
+// Then: I added this code back to my main survey version
+// Result: Did another 10 tests (at least one in each condition) and no null issues
+
+
+
+
+// Issue: Need to turn requirements for completing pre- and post-test questions back on after feedback from Andi
+// Solution: Change 'false' to 'true' for USE_PRETEST/POSTTEST_RESTRICTIONS
+// Result: Requires answers to submit pre- and post-test questions

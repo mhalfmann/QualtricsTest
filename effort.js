@@ -43,6 +43,8 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
         Qualtrics.SurveyEngine.setEmbeddedData(embeddedDataName, window._effortValue);
         console.log("Effort saved: " + window._effortValue);
     }
+    var currentTaskIndex = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentTaskIndex'), 10);
+    //if (isNaN(currentTaskIndex)) currentTaskIndex = 1;
     currentTaskIndex++;
     Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
 });
