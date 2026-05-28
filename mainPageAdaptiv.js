@@ -525,8 +525,8 @@ function calculateScore(data, key) {
     else {
         for(var k in key.step1) { 
             if((data.step1[k] || "").trim() !== key.step1[k]) s1Correct = false; 
-            console.log("checking Step 1: "+k+" "+data.step1[k] + " " + key.step1[k]);
-            console.log("s1Correct: "+s1Correct);
+            //console.log("checking Step 1: "+k+" "+data.step1[k] + " " + key.step1[k]);
+            //console.log("s1Correct: "+s1Correct);
         }
     }
     if(s1Correct) {
@@ -628,8 +628,8 @@ function collectTaskData() {
         task: currentTaskConfig.task,
         step1:{}, step2_stamboom:{}, step4_tables:{}, step5_final_answers:{} 
     };
-    console.log("dataset: "+this.dataset);
-    var s1=document.getElementById('step1-inputs').getElementsByTagName('input');for(var i=0;i<s1.length;i++){console.log("s1["+i+"].value: "+s1[i].value + " s1["+i+"].dataset.personId: " + s1[i].dataset.personId);userData.step1[s1[i].dataset.personId]=s1[i].value;}
+   // console.log("dataset: "+this.dataset);
+    var s1=document.getElementById('step1-inputs').getElementsByTagName('input');for(var i=0;i<s1.length;i++){/*console.log("s1["+i+"].value: "+s1[i].value + " s1["+i+"].dataset.personId: " + s1[i].dataset.personId);*/userData.step1[s1[i].dataset.personId]=s1[i].value;}
     var s2=document.getElementById('step2-tree').getElementsByTagName('input');for(var j=0;j<s2.length;j++){/*console.log("s2["+j+"].value: "+s2[j].value + " s2["+j+"].dataset.personId: " + s2[j].dataset.personId);*/userData.step2_stamboom[s2[j].dataset.personId]=s2[j].value;}
     var r=[];var re=document.getElementsByName('reasoning');for(var k=0;k<re.length;k++){if(re[k].checked){r.push(re[k].value);}}userData.step3_reasoning=r;
     var pi=document.getElementById('punnett-squares-needed');if(pi){userData.step3_punnett_squares_requested=pi.value;}
@@ -644,8 +644,8 @@ function completeTask() {
     var btn = document.getElementById('complete-task-btn');
     if (btn && btn.disabled) return;
     if (!isStep4PunnettComplete() || !isStep5FinalAnswersComplete()) return;
+	if (btn) btn.disabled = true;
     finalTaskData = collectTaskData();
-    if (btn) btn.disabled = true;
     document.getElementById('NextButton').click();
 }
 
@@ -658,7 +658,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     var adaptivity = 0;
     var selectedColumn = 0;
     var currentColumn = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CurrentColumn'));
-    console.log("Current Column: "+currentColumn);
+    //console.log("Current Column: "+currentColumn);
     var effort = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('Effort_'+(currentTaskIndex-1)));
     var correctSteps = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('CorrectSteps_'+(currentTaskIndex-1)));
     var score = parseInt(Qualtrics.SurveyEngine.getEmbeddedData('TaskScore_'+(currentTaskIndex-1)));
@@ -666,14 +666,14 @@ Qualtrics.SurveyEngine.addOnReady(function() {
     
 	// Qualtrics.SurveyEngine.setEmbeddedData('Adaptivity', 'none');
     // Qualtrics.SurveyEngine.setEmbeddedData('Feedback', 'yes');
-    console.log("Adaptivity: "+Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity'));
-    console.log("Feedback: "+Qualtrics.SurveyEngine.getEmbeddedData('Feedback'));
-    console.log("Current Task Index: "+currentTaskIndex);
+    //console.log("Adaptivity: "+Qualtrics.SurveyEngine.getEmbeddedData('Adaptivity'));
+    //console.log("Feedback: "+Qualtrics.SurveyEngine.getEmbeddedData('Feedback'));
+    //console.log("Current Task Index: "+currentTaskIndex);
     if(currentTaskIndex>1){
-        console.log("Current Column: "+currentColumn);
-        console.log("Correct Steps: "+correctSteps);
-        console.log("Score: "+score);
-        console.log("Effort: "+effort);
+        //console.log("Current Column: "+currentColumn);
+        //console.log("Correct Steps: "+correctSteps);
+        //console.log("Score: "+score);
+        //console.log("Effort: "+effort);
         //if correctSteps is between 0 and 1
         if(score >= 0 && score <= 1){
             if(effort >= 1 && effort <= 3){
@@ -713,7 +713,7 @@ Qualtrics.SurveyEngine.addOnReady(function() {
         selectedColumn = currentColumn + adaptivity;
         if(selectedColumn < 1) selectedColumn = 1;
         if(selectedColumn > 15) selectedColumn = 15;
-        console.log("Selected Column: "+selectedColumn);
+       // console.log("Selected Column: "+selectedColumn);
     }
     // Initialize History from Embedded Data
     var historyStr = Qualtrics.SurveyEngine.getEmbeddedData('CompletedTasks');
@@ -753,12 +753,19 @@ Qualtrics.SurveyEngine.addOnReady(function() {
 });
 
 Qualtrics.SurveyEngine.addOnPageSubmit(function() {
+
+    // Defensive fallback:
+    // Normally finalTaskData is created in completeTask().
+    // If the page submits before that object is available, try to collect it here
+    // so TaskDifficulty_X, TaskHelp_X, TaskScore_X, etc. are not left blank.
     if (!finalTaskData && currentTaskConfig && currentTaskConfig.task) {
         console.warn(
             'finalTaskData was null at page submit; collecting task data as fallback for round ' +
             currentTaskIndex
         );
+
         finalTaskData = collectTaskData();
+
         Qualtrics.SurveyEngine.setEmbeddedData(
             'TaskSaveFallbackUsed_' + currentTaskIndex,
             'true'
@@ -766,32 +773,43 @@ Qualtrics.SurveyEngine.addOnPageSubmit(function() {
     }
 
     if (finalTaskData) {
+
+        // Store the index of the task that was just completed.
+        // Follow-up questions on the same/next page should use this rather than CurrentTaskIndex,
+        // because CurrentTaskIndex may be incremented elsewhere.
         Qualtrics.SurveyEngine.setEmbeddedData(
             'LastCompletedTaskIndex',
             String(currentTaskIndex)
         );
-        // 1. Save specific fields for this task index
+
         Qualtrics.SurveyEngine.setEmbeddedData('TaskOutput_' + currentTaskIndex, JSON.stringify(finalTaskData));
         Qualtrics.SurveyEngine.setEmbeddedData('TaskDifficulty_' + currentTaskIndex, finalTaskData.level);
-        
-        // CONVERT KEY TO READABLE TEXT
-        // "veel_hulp" -> "veel hulp", "enige_hulp" -> "enige hulp", "alles_zelf" -> "alles zelf"
+
         var formattedHelp = finalTaskData.help.replace(/_/g, ' ');
-        if(formattedHelp=="veel hulp")formattedHelp = "viel Hilfe";
-        if(formattedHelp=="enige hulp")formattedHelp = "etwas Hilfe";
-        if(formattedHelp=="alles zelf")formattedHelp = "alles selbst";
+        if (formattedHelp == "veel hulp") formattedHelp = "viel Hilfe";
+        if (formattedHelp == "enige hulp") formattedHelp = "etwas Hilfe";
+        if (formattedHelp == "alles zelf") formattedHelp = "alles selbst";
+
         Qualtrics.SurveyEngine.setEmbeddedData('TaskHelp_' + currentTaskIndex, formattedHelp);
-        
         Qualtrics.SurveyEngine.setEmbeddedData('TaskType_' + currentTaskIndex, finalTaskData.task);
         Qualtrics.SurveyEngine.setEmbeddedData('TaskScore_' + currentTaskIndex, finalTaskData.score);
-        console.log("final score: "+finalTaskData.score);
-        // 2. Update CompletedTasks history
+
+        //console.log("final score: " + finalTaskData.score);
+
         if (currentTaskConfig.uniqueId) {
             completedTasksList.push(currentTaskConfig.uniqueId);
             var newHistory = completedTasksList.join(',');
             Qualtrics.SurveyEngine.setEmbeddedData('CompletedTasks', newHistory);
         }
+    } else {
+        console.error(
+            'No finalTaskData available at page submit for round ' +
+            currentTaskIndex
+        );
+
+        Qualtrics.SurveyEngine.setEmbeddedData(
+            'TaskSaveError_' + currentTaskIndex,
+            'finalTaskData_null'
+        );
     }
-    // currentTaskIndex++;
-    // Qualtrics.SurveyEngine.setEmbeddedData('CurrentTaskIndex', currentTaskIndex);
 });
