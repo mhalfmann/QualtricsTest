@@ -38,7 +38,7 @@
   {
     "id": 3,
     "level": 3,
-    "narrative": "Sichelzellanämie wird durch ein Gen verursacht, das in seiner rezessiven Form (s) zur Krankheit führt und in seiner dominanten Form (S) nicht. Die Mutter ohne Sichelzellanämie, der für dieses Merkmal heterozygot ist, bekommt ein Kind, das die Krankheit hat. Welche Genotypen sind für den anderen Elternteil möglich?",
+    "narrative": "Sichelzellanämie wird durch ein Gen verursacht, das in seiner rezessiven Form (s) zur Krankheit führt und in seiner dominanten Form (S) nicht. Die Mutter ohne Sichelzellanämie, die für dieses Merkmal heterozygot ist, bekommt ein Kind, das die Krankheit hat. Welche Genotypen sind für den anderen Elternteil möglich?",
     "gene": {
       "trait": "Sichelzellanämie",
       "dominant": { "allele": "S", "phenotype": "ohne Sichelzellanämie" },
