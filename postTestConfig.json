@@ -38,7 +38,7 @@
   {
     "id": 3,
     "level": 3,
-    "narrative": "Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem freien Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Der Vater mit einem runden Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?",
+    "narrative": "Die Form der Ohrläppchen wird durch ein Gen bestimmt, das in seiner dominanten Form (O) zu einem freien Ohrläppchen führt und in seiner rezessiven Form (o) zu verwachsenen Ohrläppchen. Der Vater mit einem freien Ohrläppchen, der dafür heterozygot ist, hat ein Kind, das homozygot ist und verwachsene Ohrläppchen hat. Welche Genotypen sind für den anderen Elternteil möglich?",
     "gene": {
       "trait": "Ohrläppchen",
       "dominant": { "allele": "O", "phenotype": "freies Ohrläppchen" },
