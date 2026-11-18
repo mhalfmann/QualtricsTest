@@ -20,7 +20,7 @@
   {
     "id": 2,
     "level": 2,
-    "narrative": "Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow's peak“. Im Deutschen sagen wir dazu: Geheimraatsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Vater und Mutter, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?",
+    "narrative": "Manche Menschen haben eine v-förmige Spitze an der Stirnhaarlinie; auf Englisch heißt das „widow's peak“. Im Deutschen sagen wir dazu: Geheimratsecken. Ob man eine solche Spitze hat, wird durch ein Gen bestimmt, das sich in seiner dominanten Form (V) ausprägt und in seiner rezessiven Form (v) nicht. Vater und Mutter, die beide eine solche Spitze haben und dafür heterozygot sind, haben ein Kind. Welche Genotypen sind für das Kind möglich?",
     "gene": {
       "trait": "Geheimratsecken",
       "dominant": { "allele": "V", "phenotype": "mit Spitze" },
