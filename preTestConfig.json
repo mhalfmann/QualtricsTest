@@ -2,7 +2,7 @@
   {
     "id": 1,
     "level": 1,
-    "narrative": "Ein dominantes Allel (R) sorgt dafür, dass Maissamen gefärbt sind, während das rezessive Allel (r) farblose Samen verursacht. Eine Pflanze mit gefärbten Samen, die für dieses Merkmal homozygot ist, bekommt Nachkommen mit einer Pflanze mit farblosen Samen. Was ist der Genotyp der Nachkommen?",
+    "narrative": "Ein dominantes Allel (R) sorgt dafür, dass Maissamen gefärbt sind, während das rezessive Allel (r) farblose Samen verursacht. Eine Pflanze mit gefärbten Samen, die für dieses Merkmal homozygot ist, bekommt Nachkommen mit einer Pflanze mit farblosen Samen, die ebenfalls homozygot ist. Was ist der Genotyp der Nachkommen?",
     "gene": {
       "trait": "Maissamenfarbe",
       "dominant": { "allele": "R", "phenotype": "gefärbt" },
